@@ -5,6 +5,7 @@ let type2Select = document.getElementById('type2Select');
 let copyBtn = document.getElementById('copyBtn');
 let langSwitcher = document.getElementById('langSwitcher');
 let attackAmountSelect = document.getElementById('attackAmountSelect');
+let defTypeSelect = document.getElementById('defTypeSelect');
 
 
 //localisation
@@ -54,57 +55,23 @@ function printTypes(lang) {
     //Get the types from the selector
     let type1 = type1Select.value;
     let type2 = type2Select.value;
-    let typeIndex1 = types.indexOf(type1);
-    let typeIndex2 = types.indexOf(type2);
 
     //Effective Attacks
     //Create 2 arrays for effective attacks
-    let effectiveAttacks1 = [];
-    for (let i = 0; i < types.length; i++) {
-        if (effectivness[i][typeIndex1] == 1) {
-
-            console.log(types[i]);
-            effectiveAttacks1.push(types[i]);
-
-        }
-    }
-    let effectiveAttacks2 = [];
-    for (let i = 0; i < types.length; i++) {
-        if (effectivness[i][typeIndex2] == 1) {
-
-            effectiveAttacks2.push(types[i]);
-        }
-    }
+    let effectiveAttacks1 = getAttacks(type1, 1);
+    let effectiveAttacks2 = getAttacks(type2, 1);
 
     //Combine arrays -> sort -> remove duplicates
-    let effectiveAttacks = effectiveAttacks1.concat(effectiveAttacks2);
-    effectiveAttacks = effectiveAttacks.sort().filter(function(item, pos, ary) {
-        return !pos || item != ary[pos - 1];
-    })
+    let effectiveAttacks = combineArrayWithoutDuplicates(effectiveAttacks1, effectiveAttacks2);
 
 
     //InEffective Attacks
     //Create 2 arrays for ineffective attacks
-    let inEffectiveAttacks1 = [];
-    for (let i = 0; i < types.length; i++) {
-        if (effectivness[i][typeIndex1] == -1) {
-
-            inEffectiveAttacks1.push(types[i]);
-        }
-    }
-    let inEffectiveAttacks2 = [];
-    for (let i = 0; i < types.length; i++) {
-        if (effectivness[i][typeIndex2] == -1) {
-
-            inEffectiveAttacks2.push(types[i]);
-        }
-    }
+    let inEffectiveAttacks1 = getAttacks(type1, -1);
+    let inEffectiveAttacks2 = getAttacks(type2, -1);
 
     //Combine arrays -> sort -> remove duplicates
-    let inEffectiveAttacks = inEffectiveAttacks1.concat(inEffectiveAttacks2);
-    inEffectiveAttacks = inEffectiveAttacks.sort().filter(function(item, pos, ary) {
-        return !pos || item != ary[pos - 1];
-    })
+    let inEffectiveAttacks = combineArrayWithoutDuplicates(inEffectiveAttacks1, inEffectiveAttacks2);
 
     //Removes ineffective attacks from effective attacks
     effectiveAttacks = effectiveAttacks.filter(val => !inEffectiveAttacks.includes(val));
@@ -117,19 +84,70 @@ function printTypes(lang) {
     const firstEffectiveAttack = `@1${effectiveAttacks.join(',@1')}`;
     const secondEffectiveAttack = `@2${effectiveAttacks.join(',@2')}`;
 
+
+    //DefensiveType
+    //Create 2 arrays for Weak Def Type
+    let weakTypes1 = getDefType(type1, 1);
+    let weakTypes2 = getDefType(type2, 1);
+
+    //Combine arrays -> sort -> remove duplicates
+    let weakTypes = combineArrayWithoutDuplicates(weakTypes1, weakTypes2);
+
+    //makes the Def Types printable
+    weakTypes = `!${weakTypes.join('&!')}`;
+
+
     //outputs the array
     output.textContent = "";
 
     if (attackAmountSelect.value == 'any') {
-        output.textContent += `${anyEffectiveAttack}`;
+        output.textContent += `${anyEffectiveAttack}&`;
     } else if (attackAmountSelect.value == 'both') {
-        output.textContent += `${firstEffectiveAttack}&${secondEffectiveAttack}`;
+        output.textContent += `${firstEffectiveAttack}&${secondEffectiveAttack}&`;
     }
+
+    if (defTypeSelect.value == "weak") {
+        output.textContent += `${weakTypes}`;
+    }
+
 
     //change copy button background to black
     copyBtn.style.background = "black";
 }
 
+function getAttacks(type, e) {
+
+    let effectiveAttacks = [];
+    let typeIndex = types.indexOf(type);
+    for (let i = 0; i < types.length; i++) {
+        if (effectivness[i][typeIndex] == e) {
+
+            effectiveAttacks.push(types[i]);
+
+        }
+    }
+    return effectiveAttacks;
+
+}
+
+function getDefType(type, e) {
+    let defensiveTypes = [];
+    let typeIndex = types.indexOf(type);
+    for (let i = 0; i < types.length; i++) {
+        if (effectivness[typeIndex][i] == e) {
+            defensiveTypes.push(types[i]);
+        }
+    }
+    return defensiveTypes;
+}
+
+function combineArrayWithoutDuplicates(arr1, arr2) {
+    let newArr = arr1.concat(arr2);
+    newArr = newArr.sort().filter(function(item, pos, ary) {
+        return !pos || item != ary[pos - 1];
+    })
+    return newArr;
+}
 
 //Type effectivness arrays
 const types = ['bug', 'dark', 'dragon', 'electric', 'fairy', 'fighting', 'fire', 'flying', 'ghost', 'grass', 'ground', 'ice', 'normal', 'poison', 'psychic', 'rock', 'steel', 'water'];
@@ -138,7 +156,7 @@ const effectivness = [
     [0, -1, 0, 0, -1, -1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0], //dark
     [0, 0, 1, 0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0], //dragon
     [0, 0, -1, -1, 0, 0, 0, 1, 0, -1, -1, 0, 0, 0, 0, 0, 0, 1], //electric
-    [0, 1, 1, 0, 0, 0, 1, -1, 0, 0, 0, 0, 0, -1, 0, 0, -1, 0], //fairy
+    [0, 1, 1, 0, 0, 1, -1, 0, 0, 0, 0, 0, 0, -1, 0, 0, -1, 0], //fairy
     [-1, 1, 0, 0, -1, 0, 0, -1, -1, 0, 0, 1, 1, -1, -1, 1, 1, 0], //fighting
     [1, 0, -1, 0, 0, 0, -1, 0, 0, 1, 0, 1, 0, 0, 0, -1, 1, -1], //fire
     [1, 0, 0, -1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, -1, -1, 0], //flying
@@ -178,6 +196,11 @@ const translations = {
 
         "anyAttack": "Any attack is effective",
         "bothAttacks": "Both attacks are effective",
+        "noAttacks": "No attack preference",
+
+        "weakTypes": "No weak types",
+        "noDefTypes": "No type preference",
+
         "copyToClipboard": "Copy to Clipboard"
     },
     "de": {
@@ -200,8 +223,13 @@ const translations = {
         "steel": "Stahl",
         "water": "Wasser",
 
-        "anyAttack": "Irgendeine Attacks ist effektiv",
+        "anyAttack": "Irgendeine Attacke ist effektiv",
         "bothAttacks": "Beide Attacken sind effektiv",
+        "noAttacks": "Keine Attack-Preferenzen",
+
+        "weakTypes": "Keine schwachen Typen",
+        "noDefTypes": "Keine Typ-Preferenzen",
+
         "copyToClipboard": "In die Zwischenablage kopieren"
     },
 };
