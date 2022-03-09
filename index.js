@@ -93,11 +93,27 @@ function printTypes(lang) {
     //Combine arrays -> sort -> remove duplicates
     let weakTypes = combineArrayWithoutDuplicates(weakTypes1, weakTypes2);
 
+    //Create 2 arrays for Strong Def Types
+    let strongTypes1 = getDefType(type1, -1);
+    let strongTypes2 = getDefType(type2, -1);
+
+    //Combine arrays -> sort -> remove duplicates
+    let strongTypes = combineArrayWithoutDuplicates(strongTypes1, strongTypes2);
+
+    //Remove weak types from strong types
+    strongTypes = strongTypes.filter(val => !weakTypes.includes(val));
+
     //translate the array
     weakTypes = weakTypes.map(elem => translations[locale][elem]);
 
     //makes the Def Types printable
     weakTypes = `!${weakTypes.join('&!')}`;
+
+    //translate the array
+    strongTypes = strongTypes.map(elem => translations[locale][elem]);
+
+    //makes the Def Types printable
+    strongTypes = `${strongTypes.join(',')}`;
 
 
     //outputs the array
@@ -111,6 +127,8 @@ function printTypes(lang) {
 
     if (defTypeSelect.value == "weak") {
         output.textContent += `${weakTypes}`;
+    } else if (defTypeSelect.value == "strong") {
+        output.textContent += `${strongTypes}`;
     }
 
 
@@ -202,6 +220,7 @@ const translations = {
         "noAttacks": "No attack preference",
 
         "weakTypes": "No weak types",
+        "strongTypes": "Strong types",
         "noDefTypes": "No type preference",
 
         "copyToClipboard": "Copy to Clipboard"
@@ -231,6 +250,7 @@ const translations = {
         "noAttacks": "Keine Attack-Preferenzen",
 
         "weakTypes": "Keine schwachen Typen",
+        "strongTypes": "Starke Typen",
         "noDefTypes": "Keine Typ-Preferenzen",
 
         "copyToClipboard": "In die Zwischenablage kopieren"
