@@ -45,7 +45,7 @@ copyBtn.addEventListener("click", evt => {
     //Copy the output
     navigator.clipboard.writeText(output.textContent);
     //Change button colour, as confirmation
-    copyBtn.style.background = "#00aa00";
+    copyBtn.style.color = "green";
 });
 
 
@@ -133,7 +133,7 @@ function printTypes(lang) {
 
 
     //change copy button background to black
-    copyBtn.style.background = "black";
+    copyBtn.style.color = "white";
 }
 
 function getAttacks(type, e) {

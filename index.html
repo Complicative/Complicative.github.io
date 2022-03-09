@@ -12,13 +12,14 @@
 </head>
 
 <body style="background-color:#555555;">
-    <select id="langSwitcher">
+    <select id="langSwitcher" style="position: fixed; right: 0px; top: 0px;
+    background-color: black; color: white; border: 2px solid white; border-radius: 10px;">
         <option value="en">English</option>
         <option value="de">German</option>
     </select>
     <div id="input" style="display:flex; justify-content: center; width:100%; margin-top: 100px;">
         <select id="type1Select" style="font-size:xx-large; text-align: center; 
-        background-color: black; color: white; width: 45%;">
+        background-color: black; color: white; width: 45%; border: 2px solid white; border-radius: 10px;">
             <option value="bug" key="bug" style="color: darkgreen;">Bug</option>
             <option value="dark" key="dark" style="color: grey;">Dark</option>
             <option value="dragon" key="dragon" style="color: blue;">Dragon</option>
@@ -39,7 +40,7 @@
             <option value="water" key="water" style="color: blue;">Water</option>
         </select>
         <select id="type2Select" style="font-size: xx-large; text-align: center; 
-        background-color: black; color: white; width: 45%;">
+        background-color: black; color: white; width: 45%; border: 2px solid white; border-radius: 10px;">
             <option value="bug" key="bug" style="color: darkgreen;">Bug</option>
             <option value="dark" key="dark" style="color: grey;">Dark</option>
             <option value="dragon" key="dragon" style="color: blue;">Dragon</option>
@@ -62,6 +63,7 @@
     </div><br>
     <div style="display: flex; justify-content: center; width: 100%;">
         <select id="attackAmountSelect" style="font-size: large; background-color: black;color: white; text-align: center;
+        border: 2px solid white; border-radius: 10px;
     margin-bottom: 5px; width:90%;">
         <option value="any" key="anyAttack">Any attack is effective</option>
         <option value="both" key="bothAttacks">Both attacks are effective</option>
@@ -70,6 +72,7 @@
     </div>
     <div style="display: flex; justify-content: center; width: 100%;">
         <select id="defTypeSelect" style="font-size: large; background-color: black;color: white; text-align: center;
+        border: 2px solid white; border-radius: 10px;
     margin-bottom: 20px; width:90%;">
         <option value="weak" key="weakTypes">No weak types</option>
         <option value="strong" key="strongTypes">Only strong types</option>
@@ -78,21 +81,25 @@
     </div>
     <div style="display: flex; justify-content: center; width: 100%; margin-top: 20px;">
         <button id="goBtn" style="font-size: xx-large; background-color: black;color: white;
+        border: 2px solid white; border-radius: 100px;
     width:90%;">GO</button>
     </div>
 
     <div id="outputDiv" style="display: flex; justify-content: center; width: 100%;">
         <p id="output" style="color: white; margin-bottom: 20px; width: 90%; text-align: center;
-        overflow: auto; overflow-wrap: break-word;">output
+        overflow: auto; overflow-wrap: break-word;
+        background-color: black; border: 2px solid white;">output
         </p>
     </div>
     <div style="display: flex; justify-content: center; width: 100%;">
         <button id="copyBtn" style="font-size: large; background-color: black;color: white;
+        border: 2px solid white; border-radius: 100px;
     width:90%;" key="copyToClipboard">Copy to Clipboard</button>
     </div>
 
-    <div style="position: fixed; bottom: 0px; left: 0px; right: 0px; margin-bottom: 0px; display: flex; justify-content: center; width: 100%;">
-        <a href="https://www.reddit.com/message/compose/?to=mComplicative" style="text-align: center; width: 100%; color: white;">Report issue through Reddit DM</a>
+    <div style="position: fixed; bottom: 0px; left: 0px; right: 0px; margin-bottom: 0px; 
+    display: flex; justify-content: center; width: 100%;">
+        <a href="https://www.reddit.com/message/compose/?to=mComplicative" style="text-align: center; width: 100%; color: white;">Report issue through Reddit DM (mComplicative)</a>
     </div>
 
 
