@@ -93,6 +93,9 @@ function printTypes(lang) {
     //Combine arrays -> sort -> remove duplicates
     let weakTypes = combineArrayWithoutDuplicates(weakTypes1, weakTypes2);
 
+    //translate the array
+    weakTypes = weakTypes.map(elem => translations[locale][elem]);
+
     //makes the Def Types printable
     weakTypes = `!${weakTypes.join('&!')}`;
 
