@@ -100,6 +100,6 @@ goBtn.addEventListener("click", evt => {
 
     output.textContent = `@${effectiveAttacks.join(',@')}`;
 
-    copyBtn.style.background = "#aaaaaa";
+    copyBtn.style.background = "black";
 
 })

@@ -12,9 +12,9 @@
 </head>
 
 <body style="background-color:#555555;">
-    <div id="input" style="display:flex; justify-content: center; margin: 0 auto; width:auto;">
-        <select id="type1Select" style="font-size: larger; text-align: center; 
-        background-color: black; color: white; width: 45%; margin: 5px;">
+    <div id="input" style="display:flex; justify-content: center; width:100%; margin-top: 100px;">
+        <select id="type1Select" style="font-size:xx-large; text-align: center; 
+        background-color: black; color: white; width: 45%;">
             <option value="bug">Bug</option>
             <option value="dark">Dark</option>
             <option value="dragon">Dragon</option>
@@ -34,8 +34,8 @@
             <option value="steel">Steel</option>
             <option value="water">Water</option>
         </select>
-        <select id="type2Select" style="font-size: larger; text-align: center; 
-        background-color: black; color: white; width: 45%; margin: 5px;">
+        <select id="type2Select" style="font-size: xx-large; text-align: center; 
+        background-color: black; color: white; width: 45%;">
             <option value="bug">Bug</option>
             <option value="dark">Dark</option>
             <option value="dragon">Dragon</option>
@@ -56,11 +56,19 @@
             <option value="water">Water</option>
         </select>
     </div><br>
-    <button id="goBtn">GO</button>
-    <div id="outputDiv">
-        <p id="output">Effective Types</p>
+    <div style="display: flex; justify-content: center; width: 100%;">
+        <button id="goBtn" style="font-size: xx-large; background-color: black;color: white;
+    width:90%; ">GO</button>
     </div>
-    <button id="copyBtn">Copy to Clipboard</button>
+
+    <div id="outputDiv" style="display: flex; justify-content: center; width: 100%;">
+        <p id="output" style="color: white; margin-bottom: 100px;">Effective Types</p>
+    </div>
+    <div style="display: flex; justify-content: center; width: 100%;">
+        <button id="copyBtn" style="font-size: xx-large; background-color: black;color: white;
+    width:90%; ">Copy to Clipboard</button>
+    </div>
+
 
 </body>
 
