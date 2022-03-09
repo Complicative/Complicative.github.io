@@ -4,7 +4,7 @@ let type1Select = document.getElementById('type1Select');
 let type2Select = document.getElementById('type2Select');
 let copyBtn = document.getElementById('copyBtn');
 let langSwitcher = document.getElementById('langSwitcher');
-
+let attackAmountSelect = document.getElementById('attackAmountSelect');
 
 
 //localisation
@@ -12,17 +12,19 @@ let locale;
 document.addEventListener("DOMContentLoaded", () => {
     locale = langSwitcher.value
     document
-    // Find all elements that have the key attribute
+    // Find all elements that have the key attribute and translate them
         .querySelectorAll("[key]")
         .forEach(translateElement);
 });
 
 function translateElement(element) {
+    //Translates elem depending on current locale var
     const key = element.getAttribute("key");
     const translation = translations[locale][key];
     element.innerText = translation;
 }
 langSwitcher.addEventListener("change", () => {
+    //Event Listener for the lang change
     locale = langSwitcher.value
     document
     // Find all elements that have the key attribute
@@ -34,16 +36,14 @@ langSwitcher.addEventListener("change", () => {
 
 
 goBtn.addEventListener("click", evt => {
+    //Event Listener for the GO Button
     printTypes(locale);
 });
 
 copyBtn.addEventListener("click", evt => {
-
-    /* Copy the text inside the text field */
+    //Copy the output
     navigator.clipboard.writeText(output.textContent);
-
-    /* Alert the copied text */
-    //alert("Copied the text: " + output.textContent);
+    //Change button colour, as confirmation
     copyBtn.style.background = "#00aa00";
 });
 
@@ -51,17 +51,14 @@ copyBtn.addEventListener("click", evt => {
 
 function printTypes(lang) {
 
-
-
+    //Get the types from the selector
     let type1 = type1Select.value;
     let type2 = type2Select.value;
     let typeIndex1 = types.indexOf(type1);
     let typeIndex2 = types.indexOf(type2);
 
-
-
     //Effective Attacks
-
+    //Create 2 arrays for effective attacks
     let effectiveAttacks1 = [];
     for (let i = 0; i < types.length; i++) {
         if (effectivness[i][typeIndex1] == 1) {
@@ -79,6 +76,7 @@ function printTypes(lang) {
         }
     }
 
+    //Combine arrays -> sort -> remove duplicates
     let effectiveAttacks = effectiveAttacks1.concat(effectiveAttacks2);
     effectiveAttacks = effectiveAttacks.sort().filter(function(item, pos, ary) {
         return !pos || item != ary[pos - 1];
@@ -86,7 +84,7 @@ function printTypes(lang) {
 
 
     //InEffective Attacks
-
+    //Create 2 arrays for ineffective attacks
     let inEffectiveAttacks1 = [];
     for (let i = 0; i < types.length; i++) {
         if (effectivness[i][typeIndex1] == -1) {
@@ -102,21 +100,38 @@ function printTypes(lang) {
         }
     }
 
+    //Combine arrays -> sort -> remove duplicates
     let inEffectiveAttacks = inEffectiveAttacks1.concat(inEffectiveAttacks2);
     inEffectiveAttacks = inEffectiveAttacks.sort().filter(function(item, pos, ary) {
         return !pos || item != ary[pos - 1];
     })
 
+    //Removes ineffective attacks from effective attacks
     effectiveAttacks = effectiveAttacks.filter(val => !inEffectiveAttacks.includes(val));
 
+    //translate the array
     effectiveAttacks = effectiveAttacks.map(elem => translations[locale][elem]);
 
-    output.textContent = `@${effectiveAttacks.join(',@')}`;
+    //makes the Attacks printable
+    const anyEffectiveAttack = `@${effectiveAttacks.join(',@')}`;
+    const firstEffectiveAttack = `@1${effectiveAttacks.join(',@1')}`;
+    const secondEffectiveAttack = `@2${effectiveAttacks.join(',@2')}`;
 
+    //outputs the array
+    output.textContent = "";
+
+    if (attackAmountSelect.value == 'any') {
+        output.textContent += `${anyEffectiveAttack}`;
+    } else if (attackAmountSelect.value == 'both') {
+        output.textContent += `${firstEffectiveAttack}&${secondEffectiveAttack}`;
+    }
+
+    //change copy button background to black
     copyBtn.style.background = "black";
 }
 
 
+//Type effectivness arrays
 const types = ['bug', 'dark', 'dragon', 'electric', 'fairy', 'fighting', 'fire', 'flying', 'ghost', 'grass', 'ground', 'ice', 'normal', 'poison', 'psychic', 'rock', 'steel', 'water'];
 const effectivness = [
     [0, 1, 0, 0, -1, -1, -1, -1, -1, 1, 0, 0, 0, -1, 1, 0, -1, 0], //bug
@@ -139,7 +154,7 @@ const effectivness = [
     [0, 0, -1, 0, 0, 0, 1, 0, 0, -1, 1, 0, 0, 0, 0, 1, 0, -1] //water
 ];
 
-
+//Dictionary
 const translations = {
     "en": {
         "bug": "Bug",
@@ -159,7 +174,11 @@ const translations = {
         "psychic": "Psychic",
         "rock": "Rock",
         "steel": "Steel",
-        "water": "Water"
+        "water": "Water",
+
+        "anyAttack": "Any attack is effective",
+        "bothAttacks": "Both attacks are effective",
+        "copyToClipboard": "Copy to Clipboard"
     },
     "de": {
         "bug": "Käfer",
@@ -179,6 +198,10 @@ const translations = {
         "psychic": "Psycho",
         "rock": "Gestein",
         "steel": "Stahl",
-        "water": "Wasser"
+        "water": "Wasser",
+
+        "anyAttack": "Irgendeine Attacks ist effektiv",
+        "bothAttacks": "Beide Attacken sind effektiv",
+        "copyToClipboard": "In die Zwischenablage kopieren"
     },
 };
