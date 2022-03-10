@@ -11,9 +11,9 @@
 
 </head>
 
-<body style="background-color:#555555;">
+<body style="background-color:#555555; overflow: auto;">
     <select id="langSwitcher" style="position: fixed; right: 0px; top: 0px;
-    background-color: black; color: white; border: 2px solid white; border-radius: 10px;">
+    background-color: black; color: white; border: 2px solid white; border-radius: 10px; font-size: large;">
         <option value="en">English</option>
         <option value="de">German</option>
     </select>
@@ -85,9 +85,11 @@
             <div key="defTypes" style="font-size: xx-large; margin: 10px;">Types:</div>
             <input type="radio" name="defTypesRadio" id="defTypesOption1" value="weak" checked>
             <label for="defTypesOption1" style="align-self: center; font-size: large;" key="weakTypes">No Weak</label>
+            <br>
             <input type="radio" name="defTypesRadio" id="defTypesOption2" value="strong">
             <label for="defTypesOption2" style="align-self: center; font-size: large;" key="strongTypes">Only
                 Resistant</label>
+            <br>
             <input type="radio" name="defTypesRadio" id="defTypesOption3" value="none">
             <label for="defTypesOption3" style="align-self: center; font-size: large;" key="noDefTypes">None</label>
         </div>
@@ -106,11 +108,11 @@
     </div>
     <div style="display: flex; justify-content: center; width: 100%;">
         <button id="copyBtn" style="font-size: x-large; background-color: black;color: white;
-        border: 2px solid white; border-radius: 100px;
+        border: 2px solid white; border-radius: 100px; margin-bottom: 20px;
     width:90%;" key="copyToClipboard">Copy to Clipboard</button>
     </div>
 
-    <div style="position: fixed; bottom: 0px; left: 0px; right: 0px; margin-bottom: 0px; 
+    <div style="position: fixed; bottom: 0px; left: 0px; right: 0px; margin-bottom: 0px;
     display: flex; justify-content: center; width: 100%;">
         <a href="https://www.reddit.com/message/compose/?to=mComplicative" style="text-align: center; width: 100%; color: white;">Report issue through Reddit DM (mComplicative)</a>
     </div>

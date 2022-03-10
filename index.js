@@ -9,9 +9,14 @@ let defTypeSelect = document.getElementById('defTypeSelect');
 
 
 //localisation
-let locale;
+let locale = document.documentElement.lang;
 document.addEventListener("DOMContentLoaded", () => {
-    locale = langSwitcher.value
+    locale = window.location.search.slice(1, window.location.search.length);
+    langSwitcher.value = locale;
+    if (langSwitcher.value == []) {
+        locale = 'en'
+        langSwitcher.value = locale;
+    }
     document
     // Find all elements that have the key attribute and translate them
         .querySelectorAll("[key]")
