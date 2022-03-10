@@ -212,7 +212,7 @@ const translations = {
         "dragon": "Dragon",
         "electric": "Electric",
         "fairy": "Fairy",
-        "fighting": "Fighthing",
+        "fighting": "Fighting",
         "fire": "Fire",
         "flying": "Flying",
         "ghost": "Ghost",
@@ -260,13 +260,17 @@ const translations = {
         "steel": "Stahl",
         "water": "Wasser",
 
-        "anyAttack": "Irgendeine Attacke ist effektiv",
-        "bothAttacks": "Beide Attacken sind effektiv",
-        "noAttacks": "Keine Attack-Preferenzen",
+        "effectAtt": "Effektive Attacken:",
+        "defTypes": "Typen:",
 
-        "weakTypes": "Keine schwachen Typen",
-        "strongTypes": "Starke Typen",
-        "noDefTypes": "Keine Typ-Preferenzen",
+        "oneAttack": "1+",
+        "twoAttacks": "2+",
+        "threeAttacks": "3",
+        "noAttacks": "Keine",
+
+        "weakTypes": "Keine Schwachen",
+        "strongTypes": "Nur Resistente",
+        "noDefTypes": "Keine",
 
         "copyToClipboard": "In die Zwischenablage kopieren"
     },
