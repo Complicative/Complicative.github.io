@@ -61,24 +61,52 @@
             <option value="water" key="water" style="color: blue;">Water</option>
         </select>
     </div><br>
-    <div style="display: flex; justify-content: center; width: 100%;">
-        <select id="attackAmountSelect" style="font-size: large; background-color: black;color: white; text-align: center;
+    <div style="display: flex; justify-content: center; width: 90%; margin: 0 auto;
+    font-size: large; background-color: black;color: white; text-align: center;
+        border: 2px solid white; border-radius: 10px;">
+        <!--<select id="attackAmountSelect" style="font-size: large; background-color: black;color: white; text-align: center;
         border: 2px solid white; border-radius: 10px;
     margin-bottom: 5px; width:90%;">
         <option value="any" key="anyAttack">Any attack is effective</option>
         <option value="both" key="bothAttacks">Both attacks are effective</option>
         <option value="none" key="noAttacks">No attack preference</option>
-    </select>
+    </select>-->
+        Effective Attacks:
+        <input type="radio" name="attackAmountRadio" id="attackAmountOption1" value="any" checked>
+        <label for="attackAmountOption1">1-2</label>
+        <input type="radio" name="attackAmountRadio" id="attackAmountOption2" value="both">
+        <label for="attackAmountOption2">Both</label>
+        <input type="radio" name="attackAmountRadio" id="attackAmountOption3" value="none">
+        <label for="attackAmountOption3">None</label>
     </div>
-    <div style="display: flex; justify-content: center; width: 100%;">
+    <div style="display: flex; justify-content: center; width: 90%; margin: 0 auto;
+        font-size: large; background-color: black;color: white; text-align: center;
+            border: 2px solid white; border-radius: 10px;">
+        <!--<select id="attackAmountSelect" style="font-size: large; background-color: black;color: white; text-align: center;
+            border: 2px solid white; border-radius: 10px;
+        margin-bottom: 5px; width:90%;">
+            <option value="any" key="anyAttack">Any attack is effective</option>
+            <option value="both" key="bothAttacks">Both attacks are effective</option>
+            <option value="none" key="noAttacks">No attack preference</option>
+        </select>-->
+        Types:
+        <input type="radio" name="defTypesRadio" id="defTypesOption1" value="weak" checked>
+        <label for="defTypesOption1">No Weak</label>
+        <input type="radio" name="defTypesRadio" id="defTypesOption2" value="strong">
+        <label for="defTypesOption2">Only Resistant</label>
+        <input type="radio" name="defTypesRadio" id="defTypesOption3" value="none">
+        <label for="defTypesOption3">None</label>
+    </div>
+
+    <!--<div style="display: flex; justify-content: center; width: 100%;">
         <select id="defTypeSelect" style="font-size: large; background-color: black;color: white; text-align: center;
         border: 2px solid white; border-radius: 10px;
     margin-bottom: 20px; width:90%;">
-        <option value="weak" key="weakTypes">No weak types</option>
-        <option value="strong" key="strongTypes">Only strong types</option>
-        <option value="none" key="noDefTypes">No type preference</option>
-    </select>
-    </div>
+            <option value="weak" key="weakTypes">No weak types</option>
+            <option value="strong" key="strongTypes">Only strong types</option>
+            <option value="none" key="noDefTypes">No type preference</option>
+        </select>
+    </div>-->
     <div style="display: flex; justify-content: center; width: 100%; margin-top: 20px;">
         <button id="goBtn" style="font-size: xx-large; background-color: black;color: white;
         border: 2px solid white; border-radius: 100px;

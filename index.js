@@ -52,6 +52,8 @@ copyBtn.addEventListener("click", evt => {
 
 function printTypes(lang) {
 
+
+
     //Get the types from the selector
     let type1 = type1Select.value;
     let type2 = type2Select.value;
@@ -119,15 +121,21 @@ function printTypes(lang) {
     //outputs the array
     output.textContent = "";
 
-    if (attackAmountSelect.value == 'any') {
+    /*if (attackAmountSelect.value == 'any') {
         output.textContent += `${anyEffectiveAttack}&`;
     } else if (attackAmountSelect.value == 'both') {
         output.textContent += `${firstEffectiveAttack}&${secondEffectiveAttack}&`;
+    }*/
+
+    if (document.querySelector('input[name="attackAmountRadio"]:checked').value == 'any') {
+        output.textContent += `${anyEffectiveAttack}&`;
+    } else if (document.querySelector('input[name="attackAmountRadio"]:checked').value == 'both') {
+        output.textContent += `${firstEffectiveAttack}&${secondEffectiveAttack}&`;
     }
 
-    if (defTypeSelect.value == "weak") {
+    if (document.querySelector('input[name="defTypesRadio"]:checked').value == "weak") {
         output.textContent += `${weakTypes}`;
-    } else if (defTypeSelect.value == "strong") {
+    } else if (document.querySelector('input[name="defTypesRadio"]:checked').value == "strong") {
         output.textContent += `${strongTypes}`;
     }
 
