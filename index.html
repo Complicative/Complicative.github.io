@@ -71,13 +71,15 @@
         <option value="both" key="bothAttacks">Both attacks are effective</option>
         <option value="none" key="noAttacks">No attack preference</option>
     </select>-->
-        Effective Attacks:
-        <input type="radio" name="attackAmountRadio" id="attackAmountOption1" value="any" checked>
-        <label for="attackAmountOption1">1-2</label>
-        <input type="radio" name="attackAmountRadio" id="attackAmountOption2" value="both">
-        <label for="attackAmountOption2">Both</label>
-        <input type="radio" name="attackAmountRadio" id="attackAmountOption3" value="none">
-        <label for="attackAmountOption3">None</label>
+        <p key="effectAtt">Effective Attacks:</p>
+        <input type="radio" name="attackAmountRadio" id="attackAmountOption1" value="one" checked>
+        <label for="attackAmountOption1" style="align-self: center;" key="oneAttack">1+</label>
+        <input type="radio" name="attackAmountRadio" id="attackAmountOption2" value="two">
+        <label for="attackAmountOption2" style="align-self: center;" key="twoAttacks">2+</label>
+        <input type="radio" name="attackAmountRadio" id="attackAmountOption3" value="three">
+        <label for="attackAmountOption3" style="align-self: center;" key="threeAttacks">3</label>
+        <input type="radio" name="attackAmountRadio" id="attackAmountOption4" value="none">
+        <label for="attackAmountOption4" style="align-self: center;" key="noAttacks">None</label>
     </div>
     <div style="display: flex; justify-content: center; width: 90%; margin: 0 auto;
         font-size: large; background-color: black;color: white; text-align: center;
@@ -89,13 +91,13 @@
             <option value="both" key="bothAttacks">Both attacks are effective</option>
             <option value="none" key="noAttacks">No attack preference</option>
         </select>-->
-        Types:
+        <p key="defTypes">Types:</p>
         <input type="radio" name="defTypesRadio" id="defTypesOption1" value="weak" checked>
-        <label for="defTypesOption1">No Weak</label>
+        <label for="defTypesOption1" style="align-self: center;" key="weakTypes">No Weak</label>
         <input type="radio" name="defTypesRadio" id="defTypesOption2" value="strong">
-        <label for="defTypesOption2">Only Resistant</label>
+        <label for="defTypesOption2" style="align-self: center;" key="strongTypes">Only Resistant</label>
         <input type="radio" name="defTypesRadio" id="defTypesOption3" value="none">
-        <label for="defTypesOption3">None</label>
+        <label for="defTypesOption3" style="align-self: center;" key="noDefTypes">None</label>
     </div>
 
     <!--<div style="display: flex; justify-content: center; width: 100%;">

@@ -85,6 +85,7 @@ function printTypes(lang) {
     const anyEffectiveAttack = `@${effectiveAttacks.join(',@')}`;
     const firstEffectiveAttack = `@1${effectiveAttacks.join(',@1')}`;
     const secondEffectiveAttack = `@2${effectiveAttacks.join(',@2')}`;
+    const thirdEffectiveAttack = `@3${effectiveAttacks.join(',@3')}`;
 
 
     //DefensiveType
@@ -127,10 +128,12 @@ function printTypes(lang) {
         output.textContent += `${firstEffectiveAttack}&${secondEffectiveAttack}&`;
     }*/
 
-    if (document.querySelector('input[name="attackAmountRadio"]:checked').value == 'any') {
+    if (document.querySelector('input[name="attackAmountRadio"]:checked').value == 'one') {
         output.textContent += `${anyEffectiveAttack}&`;
-    } else if (document.querySelector('input[name="attackAmountRadio"]:checked').value == 'both') {
-        output.textContent += `${firstEffectiveAttack}&${secondEffectiveAttack}&`;
+    } else if (document.querySelector('input[name="attackAmountRadio"]:checked').value == 'two') {
+        output.textContent += `${firstEffectiveAttack}&${secondEffectiveAttack},${thirdEffectiveAttack}`;
+    } else if (document.querySelector('input[name="attackAmountRadio"]:checked').value == 'three') {
+        output.textContent += `${firstEffectiveAttack}&${secondEffectiveAttack}&${thirdEffectiveAttack}`;
     }
 
     if (document.querySelector('input[name="defTypesRadio"]:checked').value == "weak") {
@@ -223,13 +226,17 @@ const translations = {
         "steel": "Steel",
         "water": "Water",
 
-        "anyAttack": "Any attack is effective",
-        "bothAttacks": "Both attacks are effective",
-        "noAttacks": "No attack preference",
+        "effectAtt": "Effective Attacks:",
+        "defTypes": "Types:",
 
-        "weakTypes": "No weak types",
-        "strongTypes": "Strong types",
-        "noDefTypes": "No type preference",
+        "oneAttack": "1+",
+        "twoAttacks": "2+",
+        "threeAttacks": "3",
+        "noAttacks": "None",
+
+        "weakTypes": "No Weak",
+        "strongTypes": "Only Resistant",
+        "noDefTypes": "None",
 
         "copyToClipboard": "Copy to Clipboard"
     },
