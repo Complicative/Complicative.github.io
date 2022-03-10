@@ -126,9 +126,9 @@ function printTypes(lang) {
     if (document.querySelector('input[name="attackAmountRadio"]:checked').value == 'one') {
         output.textContent += `${anyEffectiveAttack}&`;
     } else if (document.querySelector('input[name="attackAmountRadio"]:checked').value == 'two') {
-        output.textContent += `${firstEffectiveAttack}&${secondEffectiveAttack},${thirdEffectiveAttack}`;
+        output.textContent += `${firstEffectiveAttack}&${secondEffectiveAttack},${thirdEffectiveAttack}&`;
     } else if (document.querySelector('input[name="attackAmountRadio"]:checked').value == 'three') {
-        output.textContent += `${firstEffectiveAttack}&${secondEffectiveAttack}&${thirdEffectiveAttack}`;
+        output.textContent += `${firstEffectiveAttack}&${secondEffectiveAttack}&${thirdEffectiveAttack}&`;
     }
 
     if (document.querySelector('input[name="defTypesRadio"]:checked').value == "weak") {
