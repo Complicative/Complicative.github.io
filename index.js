@@ -122,11 +122,6 @@ function printTypes(lang) {
     //outputs the array
     output.textContent = "";
 
-    /*if (attackAmountSelect.value == 'any') {
-        output.textContent += `${anyEffectiveAttack}&`;
-    } else if (attackAmountSelect.value == 'both') {
-        output.textContent += `${firstEffectiveAttack}&${secondEffectiveAttack}&`;
-    }*/
 
     if (document.querySelector('input[name="attackAmountRadio"]:checked').value == 'one') {
         output.textContent += `${anyEffectiveAttack}&`;
