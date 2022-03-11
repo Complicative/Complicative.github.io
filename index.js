@@ -54,6 +54,11 @@ langSwitcher.addEventListener("change", () => {
 goBtn.addEventListener("click", evt => {
     //Event Listener for the GO Button
     printTypes(locale);
+    fetch("https://api.countapi.xyz/hit/complicative.github.io/goBtn")
+        .then(res => res.json())
+        .then(visits => {
+            console.log("Total GO Button uses: " + visits.value);
+        })
 });
 
 copyBtn.addEventListener("click", evt => {
@@ -61,6 +66,11 @@ copyBtn.addEventListener("click", evt => {
     navigator.clipboard.writeText(output.textContent);
     //Change button colour, as confirmation
     copyBtn.style.color = "green";
+    fetch("https://api.countapi.xyz/hit/complicative.github.io/copy")
+        .then(res => res.json())
+        .then(visits => {
+            console.log("Total copies to clipboard: " + visits.value);
+        })
 });
 
 
