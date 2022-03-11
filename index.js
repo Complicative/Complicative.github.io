@@ -26,7 +26,12 @@ document.addEventListener("DOMContentLoaded", () => {
 function translateElement(element) {
     //Translates elem depending on current locale var
     const key = element.getAttribute("key");
-    const translation = translations[locale][key];
+    let translation;
+    if (translations[locale][key] != undefined) {
+        translation = translations[locale][key];
+    } else {
+        translation = translations['en'][key];
+    }
     element.innerText = translation;
 }
 langSwitcher.addEventListener("change", () => {
@@ -308,4 +313,159 @@ const translations = {
 
         "copyToClipboard": "Copy to Clipboard"
     },
+    "fr": {
+        "bug": "Insecte",
+        "dark": "Ténèbres",
+        "dragon": "Dragon",
+        "electric": "Electrique",
+        "fairy": "Fée",
+        "fighting": "Combat",
+        "fire": "Feu",
+        "flying": "Vol",
+        "ghost": "Spectre",
+        "grass": "Herbe",
+        "ground": "Sol",
+        "ice": "Glace",
+        "normal": "Normal",
+        "poison": "Poison",
+        "psychic": "Psy",
+        "rock": "Roche",
+        "steel": "Acier",
+        "water": "Eau",
+
+        "effectAtt": "Attaque Effective",
+        "defTypes": "Types:",
+
+        "oneAttack": "1+",
+        "twoAttacks": "2+",
+        "threeAttacks": "3",
+
+        "noAttacks": "Aucun",
+        "weakTypes": "Aucune",
+        "strongTypes": "Résiste seulement",
+        "noDefTypes": "Aucune",
+
+        "copyToClipboard": "Copier vers le presse-papier"
+    },
+    "no": {
+        "oneAttack": "1+",
+        "twoAttacks": "2+",
+        "threeAttacks": "3",
+        "noAttacks": "Ingen",
+        "weakTypes": "Ingen svakhet",
+        "strongTypes": "Bare står imot",
+        "noDefTypes": "Ingen",
+        "copyToClipboard": "Kopiere til utklippstavle"
+    },
+    "kli": {
+        "bug": "jI'oy'",
+        "dark": "Hurgh",
+        "dragon": "Duq",
+        "electric": "'ul",
+        "fairy": "maSaH",
+        "fighting": "Bisuv",
+        "fire": "baH",
+        "flying": "Suv",
+        "ghost": "Lom qa'",
+        "grass": "'uch",
+        "ground": "yav",
+        "ice": "chuch",
+        "normal": "motlh",
+        "poison": "tar",
+        "psychic": "QI'yaH",
+        "rock": "nagh",
+        "steel": "naQ",
+        "water": "bIQ",
+        "effectAtt": "vaj jangDI' qeylIS.",
+        "defTypes": "Segh",
+        "oneAttack": "1+",
+        "twoAttacks": "2+",
+        "threeAttacks": "3",
+        "noAttacks": "pagh",
+        "weakTypes": "puj",
+        "strongTypes": "polonyuS",
+        "noDefTypes": "pagh",
+        "copyToClipboard": "qeylIS"
+    },
+    "in": {
+        "bug": "Coleottero",
+        "dark": "Buio",
+        "dragon": "Drago",
+        "electric": "Elettro",
+        "fairy": "Folletto",
+        "fighting": "Lotta",
+        "fire": "Fuoco",
+        "flying": "Volante",
+        "ghost": "Spettro",
+        "grass": "Erba",
+        "ground": "Terra",
+        "ice": "Ghiaccio",
+        "normal": "Normale",
+        "poison": "Veleno",
+        "psychic": "Psico",
+        "rock": "Roccia",
+        "steel": "Acciaio",
+        "water": "Acqua",
+
+
+        "oneAttack": "1+",
+        "twoAttacks": "2+",
+        "threeAttacks": "3",
+
+    },
+    "sv": {
+        "bug": "Insekt",
+        "dark": "Mörk",
+        "dragon": "Drake",
+        "electric": "Elektrisk",
+        "fairy": "Fe",
+        "fighting": "Kamp",
+        "fire": "Eld",
+        "flying": "Flygande",
+        "ghost": "Spöke",
+        "grass": "Gräs",
+        "ground": "Mark",
+        "ice": "Is",
+        "normal": "Normal",
+        "poison": "Gift",
+        "psychic": "Psykisk",
+        "rock": "Sten",
+        "steel": "Stål",
+        "water": "Vatten",
+
+
+        "oneAttack": "1+",
+        "twoAttacks": "2+",
+        "threeAttacks": "3",
+    },
+    "fi": {
+        "bug": "Hyönteinen",
+        "dark": "Pimeys",
+        "dragon": "Lohikäärme",
+        "electric": "Sähkö",
+        "fairy": "Keiju",
+        "fighting": "Tappelu",
+        "fire": "Tuli",
+        "flying": "Lento",
+        "ghost": "Aave",
+        "grass": "Ruoho",
+        "ground": "Maa",
+        "ice": "Jää",
+        "normal": "Normaali",
+        "poison": "Myrkky",
+        "psychic": "Meedio",
+        "rock": "Kivi",
+        "steel": "Teräs",
+        "water": "Vesi",
+
+
+        "oneAttack": "1+",
+        "twoAttacks": "2+",
+        "threeAttacks": "3",
+    },
+    "cs": {
+        "oneAttack": "1+",
+        "twoAttacks": "2+",
+        "threeAttacks": "3",
+    }
 };
