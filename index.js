@@ -22,6 +22,11 @@ document.addEventListener("DOMContentLoaded", () => {
         .querySelectorAll("[key]")
         .forEach(translateElement);
 });
+fetch("https://api.countapi.xyz/hit/complicative.github.io/visits")
+    .then(res => res.json())
+    .then(visits => {
+        console.log("Total visits: " + visits.value);
+    })
 
 function translateElement(element) {
     //Translates elem depending on current locale var
