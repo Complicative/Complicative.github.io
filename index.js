@@ -274,4 +274,38 @@ const translations = {
 
         "copyToClipboard": "In die Zwischenablage kopieren"
     },
+    "es": {
+        "bug": "Bicho",
+        "dark": "Siniestro",
+        "dragon": "Dragón",
+        "electric": "Eléctrico",
+        "fairy": "Hada",
+        "fighting": "Lucha",
+        "fire": "Fuego",
+        "flying": "Volador",
+        "ghost": "Fantasma",
+        "grass": "Planta",
+        "ground": "Tierra",
+        "ice": "Hielo",
+        "normal": "Normal",
+        "poison": "Veneno",
+        "psychic": "Psíquico",
+        "rock": "Roca",
+        "steel": "Acero",
+        "water": "Agua",
+
+        "effectAtt": "Effective Attacks:",
+        "defTypes": "Types:",
+
+        "oneAttack": "1+",
+        "twoAttacks": "2+",
+        "threeAttacks": "3",
+        "noAttacks": "None",
+
+        "weakTypes": "No Weak",
+        "strongTypes": "Only Resistant",
+        "noDefTypes": "None",
+
+        "copyToClipboard": "Copy to Clipboard"
+    },
 };
