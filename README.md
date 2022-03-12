@@ -34,10 +34,9 @@ Should this get popular, I might get a domain and even add more functionality.
 We will have to see about that, when it's time. (There is a cookie-free hidden visitor counter, which I will check from time to time)
 
 There are no cookies. Does that mean, I will have to change my language every time I open the app?
-No. It's correct, that there aren't any cookies (yay no cookie pop-ups), but there is an easy way, 
-to always open the app in your preferred language. Just add a "?lang" at the end of the url. 
-So for English, the URL would be: https://complicative.github.io?en. 
-Save it as a bookmark, or even put it on your homescreen and it should work flawlessly.
+No. It's correct, that there aren't any cookies (yay no cookie pop-ups),  but if you change the language, 
+you will see that the url changes slightly, adding a "?lang" at the end. 
+This url will always open the app in that language. Bookmark it or even put it on your homescreen, and it will always open in your language.
   
 The supported languages with their lang codes are:
 English: en
