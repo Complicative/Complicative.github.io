@@ -38,15 +38,8 @@ No. It's correct, that there aren't any cookies (yay no cookie pop-ups),  but if
 you will see that the url changes slightly, adding a "?lang" at the end. 
 This url will always open the app in that language. Bookmark it or even put it on your homescreen, and it will always open in your language.
   
-The supported languages with their lang codes are:
-English: en
-French: fr
-Finnish: fi
-German: de
-Italian: it
-Norwegian: no
-Spanish: es
-Swedish: sv
-Klingon: kli (don't ask)
+The supported languages are:
+
+English, French, Finnish, German, Italian, (Norwegian), Spanish, Swedish, Klingon (don't ask)
 
 TL;DR? Check the 7 step tutorial.
