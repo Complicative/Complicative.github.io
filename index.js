@@ -402,7 +402,7 @@ const translations = {
         "noDefTypes": "pagh",
         "copyToClipboard": "qeylIS"
     },
-    "in": {
+    "it": {
         "bug": "Coleottero",
         "dark": "Buio",
         "dragon": "Drago",
