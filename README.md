@@ -35,7 +35,7 @@ We will have to see about that, when it's time. (There is a cookie-free hidden v
 
 There are no cookies. Does that mean, I will have to change my language every time I open the app?
 No. It's correct, that there aren't any cookies (yay no cookie pop-ups), but there is an easy way, 
-to always open the app in your preferred language. Just add a "?<lang>" at the end of the url. 
+to always open the app in your preferred language. Just add a "?lang" at the end of the url. 
 So for English, the URL would be: https://complicative.github.io?en. 
 Save it as a bookmark, or even put it on your homescreen and it should work flawlessly.
   
