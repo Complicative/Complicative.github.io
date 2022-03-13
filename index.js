@@ -12,11 +12,20 @@ let defTypeSelect = document.getElementById('defTypeSelect');
 let locale = document.documentElement.lang;
 document.addEventListener("DOMContentLoaded", () => {
     console.log("Day: " + getDay());
-    fetch("https://api.countapi.xyz/hit/complicative.github.io/visits" + getDay())
-        .then(res => res.json())
-        .then(visits => {
-            console.log("Total visits today: " + visits.value);
-        })
+    console.log("" + window.location.protocol);
+    if (window.location.protocol == "file:") {
+        fetch("https://api.countapi.xyz/get/complicative.github.io/visits" + getDay())
+            .then(res => res.json())
+            .then(visits => {
+                console.log("Total visits today: " + visits.value);
+            })
+    } else {
+        fetch("https://api.countapi.xyz/hit/complicative.github.io/visits" + getDay())
+            .then(res => res.json())
+            .then(visits => {
+                console.log("Total visits today: " + visits.value);
+            })
+    }
     fetch("https://api.countapi.xyz/get/complicative.github.io/goBtn" + getDay())
         .then(res => res.json())
         .then(visits => {
