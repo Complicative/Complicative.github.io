@@ -48,7 +48,7 @@ function translateElement(element) {
 langSwitcher.addEventListener("change", () => {
     //Event Listener for the lang change
     locale = langSwitcher.value
-    console.log(window.location.href.split('?')[0]);
+    console.log("without Param: " + window.location.href.split('?')[0]);
     const pathWithoutParam = window.location.href.split('?')[0];
     window.location.assign(pathWithoutParam + "?" + locale);
 })
