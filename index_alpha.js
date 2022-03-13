@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(res => res.json())
         .then(data => console.log(data))
 
-    ffetch("./raid_bosses2.json")
+    fetch("./raid_bosses2.json")
         .then(res => res.json())
         .then(data => console.log(data))
 
