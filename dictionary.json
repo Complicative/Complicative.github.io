@@ -1,6 +1,6 @@
 {
     "myDic": {
-        "en": [{
+        "en": {
             "bug": "Bug",
             "dark": "Dark",
             "dragon": "Dragon",
@@ -39,6 +39,6 @@
             "alolan_raichu": "Alolan Raichu (Tier 3)",
             "nidoqueen": "Nidoqueen (Tier 3)",
             "wigglytuff": ""
-        }]
+        }
     }
 }
