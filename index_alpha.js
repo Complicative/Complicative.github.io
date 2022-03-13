@@ -18,6 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(res => res.json())
         .then(data => console.log(data))
 
+    fetch("./dictionary.json")
+        .then(res => res.json())
+        .then(data => console.log(data))
+
     console.log("Day: " + getDay());
     if (window.location.protocol == "file:") {
         fetch("https://api.countapi.xyz/get/complicative.github.io/visits" + getDay())
