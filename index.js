@@ -9,6 +9,11 @@ let langSwitcher = document.getElementById('langSwitcher');
 //localisation
 let locale = document.documentElement.lang;
 document.addEventListener("DOMContentLoaded", () => {
+
+    /*fetch("./raid_bosses.json")
+        .then(res => res.json())
+        .then(data => console.log(data))*/
+
     console.log("Day: " + getDay());
     if (window.location.protocol == "file:") {
         fetch("https://api.countapi.xyz/get/complicative.github.io/visits" + getDay())
@@ -271,7 +276,13 @@ const translations = {
         "strongTypes": "Only Resistant",
         "noDefTypes": "None",
 
-        "copyToClipboard": "Copy to Clipboard"
+        "copyToClipboard": "Copy to Clipboard",
+
+        "mega_venusaur": "Mega Venusaur (Mega)",
+        "tapu_koko": "Tapu Koko (Tier 5)",
+        "alolan_raichu": "Alolan Raichu (Tier 3)",
+        "nidoqueen": "Nidoqueen (Tier 3)",
+        "wigglytuff": ""
     },
     "de": {
         "bug": "Käfer",
@@ -305,7 +316,7 @@ const translations = {
         "strongTypes": "Nur Resistente",
         "noDefTypes": "Keine",
 
-        "copyToClipboard": "In die Zwischenablage kopieren"
+        "copyToClipboard": "In die Zwischenablage kopieren",
     },
     "es": {
         "bug": "Bicho",
@@ -339,7 +350,7 @@ const translations = {
         "strongTypes": "Only Resistant",
         "noDefTypes": "None",
 
-        "copyToClipboard": "Copy to Clipboard"
+        "copyToClipboard": "Copy to Clipboard",
     },
     "fr": {
         "bug": "Insecte",
@@ -373,7 +384,7 @@ const translations = {
         "strongTypes": "Résiste seulement",
         "noDefTypes": "Aucune",
 
-        "copyToClipboard": "Copier vers le presse-papier"
+        "copyToClipboard": "Copier vers le presse-papier",
     },
     "no": {
         "oneAttack": "1+",
@@ -383,7 +394,7 @@ const translations = {
         "weakTypes": "Ingen svakhet",
         "strongTypes": "Bare står imot",
         "noDefTypes": "Ingen",
-        "copyToClipboard": "Kopiere til utklippstavle"
+        "copyToClipboard": "Kopiere til utklippstavle",
     },
     "kli": {
         "bug": "jI'oy'",
@@ -413,7 +424,7 @@ const translations = {
         "weakTypes": "puj",
         "strongTypes": "polonyuS",
         "noDefTypes": "pagh",
-        "copyToClipboard": "qeylIS"
+        "copyToClipboard": "qeylIS",
     },
     "it": {
         "bug": "Coleottero",

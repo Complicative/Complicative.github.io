@@ -72,15 +72,16 @@
             <option value="steel" key="steel" style="color: teal;">Steel</option>
             <option value="water" key="water" style="color: blue;">Water</option>
         </select>
-    </div><br>
+    </div>
+    <br>
     <div style="display: flex; justify-content: center; width: 90%; margin: 0 auto;
     font-size: large; background-color: black;color: white; text-align: center;
         border: 2px solid white; border-radius: 10px;">
         <div style="margin-bottom: 20px;">
             <div key="effectAtt" style="font-size: xx-large; margin: 10px;">Effective Attacks:</div>
-            <input type="radio" name="attackAmountRadio" id="attackAmountOption1" value="one" checked>
+            <input type="radio" name="attackAmountRadio" id="attackAmountOption1" value="one">
             <label for="attackAmountOption1" style="align-self: center; font-size: larger;" key="oneAttack">1+</label>
-            <input type="radio" name="attackAmountRadio" id="attackAmountOption2" value="two">
+            <input type="radio" name="attackAmountRadio" id="attackAmountOption2" value="two" checked>
             <label for="attackAmountOption2" style="align-self: center; font-size: larger;" key="twoAttacks">2+</label>
             <input type="radio" name="attackAmountRadio" id="attackAmountOption3" value="three">
             <label for="attackAmountOption3" style="align-self: center; font-size: larger;" key="threeAttacks">3</label>
@@ -93,15 +94,15 @@
             border: 2px solid white; border-radius: 10px;">
         <div style="margin-bottom: 20px;">
             <div key="defTypes" style="font-size: xx-large; margin: 10px;">Types:</div>
-            <input type="radio" name="defTypesRadio" id="defTypesOption1" value="weak" checked>
+            <input type="radio" name="defTypesRadio" id="defTypesOption3" value="none" checked>
+            <label for="defTypesOption3" style="align-self: center; font-size: large;" key="noDefTypes">None</label>
+            <br>
+            <input type="radio" name="defTypesRadio" id="defTypesOption1" value="weak">
             <label for="defTypesOption1" style="align-self: center; font-size: large;" key="weakTypes">No Weak</label>
             <br>
             <input type="radio" name="defTypesRadio" id="defTypesOption2" value="strong">
             <label for="defTypesOption2" style="align-self: center; font-size: large;" key="strongTypes">Only
                 Resistant</label>
-            <br>
-            <input type="radio" name="defTypesRadio" id="defTypesOption3" value="none">
-            <label for="defTypesOption3" style="align-self: center; font-size: large;" key="noDefTypes">None</label>
         </div>
     </div>
     <div style="display: flex; justify-content: center; width: 100%; margin-top: 20px;">
