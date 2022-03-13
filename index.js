@@ -11,7 +11,7 @@ let locale = document.documentElement.lang;
 document.addEventListener("DOMContentLoaded", () => {
     const dic = fetch("./dic.JSON")
         .then(res => res.json())
-        .then(data => console.log("dic: " + data['lang']) + data['lang']['test'])
+        .then(data => console.log("dic: " + data['lang'] + data['lang']['test']))
     console.log(dic);
     console.log(dic['lang']['test'])
     console.log("Day: " + getDay());
