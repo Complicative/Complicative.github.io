@@ -48,7 +48,9 @@ function translateElement(element) {
 langSwitcher.addEventListener("change", () => {
     //Event Listener for the lang change
     locale = langSwitcher.value
-    window.location.assign("https://complicative.github.io/" + "?" + locale);
+    console.log(window.location.href.split('?')[0]);
+    const pathWithoutParam = window.location.href.split('?')[0];
+    window.location.assign(pathWithoutParam + "?" + locale);
 })
 
 
