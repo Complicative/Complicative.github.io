@@ -4,15 +4,16 @@ let type1Select = document.getElementById('type1Select');
 let type2Select = document.getElementById('type2Select');
 let copyBtn = document.getElementById('copyBtn');
 let langSwitcher = document.getElementById('langSwitcher');
-let attackAmountSelect = document.getElementById('attackAmountSelect');
-let defTypeSelect = document.getElementById('defTypeSelect');
 
 
 //localisation
 let locale = document.documentElement.lang;
 document.addEventListener("DOMContentLoaded", () => {
+    const dic = fetch("./dic.JSON")
+        .then(res => res.json())
+        .then(data => console.log("dic: " + data))
+        //console.log(dic);
     console.log("Day: " + getDay());
-    console.log("" + window.location.protocol);
     if (window.location.protocol == "file:") {
         fetch("https://api.countapi.xyz/get/complicative.github.io/visits" + getDay())
             .then(res => res.json())
@@ -59,13 +60,13 @@ function translateElement(element) {
         translation = translations['en'][key];
     }
     element.innerText = translation;
-}
+};
 langSwitcher.addEventListener("change", () => {
     //Event Listener for the lang change
     locale = langSwitcher.value
     const pathWithoutParam = window.location.href.split('?')[0];
     window.location.assign(pathWithoutParam + "?" + locale);
-})
+});
 
 
 
@@ -87,7 +88,7 @@ copyBtn.addEventListener("click", evt => {
 function getDay() {
     const currentDay = Math.floor((Date.now() / 1000) / 86400);
     return currentDay;
-}
+};
 
 
 
@@ -181,7 +182,7 @@ function printTypes(lang) {
 
     //change copy button background to black
     copyBtn.style.color = "white";
-}
+};
 
 function getAttacks(type, e) {
 
@@ -196,7 +197,7 @@ function getAttacks(type, e) {
     }
     return effectiveAttacks;
 
-}
+};
 
 function getDefType(type, e) {
     let defensiveTypes = [];
