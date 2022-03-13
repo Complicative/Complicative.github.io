@@ -27,8 +27,8 @@
     <div style="display:flex; justify-content: center; width: 100%;">
         <h1 style="color: white;">PokeString BETA</h1>
     </div>
-    <div id="input" style="display:flex; justify-content: center; width:100%; margin-top: 20px;">
-        <select id="type1Select" style="font-size:xx-large; text-align: center; 
+    <div id="input" style="display:flex; justify-content: center; width:100%; margin-top: -10px;">
+        <select id="type1Select" style="font-size:x-large; text-align: center; 
         background-color: black; color: white; width: 45%; border: 2px solid white; 
         border-radius: 10px;">
             <option value="bug" key="bug" style="color: darkgreen;">Bug</option>
@@ -50,7 +50,7 @@
             <option value="steel" key="steel" style="color: teal;">Steel</option>
             <option value="water" key="water" style="color: blue;">Water</option>
         </select>
-        <select id="type2Select" style="font-size: xx-large; text-align: center; 
+        <select id="type2Select" style="font-size: x-large; text-align: center; 
         background-color: black; color: white; width: 45%; 
         border: 2px solid white; border-radius: 10px;">
             <option value="bug" key="bug" style="color: darkgreen;">Bug</option>
@@ -74,7 +74,7 @@
         </select>
     </div>
     <div id="inputPKMN" style="display:flex; justify-content: center; width:100%;">
-        <select id="PKMNSelect" style="font-size:xx-large; text-align: center; 
+        <select id="PKMNSelect" style="font-size:x-large; text-align: center; 
             background-color: black; color: white; width: 90%; border: 2px solid white; 
             border-radius: 10px;">
             <option value="none"></option>
@@ -85,22 +85,22 @@
     font-size: large; background-color: black;color: white; text-align: center;
         border: 2px solid white; border-radius: 10px;">
         <div style="margin-bottom: 20px;">
-            <div key="effectAtt" style="font-size: xx-large; margin: 10px;">Effective Attacks:</div>
+            <div key="effectAtt" style="font-size: x-large; margin: 10px;">Effective Attacks:</div>
             <input type="radio" name="attackAmountRadio" id="attackAmountOption1" value="one">
-            <label for="attackAmountOption1" style="align-self: center; font-size: larger;" key="oneAttack">1+</label>
+            <label for="attackAmountOption1" style="align-self: center; font-size: large;" key="oneAttack">1+</label>
             <input type="radio" name="attackAmountRadio" id="attackAmountOption2" value="two" checked>
-            <label for="attackAmountOption2" style="align-self: center; font-size: larger;" key="twoAttacks">2+</label>
+            <label for="attackAmountOption2" style="align-self: center; font-size: large;" key="twoAttacks">2+</label>
             <input type="radio" name="attackAmountRadio" id="attackAmountOption3" value="three">
-            <label for="attackAmountOption3" style="align-self: center; font-size: larger;" key="threeAttacks">3</label>
+            <label for="attackAmountOption3" style="align-self: center; font-size: large;" key="threeAttacks">3</label>
             <input type="radio" name="attackAmountRadio" id="attackAmountOption4" value="none">
-            <label for="attackAmountOption4" style="align-self: center; font-size: larger;" key="noAttacks">None</label>
+            <label for="attackAmountOption4" style="align-self: center; font-size: large;" key="noAttacks">None</label>
         </div>
     </div>
     <div style="display: flex; justify-content: center; width: 90%; margin: 0 auto;
         font-size: large; background-color: black;color: white; text-align: center;
             border: 2px solid white; border-radius: 10px;">
         <div style="margin-bottom: 20px;">
-            <div key="defTypes" style="font-size: xx-large; margin: 10px;">Types:</div>
+            <div key="defTypes" style="font-size: x-large; margin: 10px;">Types:</div>
             <input type="radio" name="defTypesRadio" id="defTypesOption3" value="none" checked>
             <label for="defTypesOption3" style="align-self: center; font-size: large;" key="noDefTypes">None</label>
             <br>
@@ -112,17 +112,18 @@
                 Resistant</label>
         </div>
     </div>
-    <div style="display: flex; justify-content: center; width: 100%; margin-top: 20px;">
+    <div style="display: flex; justify-content: center; width: 100%; margin-top: 10px; margin-bottom: 20px;">
         <button id="goBtn" style="font-size: xx-large; background-color: black;color: white;
         border: 2px solid white; border-radius: 100px;
     width:90%;">GO</button>
     </div>
 
     <div id="outputDiv" style="display: flex; justify-content: center; width: 100%;">
-        <p id="output" style="color: white; margin-bottom: 20px; width: 90%; text-align: center; height: 60px;
+        <div id="output" style="color: white; margin-bottom: 10px; width: 90%; 
+        text-align: center; height: 60px;
         overflow: auto; overflow-wrap: break-word;
         background-color: black; border: 2px solid white;">output
-        </p>
+        </div>
     </div>
     <div style="display: flex; justify-content: center; width: 100%;">
         <button id="copyBtn" style="font-size: x-large; background-color: black;color: white;
