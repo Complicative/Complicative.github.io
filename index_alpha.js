@@ -6,21 +6,26 @@ let copyBtn = document.getElementById('copyBtn');
 let langSwitcher = document.getElementById('langSwitcher');
 
 
+let dictionary;
+let translations;
+
+async function getTranslations() {
+    const response = await fetch("https://complicative.github.io/dictionary.json");
+    return await response.json();
+    //.then(res => res.json())
+    //.then(data => console.log(data['myDic']['en']['bug']))
+    //.then(data => dictionary = data)
+}
+
 //localisation
 let locale = document.documentElement.lang;
-document.addEventListener("DOMContentLoaded", () => {
 
-    fetch("./raid_bosses.json")
-        .then(res => res.json())
-        .then(data => console.log(data))
+document.addEventListener("DOMContentLoaded", async() => {
 
-    fetch("./raid_bosses2.json")
-        .then(res => res.json())
-        .then(data => console.log(data))
+    const trans = await getTranslations();
+    translations = trans['myDic'];
 
-    fetch("./dictionary.json")
-        .then(res => res.json())
-        .then(data => console.log(data))
+    //console.log(dictionary['en']['bug'])
 
     console.log("Day: " + getDay());
     if (window.location.protocol == "file:") {
@@ -63,13 +68,14 @@ function translateElement(element) {
     //Translates elem depending on current locale var
     const key = element.getAttribute("key");
     let translation;
-    if (translations[locale][key] != undefined) {
+    if (translations[locale] != undefined) {
         translation = translations[locale][key];
     } else {
         translation = translations['en'][key];
     }
     element.innerText = translation;
 };
+
 langSwitcher.addEventListener("change", () => {
     //Event Listener for the lang change
     locale = langSwitcher.value
@@ -251,7 +257,7 @@ const effectivness = [
 ];
 
 //Dictionary
-const translations = {
+/*const translations = {
     "en": {
         "bug": "Bug",
         "dark": "Dark",
@@ -515,4 +521,4 @@ const translations = {
         "twoAttacks": "2+",
         "threeAttacks": "3",
     }
-};
+};*/
