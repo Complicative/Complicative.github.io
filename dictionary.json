@@ -58,8 +58,8 @@
             "oneAttack": "1+",
             "twoAttacks": "2+",
             "threeAttacks": "3",
-            "noAttacks": "Aucun",
-            "weakTypes": "Aucune",
+            "noAttacks": "Aucune",
+            "weakTypes": "Sans faiblesse",
             "strongTypes": "Résiste seulement",
             "noDefTypes": "Aucune",
             "copyToClipboard": "Copier vers le presse-papier"

@@ -4,25 +4,85 @@ let type1Select = document.getElementById('type1Select');
 let type2Select = document.getElementById('type2Select');
 let copyBtn = document.getElementById('copyBtn');
 let langSwitcher = document.getElementById('langSwitcher');
+let PKMNSelect = document.getElementById('PKMNSelect');
 
 
 let dictionary;
 let translations;
+let bossObject;
+let bosses = [];
 
 async function getTranslations() {
     const response = await fetch("https://complicative.github.io/dictionary.json");
     return await response.json();
 }
 
+async function getBosses() {
+    const response = await fetch("https://pogoapi.net/api/v1/raid_bosses.json");
+    return await response.json();
+}
+
+
+
+
+
 //localisation
 let locale = document.documentElement.lang;
 
+
+
 document.addEventListener("DOMContentLoaded", async() => {
 
-    const trans = await getTranslations();
-    translations = trans['myDic'];
+    translations = await getTranslations();
+    translations = translations['myDic'];
 
-    //console.log(dictionary['en']['bug'])
+    locale = window.location.search.slice(1, window.location.search.length);
+    langSwitcher.value = locale;
+    if (langSwitcher.value == []) {
+        locale = 'en'
+        langSwitcher.value = locale;
+    }
+    document
+    // Find all elements that have the key attribute and translate them
+        .querySelectorAll("[key]")
+        .forEach(elem => {
+            translateElement(elem);
+        });
+
+    bossObject = await getBosses();
+    bossObject = bossObject['current'];
+    const tier1Object = bossObject["1"];
+    const tier3Object = bossObject["3"];
+    const tier5Object = bossObject["5"];
+    const tierMObject = bossObject["mega"];
+
+    tierMObject.forEach(elem => {
+        bosses.push([elem["name"], "Mega", elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"]])
+    })
+    tier5Object.forEach(elem => {
+        bosses.push([elem["name"], 5, elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"]])
+    })
+    tier3Object.forEach(elem => {
+        bosses.push([elem["name"], 3, elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"]])
+    })
+    tier1Object.forEach(elem => {
+        bosses.push([elem["name"], 1, elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"]]);
+    })
+
+
+
+
+    bosses.forEach(elem => {
+        let option = document.createElement("option");
+        option.setAttribute("key", elem[0]);
+        option.setAttribute("type1", elem[2].toLowerCase());
+        option.setAttribute("type2", elem[3].toLowerCase());
+        option.value = elem[0];
+        option.innerText = `${elem[4] != "Normal" ? elem[4] + " " : ""}${elem[0]} (Tier ${elem[1]})`;
+        PKMNSelect.appendChild(option);
+    })
+
+
 
     console.log("Day: " + getDay());
     if (window.location.protocol == "file:") {
@@ -49,16 +109,8 @@ document.addEventListener("DOMContentLoaded", async() => {
             console.log("Total copies to clipboard: " + visits.value);
         })
 
-    locale = window.location.search.slice(1, window.location.search.length);
-    langSwitcher.value = locale;
-    if (langSwitcher.value == []) {
-        locale = 'en'
-        langSwitcher.value = locale;
-    }
-    document
-    // Find all elements that have the key attribute and translate them
-        .querySelectorAll("[key]")
-        .forEach(translateElement);
+
+
 });
 
 function translateElement(element) {
@@ -79,6 +131,23 @@ langSwitcher.addEventListener("change", () => {
     const pathWithoutParam = window.location.href.split('?')[0];
     window.location.assign(pathWithoutParam + "?" + locale);
 });
+
+PKMNSelect.addEventListener("change", () => {
+    //Event Listener for the lang change
+    if (PKMNSelect.value == "none") return;
+    type1Select.value = bosses.find(elem => elem[0] == PKMNSelect.value)[2].toLowerCase();
+    type2Select.value = bosses.find(elem => elem[0] == PKMNSelect.value)[3].toLowerCase();
+
+    //console.log(bosses.find(elem => elem[0] == PKMNSelect.value)[2] + " & " + bosses.find(elem => elem[0] == PKMNSelect.value)[3]);
+});
+
+type1Select.addEventListener("change", () => {
+    PKMNSelect.value = "none";
+})
+type2Select.addEventListener("change", () => {
+    PKMNSelect.value = "none";
+})
+
 
 
 
