@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>PokeString BETA v0.2.0</title>
+    <script defer src="index_alpha.js" charset="utf-8"></script>
+
+</head>
+
+<body style="background-color:#555555; overflow: auto;">
+    <select id="langSwitcher" style="position: fixed; right: 0px; top: 0px;
+    background-color: black; color: white; border: 2px solid white; border-radius: 10px; font-size: large;">
+        <option value="en">English</option>
+        <option value="fr">French</option>
+        <option value="fi">Finnish</option>
+        <option value="de">German</option>
+        <option value="it">Italian</option>
+        <option value="no">Norwegian</option>
+        <option value="es">Spanish</option>
+        <option value="sv">Swedish</option>
+        <option value="kli">Klingon</option>
+    </select>
+    <div style="display:flex; justify-content: center; width: 100%;">
+        <h1 style="color: white;">PokeString BETA</h1>
+    </div>
+    <div id="input" style="display:flex; justify-content: center; width:100%; margin-top: 20px;">
+        <select id="type1Select" style="font-size:xx-large; text-align: center; 
+        background-color: black; color: white; width: 45%; border: 2px solid white; 
+        border-radius: 10px;">
+            <option value="bug" key="bug" style="color: darkgreen;">Bug</option>
+            <option value="dark" key="dark" style="color: grey;">Dark</option>
+            <option value="dragon" key="dragon" style="color: blue;">Dragon</option>
+            <option value="electric" key="electric" style="color: yellow;">Electric</option>
+            <option value="fairy" key="fairy" style="color: magenta;">Fairy</option>
+            <option value="fighting" key="fighting" style="color: brown;">Fighting</option>
+            <option value="fire" key="fire" style="color: red;">Fire</option>
+            <option value="flying" key="flying" style="color: lightskyblue;">Flying</option>
+            <option value="ghost" key="ghost" style="color: darkslateblue;">Ghost</option>
+            <option value="grass" key="grass" style="color: greenyellow;">Grass</option>
+            <option value="ground" key="ground" style="color: chocolate;">Ground</option>
+            <option value="ice" key="ice" style="color: turquoise;">Ice</option>
+            <option value="normal" key="normal" style="color: darkgray;">Normal</option>
+            <option value="poison" key="poison" style="color: purple;">Poison</option>
+            <option value="psychic" key="psychic" style="color: lightcoral;">Psychic</option>
+            <option value="rock" key="rock" style="color: tan;">Rock</option>
+            <option value="steel" key="steel" style="color: teal;">Steel</option>
+            <option value="water" key="water" style="color: blue;">Water</option>
+        </select>
+        <select id="type2Select" style="font-size: xx-large; text-align: center; 
+        background-color: black; color: white; width: 45%; 
+        border: 2px solid white; border-radius: 10px;">
+            <option value="bug" key="bug" style="color: darkgreen;">Bug</option>
+            <option value="dark" key="dark" style="color: grey;">Dark</option>
+            <option value="dragon" key="dragon" style="color: blue;">Dragon</option>
+            <option value="electric" key="electric" style="color: yellow;">Electric</option>
+            <option value="fairy" key="fairy" style="color: magenta;">Fairy</option>
+            <option value="fighting" key="fighting" style="color: brown;">Fighting</option>
+            <option value="fire" key="fire" style="color: red;">Fire</option>
+            <option value="flying" key="flying" style="color: lightskyblue;">Flying</option>
+            <option value="ghost" key="ghost" style="color: darkslateblue;">Ghost</option>
+            <option value="grass" key="grass" style="color: greenyellow;">Grass</option>
+            <option value="ground" key="ground" style="color: chocolate;">Ground</option>
+            <option value="ice" key="ice" style="color: turquoise;">Ice</option>
+            <option value="normal" key="normal" style="color: darkgray;">Normal</option>
+            <option value="poison" key="poison" style="color: purple;">Poison</option>
+            <option value="psychic" key="psychic" style="color: lightcoral;">Psychic</option>
+            <option value="rock" key="rock" style="color: tan;">Rock</option>
+            <option value="steel" key="steel" style="color: teal;">Steel</option>
+            <option value="water" key="water" style="color: blue;">Water</option>
+        </select>
+    </div><br>
+    <div style="display: flex; justify-content: center; width: 90%; margin: 0 auto;
+    font-size: large; background-color: black;color: white; text-align: center;
+        border: 2px solid white; border-radius: 10px;">
+        <div style="margin-bottom: 20px;">
+            <div key="effectAtt" style="font-size: xx-large; margin: 10px;">Effective Attacks:</div>
+            <input type="radio" name="attackAmountRadio" id="attackAmountOption1" value="one" checked>
+            <label for="attackAmountOption1" style="align-self: center; font-size: larger;" key="oneAttack">1+</label>
+            <input type="radio" name="attackAmountRadio" id="attackAmountOption2" value="two">
+            <label for="attackAmountOption2" style="align-self: center; font-size: larger;" key="twoAttacks">2+</label>
+            <input type="radio" name="attackAmountRadio" id="attackAmountOption3" value="three">
+            <label for="attackAmountOption3" style="align-self: center; font-size: larger;" key="threeAttacks">3</label>
+            <input type="radio" name="attackAmountRadio" id="attackAmountOption4" value="none">
+            <label for="attackAmountOption4" style="align-self: center; font-size: larger;" key="noAttacks">None</label>
+        </div>
+    </div>
+    <div style="display: flex; justify-content: center; width: 90%; margin: 0 auto;
+        font-size: large; background-color: black;color: white; text-align: center;
+            border: 2px solid white; border-radius: 10px;">
+        <div style="margin-bottom: 20px;">
+            <div key="defTypes" style="font-size: xx-large; margin: 10px;">Types:</div>
+            <input type="radio" name="defTypesRadio" id="defTypesOption1" value="weak" checked>
+            <label for="defTypesOption1" style="align-self: center; font-size: large;" key="weakTypes">No Weak</label>
+            <br>
+            <input type="radio" name="defTypesRadio" id="defTypesOption2" value="strong">
+            <label for="defTypesOption2" style="align-self: center; font-size: large;" key="strongTypes">Only
+                Resistant</label>
+            <br>
+            <input type="radio" name="defTypesRadio" id="defTypesOption3" value="none">
+            <label for="defTypesOption3" style="align-self: center; font-size: large;" key="noDefTypes">None</label>
+        </div>
+    </div>
+    <div style="display: flex; justify-content: center; width: 100%; margin-top: 20px;">
+        <button id="goBtn" style="font-size: xx-large; background-color: black;color: white;
+        border: 2px solid white; border-radius: 100px;
+    width:90%;">GO</button>
+    </div>
+
+    <div id="outputDiv" style="display: flex; justify-content: center; width: 100%;">
+        <p id="output" style="color: white; margin-bottom: 20px; width: 90%; text-align: center; height: 60px;
+        overflow: auto; overflow-wrap: break-word;
+        background-color: black; border: 2px solid white;">output
+        </p>
+    </div>
+    <div style="display: flex; justify-content: center; width: 100%;">
+        <button id="copyBtn" style="font-size: x-large; background-color: black;color: white;
+        border: 2px solid white; border-radius: 100px; margin-bottom: 60px;
+    width:90%;" key="copyToClipboard">Copy to Clipboard</button>
+    </div>
+
+    <div style="position: fixed; bottom: 0px; left: 0px; right: 0px; margin-bottom: 0px; 
+    text-align: center; background-color: black;
+    display: flex; justify-content: center; width: 100%;">
+        <p style="color: white; margin: 10px; font-size: small;">Report issue through<br>
+            <a href="https://www.reddit.com/message/compose/?to=mComplicative" style="color: white;">Reddit DM
+                (mComplicative)</a> or
+            <a href="https://github.com/Complicative/Complicative.github.io/issues" style="color: white;">Github Issues
+                (Complicative)</a>
+        </p>
+    </div>
+
+
+</body>
+
+
+
+</html>
