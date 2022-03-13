@@ -4,15 +4,85 @@ let type1Select = document.getElementById('type1Select');
 let type2Select = document.getElementById('type2Select');
 let copyBtn = document.getElementById('copyBtn');
 let langSwitcher = document.getElementById('langSwitcher');
+let PKMNSelect = document.getElementById('PKMNSelect');
+
+
+let dictionary;
+let translations;
+let bossObject;
+let bosses = [];
+
+async function getTranslations() {
+    const response = await fetch("https://complicative.github.io/dictionary.json");
+    return await response.json();
+}
+
+async function getBosses() {
+    const response = await fetch("https://pogoapi.net/api/v1/raid_bosses.json");
+    return await response.json();
+}
+
+
+
 
 
 //localisation
 let locale = document.documentElement.lang;
-document.addEventListener("DOMContentLoaded", () => {
 
-    /*fetch("./raid_bosses.json")
-        .then(res => res.json())
-        .then(data => console.log(data))*/
+
+
+document.addEventListener("DOMContentLoaded", async() => {
+
+    translations = await getTranslations();
+    translations = translations['myDic'];
+
+    locale = window.location.search.slice(1, window.location.search.length);
+    langSwitcher.value = locale;
+    if (langSwitcher.value == []) {
+        locale = 'en'
+        langSwitcher.value = locale;
+    }
+    document
+    // Find all elements that have the key attribute and translate them
+        .querySelectorAll("[key]")
+        .forEach(elem => {
+            translateElement(elem);
+        });
+
+    bossObject = await getBosses();
+    bossObject = bossObject['current'];
+    const tier1Object = bossObject["1"];
+    const tier3Object = bossObject["3"];
+    const tier5Object = bossObject["5"];
+    const tierMObject = bossObject["mega"];
+
+    tierMObject.forEach(elem => {
+        bosses.push([elem["name"], "Mega", elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"]])
+    })
+    tier5Object.forEach(elem => {
+        bosses.push([elem["name"], 5, elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"]])
+    })
+    tier3Object.forEach(elem => {
+        bosses.push([elem["name"], 3, elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"]])
+    })
+    tier1Object.forEach(elem => {
+        bosses.push([elem["name"], 1, elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"]]);
+    })
+
+
+
+
+    bosses.forEach(elem => {
+        let option = document.createElement("option");
+        option.setAttribute("key", elem[0]);
+        option.setAttribute("type1", elem[2].toLowerCase());
+        option.setAttribute("type2", elem[3].toLowerCase());
+        option.value = elem[0];
+        option.innerText = `${elem[4] != "Normal" ? elem[4] + " " : ""}${elem[0]} (Tier ${elem[1]})`;
+        PKMNSelect.appendChild(option);
+    })
+
+
 
     console.log("Day: " + getDay());
     if (window.location.protocol == "file:") {
@@ -39,35 +109,45 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("Total copies to clipboard: " + visits.value);
         })
 
-    locale = window.location.search.slice(1, window.location.search.length);
-    langSwitcher.value = locale;
-    if (langSwitcher.value == []) {
-        locale = 'en'
-        langSwitcher.value = locale;
-    }
-    document
-    // Find all elements that have the key attribute and translate them
-        .querySelectorAll("[key]")
-        .forEach(translateElement);
+
+
 });
 
 function translateElement(element) {
     //Translates elem depending on current locale var
     const key = element.getAttribute("key");
     let translation;
-    if (translations[locale][key] != undefined) {
+    if (translations[locale] != undefined && translations[locale][key] != undefined) {
         translation = translations[locale][key];
     } else {
         translation = translations['en'][key];
     }
     element.innerText = translation;
 };
+
 langSwitcher.addEventListener("change", () => {
     //Event Listener for the lang change
     locale = langSwitcher.value
     const pathWithoutParam = window.location.href.split('?')[0];
     window.location.assign(pathWithoutParam + "?" + locale);
 });
+
+PKMNSelect.addEventListener("change", () => {
+    //Event Listener for the lang change
+    if (PKMNSelect.value == "none") return;
+    type1Select.value = bosses.find(elem => elem[0] == PKMNSelect.value)[2].toLowerCase();
+    type2Select.value = bosses.find(elem => elem[0] == PKMNSelect.value)[3].toLowerCase();
+
+    //console.log(bosses.find(elem => elem[0] == PKMNSelect.value)[2] + " & " + bosses.find(elem => elem[0] == PKMNSelect.value)[3]);
+});
+
+type1Select.addEventListener("change", () => {
+    PKMNSelect.value = "none";
+})
+type2Select.addEventListener("change", () => {
+    PKMNSelect.value = "none";
+})
+
 
 
 
@@ -241,270 +321,3 @@ const effectivness = [
     [0, 0, 0, -1, 1, 0, -1, 0, 0, 0, 0, 1, 0, 0, 0, 1, -1, -1], //steel
     [0, 0, -1, 0, 0, 0, 1, 0, 0, -1, 1, 0, 0, 0, 0, 1, 0, -1] //water
 ];
-
-//Dictionary
-const translations = {
-    "en": {
-        "bug": "Bug",
-        "dark": "Dark",
-        "dragon": "Dragon",
-        "electric": "Electric",
-        "fairy": "Fairy",
-        "fighting": "Fighting",
-        "fire": "Fire",
-        "flying": "Flying",
-        "ghost": "Ghost",
-        "grass": "Grass",
-        "ground": "Ground",
-        "ice": "Ice",
-        "normal": "Normal",
-        "poison": "Poison",
-        "psychic": "Psychic",
-        "rock": "Rock",
-        "steel": "Steel",
-        "water": "Water",
-
-        "effectAtt": "Effective Attacks:",
-        "defTypes": "Types:",
-
-        "oneAttack": "1+",
-        "twoAttacks": "2+",
-        "threeAttacks": "3",
-        "noAttacks": "None",
-
-        "weakTypes": "No Weak",
-        "strongTypes": "Only Resistant",
-        "noDefTypes": "None",
-
-        "copyToClipboard": "Copy to Clipboard",
-
-        "mega_venusaur": "Mega Venusaur (Mega)",
-        "tapu_koko": "Tapu Koko (Tier 5)",
-        "alolan_raichu": "Alolan Raichu (Tier 3)",
-        "nidoqueen": "Nidoqueen (Tier 3)",
-        "wigglytuff": ""
-    },
-    "de": {
-        "bug": "Käfer",
-        "dark": "Unlicht",
-        "dragon": "Drache",
-        "electric": "Elektro",
-        "fairy": "Fee",
-        "fighting": "Kampf",
-        "fire": "Feuer",
-        "flying": "Flug",
-        "ghost": "Geist",
-        "grass": "Pflanze",
-        "ground": "Boden",
-        "ice": "Eis",
-        "normal": "Normal",
-        "poison": "Gift",
-        "psychic": "Psycho",
-        "rock": "Gestein",
-        "steel": "Stahl",
-        "water": "Wasser",
-
-        "effectAtt": "Effektive Attacken:",
-        "defTypes": "Typen:",
-
-        "oneAttack": "1+",
-        "twoAttacks": "2+",
-        "threeAttacks": "3",
-        "noAttacks": "Keine",
-
-        "weakTypes": "Keine Schwachen",
-        "strongTypes": "Nur Resistente",
-        "noDefTypes": "Keine",
-
-        "copyToClipboard": "In die Zwischenablage kopieren",
-    },
-    "es": {
-        "bug": "Bicho",
-        "dark": "Siniestro",
-        "dragon": "Dragón",
-        "electric": "Eléctrico",
-        "fairy": "Hada",
-        "fighting": "Lucha",
-        "fire": "Fuego",
-        "flying": "Volador",
-        "ghost": "Fantasma",
-        "grass": "Planta",
-        "ground": "Tierra",
-        "ice": "Hielo",
-        "normal": "Normal",
-        "poison": "Veneno",
-        "psychic": "Psíquico",
-        "rock": "Roca",
-        "steel": "Acero",
-        "water": "Agua",
-
-        "effectAtt": "Effective Attacks:",
-        "defTypes": "Types:",
-
-        "oneAttack": "1+",
-        "twoAttacks": "2+",
-        "threeAttacks": "3",
-        "noAttacks": "None",
-
-        "weakTypes": "No Weak",
-        "strongTypes": "Only Resistant",
-        "noDefTypes": "None",
-
-        "copyToClipboard": "Copy to Clipboard",
-    },
-    "fr": {
-        "bug": "Insecte",
-        "dark": "Ténèbres",
-        "dragon": "Dragon",
-        "electric": "Electrique",
-        "fairy": "Fée",
-        "fighting": "Combat",
-        "fire": "Feu",
-        "flying": "Vol",
-        "ghost": "Spectre",
-        "grass": "Herbe",
-        "ground": "Sol",
-        "ice": "Glace",
-        "normal": "Normal",
-        "poison": "Poison",
-        "psychic": "Psy",
-        "rock": "Roche",
-        "steel": "Acier",
-        "water": "Eau",
-
-        "effectAtt": "Attaque Effective",
-        "defTypes": "Types:",
-
-        "oneAttack": "1+",
-        "twoAttacks": "2+",
-        "threeAttacks": "3",
-
-        "noAttacks": "Aucun",
-        "weakTypes": "Aucune",
-        "strongTypes": "Résiste seulement",
-        "noDefTypes": "Aucune",
-
-        "copyToClipboard": "Copier vers le presse-papier",
-    },
-    "no": {
-        "oneAttack": "1+",
-        "twoAttacks": "2+",
-        "threeAttacks": "3",
-        "noAttacks": "Ingen",
-        "weakTypes": "Ingen svakhet",
-        "strongTypes": "Bare står imot",
-        "noDefTypes": "Ingen",
-        "copyToClipboard": "Kopiere til utklippstavle",
-    },
-    "kli": {
-        "bug": "jI'oy'",
-        "dark": "Hurgh",
-        "dragon": "Duq",
-        "electric": "'ul",
-        "fairy": "maSaH",
-        "fighting": "Bisuv",
-        "fire": "baH",
-        "flying": "Suv",
-        "ghost": "Lom qa'",
-        "grass": "'uch",
-        "ground": "yav",
-        "ice": "chuch",
-        "normal": "motlh",
-        "poison": "tar",
-        "psychic": "QI'yaH",
-        "rock": "nagh",
-        "steel": "naQ",
-        "water": "bIQ",
-        "effectAtt": "vaj jangDI' qeylIS.",
-        "defTypes": "Segh",
-        "oneAttack": "1+",
-        "twoAttacks": "2+",
-        "threeAttacks": "3",
-        "noAttacks": "pagh",
-        "weakTypes": "puj",
-        "strongTypes": "polonyuS",
-        "noDefTypes": "pagh",
-        "copyToClipboard": "qeylIS",
-    },
-    "it": {
-        "bug": "Coleottero",
-        "dark": "Buio",
-        "dragon": "Drago",
-        "electric": "Elettro",
-        "fairy": "Folletto",
-        "fighting": "Lotta",
-        "fire": "Fuoco",
-        "flying": "Volante",
-        "ghost": "Spettro",
-        "grass": "Erba",
-        "ground": "Terra",
-        "ice": "Ghiaccio",
-        "normal": "Normale",
-        "poison": "Veleno",
-        "psychic": "Psico",
-        "rock": "Roccia",
-        "steel": "Acciaio",
-        "water": "Acqua",
-
-
-        "oneAttack": "1+",
-        "twoAttacks": "2+",
-        "threeAttacks": "3",
-
-    },
-    "sv": {
-        "bug": "Insekt",
-        "dark": "Mörk",
-        "dragon": "Drake",
-        "electric": "Elektrisk",
-        "fairy": "Fe",
-        "fighting": "Kamp",
-        "fire": "Eld",
-        "flying": "Flygande",
-        "ghost": "Spöke",
-        "grass": "Gräs",
-        "ground": "Mark",
-        "ice": "Is",
-        "normal": "Normal",
-        "poison": "Gift",
-        "psychic": "Psykisk",
-        "rock": "Sten",
-        "steel": "Stål",
-        "water": "Vatten",
-
-
-        "oneAttack": "1+",
-        "twoAttacks": "2+",
-        "threeAttacks": "3",
-    },
-    "fi": {
-        "bug": "Hyönteinen",
-        "dark": "Pimeys",
-        "dragon": "Lohikäärme",
-        "electric": "Sähkö",
-        "fairy": "Keiju",
-        "fighting": "Tappelu",
-        "fire": "Tuli",
-        "flying": "Lento",
-        "ghost": "Aave",
-        "grass": "Ruoho",
-        "ground": "Maa",
-        "ice": "Jää",
-        "normal": "Normaali",
-        "poison": "Myrkky",
-        "psychic": "Meedio",
-        "rock": "Kivi",
-        "steel": "Teräs",
-        "water": "Vesi",
-
-
-        "oneAttack": "1+",
-        "twoAttacks": "2+",
-        "threeAttacks": "3",
-    },
-    "cs": {
-        "oneAttack": "1+",
-        "twoAttacks": "2+",
-        "threeAttacks": "3",
-    }
-};
