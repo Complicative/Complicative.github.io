@@ -9,11 +9,6 @@ let langSwitcher = document.getElementById('langSwitcher');
 //localisation
 let locale = document.documentElement.lang;
 document.addEventListener("DOMContentLoaded", () => {
-    const dic = fetch("./dic.JSON")
-        .then(res => res.json())
-        .then(data => console.log("dic: " + data['lang'] + data['lang']['test']))
-    console.log(dic);
-    console.log(dic['lang']['test'])
     console.log("Day: " + getDay());
     if (window.location.protocol == "file:") {
         fetch("https://api.countapi.xyz/get/complicative.github.io/visits" + getDay())
