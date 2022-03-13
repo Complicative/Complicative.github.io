@@ -11,6 +11,23 @@ let defTypeSelect = document.getElementById('defTypeSelect');
 //localisation
 let locale = document.documentElement.lang;
 document.addEventListener("DOMContentLoaded", () => {
+    console.log("Day: " + getDay());
+    fetch("https://api.countapi.xyz/hit/complicative.github.io/visits" + getDay())
+        .then(res => res.json())
+        .then(visits => {
+            console.log("Total visits today: " + visits.value);
+        })
+    fetch("https://api.countapi.xyz/get/complicative.github.io/goBtn" + getDay())
+        .then(res => res.json())
+        .then(visits => {
+            console.log("Total GO Button uses: " + visits.value);
+        })
+    fetch("https://api.countapi.xyz/get/complicative.github.io/copy" + getDay())
+        .then(res => res.json())
+        .then(visits => {
+            console.log("Total copies to clipboard: " + visits.value);
+        })
+
     locale = window.location.search.slice(1, window.location.search.length);
     langSwitcher.value = locale;
     if (langSwitcher.value == []) {
@@ -22,11 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
         .querySelectorAll("[key]")
         .forEach(translateElement);
 });
-fetch("https://api.countapi.xyz/hit/complicative.github.io/visits")
-    .then(res => res.json())
-    .then(visits => {
-        console.log("Total visits: " + visits.value);
-    })
 
 function translateElement(element) {
     //Translates elem depending on current locale var
@@ -42,7 +54,8 @@ function translateElement(element) {
 langSwitcher.addEventListener("change", () => {
     //Event Listener for the lang change
     locale = langSwitcher.value
-    window.location.assign("https://complicative.github.io/" + "?" + locale);
+    const pathWithoutParam = window.location.href.split('?')[0];
+    window.location.assign(pathWithoutParam + "?" + locale);
 })
 
 
@@ -51,11 +64,7 @@ langSwitcher.addEventListener("change", () => {
 goBtn.addEventListener("click", evt => {
     //Event Listener for the GO Button
     printTypes(locale);
-    fetch("https://api.countapi.xyz/hit/complicative.github.io/goBtn")
-        .then(res => res.json())
-        .then(visits => {
-            console.log("Total GO Button uses: " + visits.value);
-        })
+    fetch("https://api.countapi.xyz/hit/complicative.github.io/goBtn" + getDay());
 });
 
 copyBtn.addEventListener("click", evt => {
@@ -63,12 +72,13 @@ copyBtn.addEventListener("click", evt => {
     navigator.clipboard.writeText(output.textContent);
     //Change button colour, as confirmation
     copyBtn.style.color = "green";
-    fetch("https://api.countapi.xyz/hit/complicative.github.io/copy")
-        .then(res => res.json())
-        .then(visits => {
-            console.log("Total copies to clipboard: " + visits.value);
-        })
+    fetch("https://api.countapi.xyz/hit/complicative.github.io/copy" + getDay());
 });
+
+function getDay() {
+    const currentDay = Math.floor((Date.now() / 1000) / 86400);
+    return currentDay;
+}
 
 
 
