@@ -5,12 +5,14 @@ let type2Select = document.getElementById('type2Select');
 let copyBtn = document.getElementById('copyBtn');
 let langSwitcher = document.getElementById('langSwitcher');
 let PKMNSelect = document.getElementById('PKMNSelect');
+let PKMNSelectold = document.getElementById('PKMNSelectold');
 
 
 let dictionary;
 let translations;
 let bossObject;
-let bosses = [];
+let bossesCurrent = [];
+let bossesOld = [];
 
 async function getTranslations() {
     const response = await fetch("https://complicative.github.io/dictionary.json");
@@ -49,39 +51,11 @@ document.addEventListener("DOMContentLoaded", async() => {
             translateElement(elem);
         });
 
+
     bossObject = await getBosses();
-    bossObject = bossObject['current'];
-    const tier1Object = bossObject["1"];
-    const tier3Object = bossObject["3"];
-    const tier5Object = bossObject["5"];
-    const tierMObject = bossObject["mega"];
 
-    tierMObject.forEach(elem => {
-        bosses.push([elem["name"], "Mega", elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"]])
-    })
-    tier5Object.forEach(elem => {
-        bosses.push([elem["name"], 5, elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"]])
-    })
-    tier3Object.forEach(elem => {
-        bosses.push([elem["name"], 3, elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"]])
-    })
-    tier1Object.forEach(elem => {
-        bosses.push([elem["name"], 1, elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"]]);
-    })
-
-
-
-
-    bosses.forEach(elem => {
-        let option = document.createElement("option");
-        option.setAttribute("key", elem[0]);
-        option.setAttribute("type1", elem[2].toLowerCase());
-        option.setAttribute("type2", elem[3].toLowerCase());
-        option.value = elem[0];
-        option.innerText = `${elem[4] != "Normal" ? elem[4] + " " : ""}${elem[0]} (Tier ${elem[1]})`;
-        PKMNSelect.appendChild(option);
-    })
-
+    setBosses('current', PKMNSelect, bossesCurrent);
+    setBosses('previous', PKMNSelectold, bossesOld);
 
 
     console.log("Day: " + getDay());
@@ -113,6 +87,44 @@ document.addEventListener("DOMContentLoaded", async() => {
 
 });
 
+async function setBosses(time, select, bossArr) {
+
+    let nbossObject = bossObject[time];
+    const tier1Object = nbossObject["1"];
+    const tier3Object = nbossObject["3"];
+    const tier5Object = nbossObject["5"];
+    const tierMObject = nbossObject["mega"];
+
+    tierMObject.forEach(elem => {
+        bossArr.push([elem["name"], "Mega", elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"]])
+    })
+
+    tier5Object.forEach(elem => {
+        bossArr.push([elem["name"], 5, elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"]])
+    })
+
+    tier3Object.forEach(elem => {
+        bossArr.push([elem["name"], 3, elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"]])
+    })
+
+    tier1Object.forEach(elem => {
+        bossArr.push([elem["name"], 1, elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"]]);
+    })
+
+    bossArr.sort((a, b) => a[0] > b[0]);
+
+    bossArr.forEach(elem => {
+        let option = document.createElement("option");
+        option.setAttribute("key", elem[0]);
+        option.setAttribute("type1", elem[2].toLowerCase());
+        option.setAttribute("type2", elem[3].toLowerCase());
+        option.value = elem[0];
+        option.innerText = `${elem[0]}${elem[4] != "Normal" ? " " + elem[4] : ""} (Tier ${elem[1]})`;
+        select.appendChild(option);
+    })
+
+}
+
 function translateElement(element) {
     //Translates elem depending on current locale var
     const key = element.getAttribute("key");
@@ -135,8 +147,17 @@ langSwitcher.addEventListener("change", () => {
 PKMNSelect.addEventListener("change", () => {
     //Event Listener for the lang change
     if (PKMNSelect.value == "none") return;
-    type1Select.value = bosses.find(elem => elem[0] == PKMNSelect.value)[2].toLowerCase();
-    type2Select.value = bosses.find(elem => elem[0] == PKMNSelect.value)[3].toLowerCase();
+    type1Select.value = bossesCurrent.find(elem => elem[0] == PKMNSelect.value)[2].toLowerCase();
+    type2Select.value = bossesCurrent.find(elem => elem[0] == PKMNSelect.value)[3].toLowerCase();
+
+    //console.log(bosses.find(elem => elem[0] == PKMNSelect.value)[2] + " & " + bosses.find(elem => elem[0] == PKMNSelect.value)[3]);
+});
+
+PKMNSelectold.addEventListener("change", () => {
+    //Event Listener for the lang change
+    if (PKMNSelectold.value == "none") return;
+    type1Select.value = bossesOld.find(elem => elem[0] == PKMNSelectold.value)[2].toLowerCase();
+    type2Select.value = bossesOld.find(elem => elem[0] == PKMNSelectold.value)[3].toLowerCase();
 
     //console.log(bosses.find(elem => elem[0] == PKMNSelect.value)[2] + " & " + bosses.find(elem => elem[0] == PKMNSelect.value)[3]);
 });
