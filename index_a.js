@@ -4,8 +4,8 @@ let type1Select = document.getElementById('type1Select');
 let type2Select = document.getElementById('type2Select');
 let copyBtn = document.getElementById('copyBtn');
 let langSwitcher = document.getElementById('langSwitcher');
-let PKMNSelect = document.getElementById('PKMNSelect');
-let PKMNSelectold = document.getElementById('PKMNSelectold');
+let PKMNSelectCurrent = document.getElementById('PKMNSelectCurrent');
+let PKMNSelectOld = document.getElementById('PKMNSelectOld');
 
 
 let dictionary;
@@ -54,8 +54,8 @@ document.addEventListener("DOMContentLoaded", async() => {
 
     bossObject = await getBosses();
 
-    setBosses('current', PKMNSelect, bossesCurrent);
-    setBosses('previous', PKMNSelectold, bossesOld);
+    setBosses('current', PKMNSelectCurrent, bossesCurrent);
+    setBosses('previous', PKMNSelectOld, bossesOld);
 
 
     console.log("Day: " + getDay());
@@ -144,29 +144,29 @@ langSwitcher.addEventListener("change", () => {
     window.location.assign(pathWithoutParam + "?" + locale);
 });
 
-PKMNSelect.addEventListener("change", () => {
+PKMNSelectCurrent.addEventListener("change", () => {
     //Event Listener for the lang change
-    if (PKMNSelect.value == "none") return;
-    type1Select.value = bossesCurrent.find(elem => elem[0] == PKMNSelect.value)[2].toLowerCase();
-    type2Select.value = bossesCurrent.find(elem => elem[0] == PKMNSelect.value)[3].toLowerCase();
+    if (PKMNSelectCurrent.value == "none") return;
+    type1Select.value = bossesCurrent.find(elem => elem[0] == PKMNSelectCurrent.value)[2].toLowerCase();
+    type2Select.value = bossesCurrent.find(elem => elem[0] == PKMNSelectCurrent.value)[3].toLowerCase();
 
     //console.log(bosses.find(elem => elem[0] == PKMNSelect.value)[2] + " & " + bosses.find(elem => elem[0] == PKMNSelect.value)[3]);
 });
 
-PKMNSelectold.addEventListener("change", () => {
+PKMNSelectOld.addEventListener("change", () => {
     //Event Listener for the lang change
-    if (PKMNSelectold.value == "none") return;
-    type1Select.value = bossesOld.find(elem => elem[0] == PKMNSelectold.value)[2].toLowerCase();
-    type2Select.value = bossesOld.find(elem => elem[0] == PKMNSelectold.value)[3].toLowerCase();
+    if (PKMNSelectOld.value == "none") return;
+    type1Select.value = bossesOld.find(elem => elem[0] == PKMNSelectOld.value)[2].toLowerCase();
+    type2Select.value = bossesOld.find(elem => elem[0] == PKMNSelectOld.value)[3].toLowerCase();
 
     //console.log(bosses.find(elem => elem[0] == PKMNSelect.value)[2] + " & " + bosses.find(elem => elem[0] == PKMNSelect.value)[3]);
 });
 
 type1Select.addEventListener("change", () => {
-    PKMNSelect.value = "none";
+    PKMNSelectCurrent.value = "none";
 })
 type2Select.addEventListener("change", () => {
-    PKMNSelect.value = "none";
+    PKMNSelectCurrent.value = "none";
 })
 
 
