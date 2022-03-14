@@ -6,30 +6,78 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>PokeString ALPHA</title>
+    <title>PokeString BETA</title>
     <script defer src="index.js" charset="utf-8"></script>
 
 </head>
 
 <body style="background-color:#555555; overflow: auto;">
-    <select id="langSwitcher" style="position: fixed; right: 0px; top: 0px;
-    background-color: black; color: white; border: 2px solid white; border-radius: 10px; font-size: large;">
-        <option value="en">English</option>
-        <option value="fr">French</option>
-        <option value="fi">Finnish</option>
-        <option value="de">German</option>
-        <option value="it">Italian</option>
-        <option value="no">Norwegian</option>
-        <option value="es">Spanish</option>
-        <option value="sv">Swedish</option>
-        <option value="kli">Klingon</option>
-    </select>
-    <div style="display:flex; justify-content: center; width: 100%; margin-top: 30px;">
+
+
+    <button onclick="menu_open()" style="right: 0; bottom: 0; position: fixed;
+    background-color: black; color: white;
+    border: 2px solid white; border-radius: 0px;
+    font-size: x-large; width: 20%;">&#9776;</button>
+
+    <div style="transition:0.5s; position:fixed; width:0; 
+    bottom: 0; right:0; top: 0; background-color: black;" id="sidebar">
+        <select id="langSwitcher" style="background-color: black; color: white; 
+            border: 2px solid white; border-radius: 10px; font-size: large; 
+            width: 100%;">
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="fi">Finnish</option>
+            <option value="de">German</option>
+            <option value="it">Italian</option>
+            <option value="no">Norwegian</option>
+            <option value="es">Spanish</option>
+            <option value="sv">Swedish</option>
+            <option value="kli">Klingon</option>
+        </select><br>
+        <button onclick="menu_close()" style="position: fixed; bottom: 0;
+            background-color: black; color: white;
+            border: 2px solid white; border-radius: 0px;
+            font-size: x-large; width: 40%;">&times;</button>
+    </div>
+
+    <script>
+        function menu_open() {
+            document.getElementById("sidebar").style.width = "40%";
+            document.getElementById("footer").style.width = "60%";
+            document.getElementById('footerText').style.display = "block";
+
+        }
+
+        function menu_close() {
+            document.getElementById("sidebar").style.width = "0";
+            document.getElementById("footer").style.width = "0";
+            document.getElementById('footerText').style.display = "none";
+        }
+
+        function pkmnSelect_open(btn) {
+            if (btn.value == "closed") {
+                document.getElementById('inputPKMN').style.height = "auto";
+                document.getElementById('PKMNSelectCurrent').style.display = "block";
+                document.getElementById('PKMNSelectOld').style.display = "block";
+                btn.innerHTML = "&UpArrowBar;";
+                btn.value = "open";
+            } else if (btn.value == "open") {
+                document.getElementById('inputPKMN').style.height = "0";
+                document.getElementById('PKMNSelectCurrent').style.display = "none";
+                document.getElementById('PKMNSelectOld').style.display = "none";
+                btn.innerHTML = "&DownArrowBar;";
+                btn.value = "closed";
+            }
+        }
+    </script>
+
+
+    <div style="display:flex; justify-content: center; width: 100%; margin-top: -10px;">
         <h1 style="color: white;">PokeString BETA</h1>
     </div>
     <div id="input" style="display:flex; justify-content: center; width:100%; margin-top: -10px;">
         <select id="type1Select" style="font-size:x-large; text-align: center; 
-        background-color: black; color: white; width: 45%; border: 2px solid white; 
+        background-color: black; color: white; width: 40%; border: 2px solid white; 
         border-radius: 10px;">
             <option value="bug" key="bug" style="color: darkgreen;">Bug</option>
             <option value="dark" key="dark" style="color: grey;">Dark</option>
@@ -51,7 +99,7 @@
             <option value="water" key="water" style="color: blue;">Water</option>
         </select>
         <select id="type2Select" style="font-size: x-large; text-align: center; 
-        background-color: black; color: white; width: 45%; 
+        background-color: black; color: white; width: 40%; 
         border: 2px solid white; border-radius: 10px;">
             <option value="bug" key="bug" style="color: darkgreen;">Bug</option>
             <option value="dark" key="dark" style="color: grey;">Dark</option>
@@ -72,15 +120,26 @@
             <option value="steel" key="steel" style="color: teal;">Steel</option>
             <option value="water" key="water" style="color: blue;">Water</option>
         </select>
+        <button onclick="pkmnSelect_open(this)" value="closed" style="background-color: black; color: white;
+    border: 2px solid white; border-radius: 0px;
+    font-size: x-large; width: 10%;">&DownArrowBar;</button>
     </div>
-    <div id="inputPKMN" style="display:flex; justify-content: center; width:100%; margin-bottom: 10px;">
-        <select id="PKMNSelect" style="font-size:x-large; text-align: center; 
-            background-color: black; color: white; width: 90%; border: 2px solid white; 
+
+
+    <div id="inputPKMN" style="width:90%; margin: 0 auto; height: 0;">
+        <select id="PKMNSelectCurrent" style="display: none; font-size:large; text-align: center; 
+            background-color: black; color: white; width: 100%; border: 2px solid white; 
             border-radius: 10px;">
-            <option value="none"></option>
+            <option value="none">Current Raids</option>
+        </select>
+        <select id="PKMNSelectOld" style="display: none; font-size:large; text-align: center; 
+            background-color: black; color: white; width: 100%; border: 2px solid white; 
+            border-radius: 10px;">
+            <option value="none">All Raids</option>
         </select>
     </div>
-    <div style="display: flex; justify-content: center; width: 90%; margin: 0 auto;
+    <br>
+    <div style="width: 90%; margin: 0 auto;
     font-size: large; background-color: black;color: white; text-align: center;
         border: 2px solid white; border-radius: 10px;">
         <div style="margin-bottom: 20px;">
@@ -126,20 +185,20 @@
     </div>
     <div style="display: flex; justify-content: center; width: 100%;">
         <button id="copyBtn" style="font-size: x-large; background-color: black;color: white;
-        border: 2px solid white; border-radius: 100px; margin-bottom: 60px;
+        border: 2px solid white; border-radius: 100px; margin-bottom: 20px;
     width:90%;" key="copyToClipboard">Copy to Clipboard</button>
     </div>
 
-    <!--<div style="position: fixed; bottom: 0px; left: 0px; right: 0px; margin-bottom: 0px; 
+    <div id="footer" style="transition: 0.5s; position: fixed; bottom: 0; right: 0;
     text-align: center; background-color: black;
-    display: flex; justify-content: center; width: 100%;">
-        <p style="color: white; margin: 10px; font-size: small;">Report issue through<br>
+    width: 0; margin-right: 40%;">
+        <p id="footerText" style="display:none; color: white; font-size: small;">Report issue through<br>
             <a href="https://www.reddit.com/message/compose/?to=mComplicative" style="color: white;">Reddit DM
                 (mComplicative)</a> or
             <a href="https://github.com/Complicative/Complicative.github.io/issues" style="color: white;">Github Issues
                 (Complicative)</a>
         </p>
-    </div>-->
+    </div>
 
 
 </body>
