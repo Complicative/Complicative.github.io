@@ -111,7 +111,7 @@ async function setBosses(time, select, bossArr) {
         bossArr.push([elem["name"], 1, elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"]]);
     })
 
-    bossArr.sort((a, b) => a[0] > b[0]);
+    bossArr.sort((a, b) => a[1] == b[1] ? a[0] > b[0] : 0);
 
     bossArr.forEach(elem => {
         let option = document.createElement("option");
