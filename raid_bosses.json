@@ -3,23 +3,227 @@
         "1": [
             {
                 "boosted_weather": [
-                    "Clear",
-                    "Overcast"
+                    "Clear"
                 ],
                 "form": "Normal",
-                "id": 69,
-                "max_boosted_cp": 738,
-                "max_unboosted_cp": 590,
-                "min_boosted_cp": 679,
-                "min_unboosted_cp": 543,
-                "name": "Bellsprout",
+                "id": 252,
+                "max_boosted_cp": 752,
+                "max_unboosted_cp": 601,
+                "min_boosted_cp": 695,
+                "min_unboosted_cp": 556,
+                "name": "Treecko",
                 "possible_shiny": true,
                 "tier": 1,
                 "type": [
-                    "Grass",
-                    "Poison"
+                    "Grass"
                 ]
             },
+            {
+                "boosted_weather": [
+                    "Clear"
+                ],
+                "form": "Normal",
+                "id": 255,
+                "max_boosted_cp": 781,
+                "max_unboosted_cp": 624,
+                "min_boosted_cp": 722,
+                "min_unboosted_cp": 578,
+                "name": "Torchic",
+                "possible_shiny": true,
+                "tier": 1,
+                "type": [
+                    "Fire"
+                ]
+            },
+            {
+                "boosted_weather": [
+                    "Partly Cloudy"
+                ],
+                "form": "Normal",
+                "id": 744,
+                "max_boosted_cp": 679,
+                "max_unboosted_cp": 543,
+                "min_boosted_cp": 624,
+                "min_unboosted_cp": 499,
+                "name": "Rockruff",
+                "possible_shiny": true,
+                "tier": 1,
+                "type": [
+                    "Rock"
+                ]
+            },
+            {
+                "boosted_weather": [
+                    "Overcast",
+                    "Partly Cloudy"
+                ],
+                "form": "Normal",
+                "id": 39,
+                "max_boosted_cp": 517,
+                "max_unboosted_cp": 413,
+                "min_boosted_cp": 463,
+                "min_unboosted_cp": 370,
+                "name": "Jigglypuff",
+                "possible_shiny": true,
+                "tier": 1,
+                "type": [
+                    "Normal",
+                    "Fairy"
+                ]
+            },
+            {
+                "boosted_weather": [
+                    "Rainy"
+                ],
+                "form": "Normal",
+                "id": 258,
+                "max_boosted_cp": 805,
+                "max_unboosted_cp": 644,
+                "min_boosted_cp": 746,
+                "min_unboosted_cp": 597,
+                "name": "Mudkip",
+                "possible_shiny": true,
+                "tier": 1,
+                "type": [
+                    "Water"
+                ]
+            }
+        ],
+        "2": [],
+        "3": [
+            {
+                "boosted_weather": [
+                    "Clear"
+                ],
+                "form": "Normal",
+                "id": 105,
+                "max_boosted_cp": 1311,
+                "max_unboosted_cp": 1048,
+                "min_boosted_cp": 1235,
+                "min_unboosted_cp": 988,
+                "name": "Marowak",
+                "possible_shiny": true,
+                "tier": 3,
+                "type": [
+                    "Ground"
+                ]
+            },
+            {
+                "boosted_weather": [
+                    "Clear",
+                    "Fog"
+                ],
+                "form": "Alola",
+                "id": 105,
+                "max_boosted_cp": 1311,
+                "max_unboosted_cp": 1048,
+                "min_boosted_cp": 1235,
+                "min_unboosted_cp": 988,
+                "name": "Marowak",
+                "possible_shiny": false,
+                "tier": 3,
+                "type": [
+                    "Fire",
+                    "Ghost"
+                ]
+            },
+            {
+                "boosted_weather": [
+                    "Partly Cloudy"
+                ],
+                "form": "Normal",
+                "id": 113,
+                "max_boosted_cp": 896,
+                "max_unboosted_cp": 717,
+                "min_boosted_cp": 817,
+                "min_unboosted_cp": 654,
+                "name": "Chansey",
+                "possible_shiny": true,
+                "tier": 3,
+                "type": [
+                    "Normal"
+                ]
+            },
+            {
+                "boosted_weather": [
+                    "Fog"
+                ],
+                "form": "Normal",
+                "id": 197,
+                "max_boosted_cp": 1526,
+                "max_unboosted_cp": 1221,
+                "min_boosted_cp": 1442,
+                "min_unboosted_cp": 1153,
+                "name": "Umbreon",
+                "possible_shiny": true,
+                "tier": 3,
+                "type": [
+                    "Dark"
+                ]
+            },
+            {
+                "boosted_weather": [
+                    "Windy"
+                ],
+                "form": "Normal",
+                "id": 621,
+                "max_boosted_cp": 1951,
+                "max_unboosted_cp": 1561,
+                "min_boosted_cp": 1859,
+                "min_unboosted_cp": 1487,
+                "name": "Druddigon",
+                "possible_shiny": true,
+                "tier": 3,
+                "type": [
+                    "Dragon"
+                ]
+            }
+        ],
+        "4": [],
+        "5": [
+            {
+                "boosted_weather": [
+                    "Windy"
+                ],
+                "form": "Therian",
+                "id": 641,
+                "max_boosted_cp": 2296,
+                "max_unboosted_cp": 1837,
+                "min_boosted_cp": 2196,
+                "min_unboosted_cp": 1756,
+                "name": "Tornadus",
+                "possible_shiny": false,
+                "tier": 5,
+                "type": [
+                    "Flying"
+                ]
+            }
+        ],
+        "6": [],
+        "mega": [
+            {
+                "boosted_weather": [
+                    "Overcast",
+                    "Partly Cloudy"
+                ],
+                "form": "Normal",
+                "id": 428,
+                "max_boosted_cp": 2675,
+                "max_unboosted_cp": 2140,
+                "min_boosted_cp": 2564,
+                "min_unboosted_cp": 2051,
+                "name": "Lopunny",
+                "possible_shiny": true,
+                "tier": "mega",
+                "type": [
+                    "Normal",
+                    "Fighting"
+                ]
+            }
+        ]
+    },
+    "previous": {
+        "1": [
             {
                 "boosted_weather": [
                     "Overcast"
@@ -35,6 +239,25 @@
                 "tier": 1,
                 "type": [
                     "Fairy"
+                ]
+            },
+            {
+                "boosted_weather": [
+                    "Clear",
+                    "Overcast"
+                ],
+                "form": "Normal",
+                "id": 69,
+                "max_boosted_cp": 738,
+                "max_unboosted_cp": 590,
+                "min_boosted_cp": 679,
+                "min_unboosted_cp": 543,
+                "name": "Bellsprout",
+                "possible_shiny": true,
+                "tier": 1,
+                "type": [
+                    "Grass",
+                    "Poison"
                 ]
             },
             {
@@ -71,150 +294,6 @@
                     "Electric"
                 ]
             },
-            {
-                "boosted_weather": [
-                    "Partly Cloudy"
-                ],
-                "form": "Normal",
-                "id": 744,
-                "max_boosted_cp": 679,
-                "max_unboosted_cp": 543,
-                "min_boosted_cp": 624,
-                "min_unboosted_cp": 499,
-                "name": "Rockruff",
-                "possible_shiny": true,
-                "tier": 1,
-                "type": [
-                    "Rock"
-                ]
-            }
-        ],
-        "2": [],
-        "3": [
-            {
-                "boosted_weather": [
-                    "Rainy",
-                    "Windy"
-                ],
-                "form": "Alola",
-                "id": 26,
-                "max_boosted_cp": 1633,
-                "max_unboosted_cp": 1306,
-                "min_boosted_cp": 1548,
-                "min_unboosted_cp": 1238,
-                "name": "Raichu",
-                "possible_shiny": false,
-                "tier": 3,
-                "type": [
-                    "Electric",
-                    "Psychic"
-                ]
-            },
-            {
-                "boosted_weather": [
-                    "Clear",
-                    "Overcast"
-                ],
-                "form": "Normal",
-                "id": 31,
-                "max_boosted_cp": 1777,
-                "max_unboosted_cp": 1421,
-                "min_boosted_cp": 1689,
-                "min_unboosted_cp": 1351,
-                "name": "Nidoqueen",
-                "possible_shiny": true,
-                "tier": 3,
-                "type": [
-                    "Poison",
-                    "Ground"
-                ]
-            },
-            {
-                "boosted_weather": [
-                    "Overcast",
-                    "Partly Cloudy"
-                ],
-                "form": "Normal",
-                "id": 40,
-                "max_boosted_cp": 1376,
-                "max_unboosted_cp": 1101,
-                "min_boosted_cp": 1293,
-                "min_unboosted_cp": 1034,
-                "name": "Wigglytuff",
-                "possible_shiny": true,
-                "tier": 3,
-                "type": [
-                    "Normal",
-                    "Fairy"
-                ]
-            },
-            {
-                "boosted_weather": [
-                    "Partly Cloudy",
-                    "Rainy"
-                ],
-                "form": "Alola",
-                "id": 75,
-                "max_boosted_cp": 1355,
-                "max_unboosted_cp": 1084,
-                "min_boosted_cp": 1278,
-                "min_unboosted_cp": 1023,
-                "name": "Graveler",
-                "possible_shiny": false,
-                "tier": 3,
-                "type": [
-                    "Rock",
-                    "Electric"
-                ]
-            }
-        ],
-        "4": [],
-        "5": [
-            {
-                "boosted_weather": [
-                    "Overcast",
-                    "Rainy"
-                ],
-                "form": "Normal",
-                "id": 785,
-                "max_boosted_cp": 2263,
-                "max_unboosted_cp": 1810,
-                "min_boosted_cp": 2162,
-                "min_unboosted_cp": 1730,
-                "name": "Tapu Koko",
-                "possible_shiny": false,
-                "tier": 5,
-                "type": [
-                    "Electric",
-                    "Fairy"
-                ]
-            }
-        ],
-        "6": [],
-        "mega": [
-            {
-                "boosted_weather": [
-                    "Clear",
-                    "Overcast"
-                ],
-                "form": "Normal",
-                "id": 3,
-                "max_boosted_cp": 2641,
-                "max_unboosted_cp": 2113,
-                "min_boosted_cp": 2533,
-                "min_unboosted_cp": 2026,
-                "name": "Venusaur",
-                "possible_shiny": true,
-                "tier": "mega",
-                "type": [
-                    "Grass",
-                    "Poison"
-                ]
-            }
-        ]
-    },
-    "previous": {
-        "1": [
             {
                 "boosted_weather": [
                     "Fog"
@@ -1268,23 +1347,6 @@
             },
             {
                 "boosted_weather": [
-                    "Clear"
-                ],
-                "form": "Normal",
-                "id": 255,
-                "max_boosted_cp": 781,
-                "max_unboosted_cp": 624,
-                "min_boosted_cp": 722,
-                "min_unboosted_cp": 578,
-                "name": "Torchic",
-                "possible_shiny": true,
-                "tier": 1,
-                "type": [
-                    "Fire"
-                ]
-            },
-            {
-                "boosted_weather": [
                     "Snow"
                 ],
                 "form": "Normal",
@@ -2327,40 +2389,6 @@
             },
             {
                 "boosted_weather": [
-                    "Clear"
-                ],
-                "form": "Normal",
-                "id": 252,
-                "max_boosted_cp": 752,
-                "max_unboosted_cp": 601,
-                "min_boosted_cp": 695,
-                "min_unboosted_cp": 556,
-                "name": "Treecko",
-                "possible_shiny": true,
-                "tier": 1,
-                "type": [
-                    "Grass"
-                ]
-            },
-            {
-                "boosted_weather": [
-                    "Rainy"
-                ],
-                "form": "Normal",
-                "id": 258,
-                "max_boosted_cp": 805,
-                "max_unboosted_cp": 644,
-                "min_boosted_cp": 746,
-                "min_unboosted_cp": 597,
-                "name": "Mudkip",
-                "possible_shiny": true,
-                "tier": 1,
-                "type": [
-                    "Water"
-                ]
-            },
-            {
-                "boosted_weather": [
                     "Partly Cloudy",
                     "Snow"
                 ],
@@ -2924,25 +2952,6 @@
                 "tier": 1,
                 "type": [
                     "Water"
-                ]
-            },
-            {
-                "boosted_weather": [
-                    "Overcast",
-                    "Partly Cloudy"
-                ],
-                "form": "Normal",
-                "id": 39,
-                "max_boosted_cp": 517,
-                "max_unboosted_cp": 413,
-                "min_boosted_cp": 463,
-                "min_unboosted_cp": 370,
-                "name": "Jigglypuff",
-                "possible_shiny": true,
-                "tier": 1,
-                "type": [
-                    "Normal",
-                    "Fairy"
                 ]
             },
             {
@@ -4908,6 +4917,82 @@
         "3": [
             {
                 "boosted_weather": [
+                    "Overcast",
+                    "Partly Cloudy"
+                ],
+                "form": "Normal",
+                "id": 40,
+                "max_boosted_cp": 1376,
+                "max_unboosted_cp": 1101,
+                "min_boosted_cp": 1293,
+                "min_unboosted_cp": 1034,
+                "name": "Wigglytuff",
+                "possible_shiny": true,
+                "tier": 3,
+                "type": [
+                    "Normal",
+                    "Fairy"
+                ]
+            },
+            {
+                "boosted_weather": [
+                    "Partly Cloudy",
+                    "Rainy"
+                ],
+                "form": "Alola",
+                "id": 75,
+                "max_boosted_cp": 1355,
+                "max_unboosted_cp": 1084,
+                "min_boosted_cp": 1278,
+                "min_unboosted_cp": 1023,
+                "name": "Graveler",
+                "possible_shiny": false,
+                "tier": 3,
+                "type": [
+                    "Rock",
+                    "Electric"
+                ]
+            },
+            {
+                "boosted_weather": [
+                    "Clear",
+                    "Overcast"
+                ],
+                "form": "Normal",
+                "id": 31,
+                "max_boosted_cp": 1777,
+                "max_unboosted_cp": 1421,
+                "min_boosted_cp": 1689,
+                "min_unboosted_cp": 1351,
+                "name": "Nidoqueen",
+                "possible_shiny": true,
+                "tier": 3,
+                "type": [
+                    "Poison",
+                    "Ground"
+                ]
+            },
+            {
+                "boosted_weather": [
+                    "Rainy",
+                    "Windy"
+                ],
+                "form": "Alola",
+                "id": 26,
+                "max_boosted_cp": 1633,
+                "max_unboosted_cp": 1306,
+                "min_boosted_cp": 1548,
+                "min_unboosted_cp": 1238,
+                "name": "Raichu",
+                "possible_shiny": false,
+                "tier": 3,
+                "type": [
+                    "Electric",
+                    "Psychic"
+                ]
+            },
+            {
+                "boosted_weather": [
                     "Clear",
                     "Partly Cloudy"
                 ],
@@ -4959,23 +5044,6 @@
                 "tier": 3,
                 "type": [
                     "Ghost"
-                ]
-            },
-            {
-                "boosted_weather": [
-                    "Windy"
-                ],
-                "form": "Normal",
-                "id": 621,
-                "max_boosted_cp": 1951,
-                "max_unboosted_cp": 1561,
-                "min_boosted_cp": 1859,
-                "min_unboosted_cp": 1487,
-                "name": "Druddigon",
-                "possible_shiny": true,
-                "tier": 3,
-                "type": [
-                    "Dragon"
                 ]
             },
             {
@@ -5520,25 +5588,6 @@
             },
             {
                 "boosted_weather": [
-                    "Clear",
-                    "Fog"
-                ],
-                "form": "Alola",
-                "id": 105,
-                "max_boosted_cp": 1311,
-                "max_unboosted_cp": 1048,
-                "min_boosted_cp": 1235,
-                "min_unboosted_cp": 988,
-                "name": "Marowak",
-                "possible_shiny": false,
-                "tier": 3,
-                "type": [
-                    "Fire",
-                    "Ghost"
-                ]
-            },
-            {
-                "boosted_weather": [
                     "Fog",
                     "Windy"
                 ],
@@ -5591,23 +5640,6 @@
                 "type": [
                     "Dark",
                     "Ghost"
-                ]
-            },
-            {
-                "boosted_weather": [
-                    "Partly Cloudy"
-                ],
-                "form": "Normal",
-                "id": 113,
-                "max_boosted_cp": 896,
-                "max_unboosted_cp": 717,
-                "min_boosted_cp": 817,
-                "min_unboosted_cp": 654,
-                "name": "Chansey",
-                "possible_shiny": true,
-                "tier": 3,
-                "type": [
-                    "Normal"
                 ]
             },
             {
@@ -6246,23 +6278,6 @@
                 "tier": 3,
                 "type": [
                     "Psychic"
-                ]
-            },
-            {
-                "boosted_weather": [
-                    "Fog"
-                ],
-                "form": "Normal",
-                "id": 197,
-                "max_boosted_cp": 1526,
-                "max_unboosted_cp": 1221,
-                "min_boosted_cp": 1442,
-                "min_unboosted_cp": 1153,
-                "name": "Umbreon",
-                "possible_shiny": true,
-                "tier": 3,
-                "type": [
-                    "Dark"
                 ]
             },
             {
@@ -8560,6 +8575,25 @@
         "5": [
             {
                 "boosted_weather": [
+                    "Overcast",
+                    "Rainy"
+                ],
+                "form": "Normal",
+                "id": 785,
+                "max_boosted_cp": 2263,
+                "max_unboosted_cp": 1810,
+                "min_boosted_cp": 2162,
+                "min_unboosted_cp": 1730,
+                "name": "Tapu Koko",
+                "possible_shiny": false,
+                "tier": 5,
+                "type": [
+                    "Electric",
+                    "Fairy"
+                ]
+            },
+            {
+                "boosted_weather": [
                     "Windy"
                 ],
                 "form": "Normal",
@@ -9137,23 +9171,6 @@
             },
             {
                 "boosted_weather": [
-                    "Windy"
-                ],
-                "form": "Therian",
-                "id": 641,
-                "max_boosted_cp": 2296,
-                "max_unboosted_cp": 1837,
-                "min_boosted_cp": 2196,
-                "min_unboosted_cp": 1756,
-                "name": "Tornadus",
-                "possible_shiny": false,
-                "tier": 5,
-                "type": [
-                    "Flying"
-                ]
-            },
-            {
-                "boosted_weather": [
                     "Rainy",
                     "Windy"
                 ],
@@ -9551,6 +9568,25 @@
         "mega": [
             {
                 "boosted_weather": [
+                    "Clear",
+                    "Overcast"
+                ],
+                "form": "Normal",
+                "id": 3,
+                "max_boosted_cp": 2641,
+                "max_unboosted_cp": 2113,
+                "min_boosted_cp": 2533,
+                "min_unboosted_cp": 2026,
+                "name": "Venusaur",
+                "possible_shiny": true,
+                "tier": "mega",
+                "type": [
+                    "Grass",
+                    "Poison"
+                ]
+            },
+            {
+                "boosted_weather": [
                     "Rainy",
                     "Windy"
                 ],
@@ -9642,25 +9678,6 @@
                 "type": [
                     "Steel",
                     "Ground"
-                ]
-            },
-            {
-                "boosted_weather": [
-                    "Overcast",
-                    "Partly Cloudy"
-                ],
-                "form": "Normal",
-                "id": 428,
-                "max_boosted_cp": 2675,
-                "max_unboosted_cp": 2140,
-                "min_boosted_cp": 2564,
-                "min_unboosted_cp": 2051,
-                "name": "Lopunny",
-                "possible_shiny": true,
-                "tier": "mega",
-                "type": [
-                    "Normal",
-                    "Fighting"
                 ]
             },
             {
