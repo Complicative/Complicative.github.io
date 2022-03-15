@@ -155,7 +155,24 @@
             "threeAttacks": "3"
         },
         "sv": {
-
+            "bug": "Insekt",
+            "dark": "Mörk",
+            "dragon": "Drake",
+            "electric": "Elektrisk",
+            "fairy": "Fe",
+            "fighting": "Kamp",
+            "fire": "Eld",
+            "flying": "Flygande",
+            "ghost": "Spöke",
+            "grass": "Gräs",
+            "ground": "Mark",
+            "ice": "Is",
+            "normal": "Normal",
+            "poison": "Gift",
+            "psychic": "Psykisk",
+            "rock": "Sten",
+            "steel": "Stål",
+            "water": "Vatten"
         },
         "fi": {
             "bug": "Hyönteinen",
@@ -186,51 +203,6 @@
 
 
             "copyToClipboard": "Kopioi leikepöydälle"
-        },
-        "no": {
-            "oneAttack": "1+",
-            "twoAttacks": "2+",
-            "threeAttacks": "3",
-            "noAttacks": "Ingen",
-            "weakTypes": "Ingen svakhet",
-            "strongTypes": "Bare står imot",
-            "noDefTypes": "Ingen",
-            "copyToClipboard": "Kopiere til utklippstavle"
-        },
-        "cs": {
-            "oneAttack": "1+",
-            "twoAttacks": "2+",
-            "threeAttacks": "3"
-        },
-        "kli": {
-            "bug": "jI'oy'",
-            "dark": "Hurgh",
-            "dragon": "Duq",
-            "electric": "'ul",
-            "fairy": "maSaH",
-            "fighting": "Bisuv",
-            "fire": "baH",
-            "flying": "Suv",
-            "ghost": "Lom qa'",
-            "grass": "'uch",
-            "ground": "yav",
-            "ice": "chuch",
-            "normal": "motlh",
-            "poison": "tar",
-            "psychic": "QI'yaH",
-            "rock": "nagh",
-            "steel": "naQ",
-            "water": "bIQ",
-            "effectAtt": "vaj jangDI' qeylIS.",
-            "defTypes": "Segh",
-            "oneAttack": "1+",
-            "twoAttacks": "2+",
-            "threeAttacks": "3",
-            "noAttacks": "pagh",
-            "weakTypes": "puj",
-            "strongTypes": "polonyuS",
-            "noDefTypes": "pagh",
-            "copyToClipboard": "qeylIS"
         }
     }
 }
