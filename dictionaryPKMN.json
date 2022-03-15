@@ -1,0 +1,43 @@
+{
+    "myPKMNDic": {
+        "en": {
+            "39": "Jigglypuff",
+            "105": "Marowak",
+            "113": "Chansey",
+            "197": "Umbreon",
+            "252": "Treecko",
+            "255": "Torchic",
+            "258": "Mudkip",
+            "428": "Lopunny",
+            "621": "Druddigon",
+            "641": "Tornadus",
+            "744": "Rockruff"
+        },
+        "fr": {
+            "39": "Rondoudou",
+            "105": "Ossatueur",
+            "113": "Leveinard",
+            "197": "Noctali",
+            "252": "Arcko",
+            "255": "Poussifeu",
+            "258": "Gobou",
+            "428": "Lockpin",
+            "621": "Drakkarmin",
+            "641": "Boréas",
+            "744": "Rocabot"
+        },
+        "de": {
+            "39": "Pummeluff",
+            "105": "Knogga",
+            "113": "Chaneira",
+            "197": "Nachtara",
+            "252": "Geckarbor",
+            "255": "Flemmli",
+            "258": "Hydropi",
+            "428": "Schlapor",
+            "621": "Shardrago",
+            "641": "Boreos",
+            "744": "Wuffels"
+        }
+    }
+}

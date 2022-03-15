@@ -10,11 +10,17 @@ let PKMNSelectOld = document.getElementById('PKMNSelectOld');
 
 let dictionary;
 let translations;
+let translationsPKMN;
 let bossObject;
 let bosses = [];
 
 async function getTranslations() {
     const response = await fetch("https://complicative.github.io/dictionary.json");
+    return await response.json();
+}
+
+async function getTranslationsPKMN() {
+    const response = await fetch("https://complicative.github.io/dictionaryPKMN.json");
     return await response.json();
 }
 
@@ -36,6 +42,9 @@ document.addEventListener("DOMContentLoaded", async() => {
 
     translations = await getTranslations();
     translations = translations['myDic'];
+
+    translationsPKMN = await getTranslationsPKMN();
+    translationsPKMN = translationsPKMN['myPKMNDic'];
 
     locale = window.location.search.slice(1, window.location.search.length);
     langSwitcher.value = locale;
