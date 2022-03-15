@@ -20,7 +20,7 @@ async function getTranslations() {
 }
 
 async function getBosses() {
-    const response = await fetch("https://pogoapi.net/api/v1/raid_bosses.json");
+    const response = await fetch("https://complicative.github.io/raid_bosses.json");
     return await response.json();
 }
 
