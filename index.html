@@ -21,10 +21,10 @@
     font-size: x-large; width: 20%;">&#9776;</button>
 
     <div style="transition:0.5s; position:fixed; width:0; 
-    bottom: 0; right:0; top: 0; background-color: black;" id="sidebar">
-        <div style="width: 40%; margin: 0 auto; position: fixed; bottom: 0;">
+    bottom: 0; right:0; top: 0; background-color: transparent;" id="sidebar">
+        <div style="width: 100%; margin: 0 auto; position: fixed; bottom: 0; background-color: black;">
             <select id="langSwitcher" style="background-color: black; color: white; 
-            border: 2px solid white; border-radius: 10px; font-size: large; 
+            border: 2px solid white; border-radius: 10px; font-size: large; text-align: center;
             width: 100%;">
                 <option value="en">English</option>
                 <option value="fr">French</option>
@@ -57,16 +57,16 @@
 
     <script>
         function menu_open() {
-            document.getElementById("sidebar").style.width = "40%";
-            document.getElementById("footer").style.width = "60%";
-            document.getElementById('footerText').style.display = "block";
+            document.getElementById("sidebar").style.width = "100%";
+            //document.getElementById("footer").style.width = "60%";
+            //document.getElementById('footerText').style.display = "block";
 
         }
 
         function menu_close() {
             document.getElementById("sidebar").style.width = "0";
-            document.getElementById("footer").style.width = "0";
-            document.getElementById('footerText').style.display = "none";
+            //document.getElementById("footer").style.width = "0";
+            //document.getElementById('footerText').style.display = "none";
         }
 
         function pkmnSelect_open(btn) {
