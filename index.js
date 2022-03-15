@@ -124,11 +124,11 @@ async function setBosses(time, select, bossArr) {
 
     bossArr.forEach(elem => {
         let option = document.createElement("option");
-        option.setAttribute("key", elem[5]);
+        //option.setAttribute("key", elem[5]);
         option.setAttribute("type1", elem[2].toLowerCase());
         option.setAttribute("type2", elem[3].toLowerCase());
         option.value = elem[5] + " " + elem[4];
-        option.innerText = `${elem[0]}${elem[4] != "Normal" ? " " + elem[4] : ""} (Tier ${elem[1]})`;
+        option.innerText = `${translatePKMN(elem[0], elem[5])}${elem[4] != "Normal" ? " " + elem[4] : ""} (Tier ${elem[1]})`;
         select.appendChild(option);
     })
 
@@ -145,6 +145,14 @@ function translateElement(element) {
     }
     element.innerText = translation;
 };
+
+function translatePKMN(pkmnName, pkmnID) {
+    if (translationsPKMN[locale] != undefined && translationsPKMN[locale][pkmnID] != undefined) {
+        return translationsPKMN[locale][pkmnID];
+    } else {
+        return pkmnName;
+    }
+}
 
 langSwitcher.addEventListener("change", () => {
     //Event Listener for the lang change

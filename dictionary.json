@@ -32,7 +32,10 @@
             "strongTypes": "Only Resistant",
             "noDefTypes": "None",
 
-            "copyToClipboard": "Copy to Clipboard"
+            "copyToClipboard": "Copy to Clipboard",
+
+            "currentRaids": "Current Raids",
+            "allRaids": "All Raids"
         },
         "fr": {
             "bug": "Insecte",
@@ -96,7 +99,10 @@
             "strongTypes": "Nur Resistente",
             "noDefTypes": "Keine",
 
-            "copyToClipboard": "In die Zwischenablage kopieren"
+            "copyToClipboard": "In die Zwischenablage kopieren",
+
+            "currentRaids": "Aktuelle Raids",
+            "allRaids": "Alle Raids"
         },
         "it": {
             "bug": "Coleottero",
