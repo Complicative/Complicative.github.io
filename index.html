@@ -14,6 +14,7 @@
 <body style="background-color:#555555; overflow: auto;">
 
 
+
     <button onclick="menu_open()" style="right: 0; bottom: 0; position: fixed;
     background-color: black; color: white;
     border: 2px solid white; border-radius: 0px;
@@ -21,23 +22,39 @@
 
     <div style="transition:0.5s; position:fixed; width:0; 
     bottom: 0; right:0; top: 0; background-color: black;" id="sidebar">
-        <select id="langSwitcher" style="background-color: black; color: white; 
+        <div style="width: 40%; margin: 0 auto; position: fixed; bottom: 0;">
+            <select id="langSwitcher" style="background-color: black; color: white; 
             border: 2px solid white; border-radius: 10px; font-size: large; 
             width: 100%;">
-            <option value="en">English</option>
-            <option value="fr">French</option>
-            <option value="fi">Finnish</option>
-            <option value="de">German</option>
-            <option value="it">Italian</option>
-            <option value="no">Norwegian</option>
-            <option value="es">Spanish</option>
-            <option value="sv">Swedish</option>
-            <option value="kli">Klingon</option>
-        </select><br>
-        <button onclick="menu_close()" style="position: fixed; bottom: 0;
-            background-color: black; color: white;
-            border: 2px solid white; border-radius: 0px;
-            font-size: x-large; width: 40%;">&times;</button>
+                <option value="en">English</option>
+                <option value="fr">French</option>
+                <option value="fi">Finnish</option>
+                <option value="de">German</option>
+                <option value="it">Italian</option>
+                <option value="no">Norwegian</option>
+                <option value="es">Spanish</option>
+                <option value="sv">Swedish</option>
+                <option value="kli">Klingon</option>
+            </select>
+
+            <div style="width: fit-content; margin: 0 auto; margin-bottom: 10px;">
+                <a href="https://twitter.com/mComplicative" style="text-decoration: none;">
+                    <img src="twitter.png" style="width: 32px; height: 32px; margin-top: 16px;">
+                </a>
+                <a href="https://www.reddit.com/user/mComplicative" style="text-decoration: none;">
+                    <img src="reddit.png" style="width: 32px; height: 32px; margin-top: 16px;">
+                </a>
+                <a href="https://github.com/Complicative/Complicative.github.io" style="text-decoration: none;">
+                    <img src="github.png" style="width: 32px; height: 32px; margin-top: 16px;">
+                </a>
+            </div>
+
+            <button onclick="menu_close()" style="
+                                background-color: black; color: white;
+                                border: 2px solid white; border-radius: 0px;
+                                font-size: x-large; width: 100%;">&times;</button>
+        </div>
+
     </div>
 
     <script>
@@ -191,7 +208,7 @@
     width:90%;" key="copyToClipboard">Copy to Clipboard</button>
     </div>
 
-    <div id="footer" style="transition: 0.5s; position: fixed; bottom: 0; right: 0;
+    <!--<div id="footer" style="transition: 0.5s; position: fixed; bottom: 0; right: 0;
     text-align: center; background-color: black;
     width: 0; margin-right: 40%;">
         <p id="footerText" style="display:none; color: white; font-size: small;">Report issue through<br>
