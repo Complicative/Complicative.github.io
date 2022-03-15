@@ -1,70 +1,36 @@
 {
     "current": {
-        "1": [
-            {
-                "boosted_weather": [
-                    "Clear"
-                ],
+        "1": [{
                 "form": "Normal",
                 "id": 252,
-                "max_boosted_cp": 752,
-                "max_unboosted_cp": 601,
-                "min_boosted_cp": 695,
-                "min_unboosted_cp": 556,
                 "name": "Treecko",
-                "possible_shiny": true,
                 "tier": 1,
                 "type": [
                     "Grass"
                 ]
             },
             {
-                "boosted_weather": [
-                    "Clear"
-                ],
                 "form": "Normal",
                 "id": 255,
-                "max_boosted_cp": 781,
-                "max_unboosted_cp": 624,
-                "min_boosted_cp": 722,
-                "min_unboosted_cp": 578,
                 "name": "Torchic",
-                "possible_shiny": true,
                 "tier": 1,
                 "type": [
                     "Fire"
                 ]
             },
             {
-                "boosted_weather": [
-                    "Partly Cloudy"
-                ],
                 "form": "Normal",
                 "id": 744,
-                "max_boosted_cp": 679,
-                "max_unboosted_cp": 543,
-                "min_boosted_cp": 624,
-                "min_unboosted_cp": 499,
                 "name": "Rockruff",
-                "possible_shiny": true,
                 "tier": 1,
                 "type": [
                     "Rock"
                 ]
             },
             {
-                "boosted_weather": [
-                    "Overcast",
-                    "Partly Cloudy"
-                ],
                 "form": "Normal",
                 "id": 39,
-                "max_boosted_cp": 517,
-                "max_unboosted_cp": 413,
-                "min_boosted_cp": 463,
-                "min_unboosted_cp": 370,
                 "name": "Jigglypuff",
-                "possible_shiny": true,
                 "tier": 1,
                 "type": [
                     "Normal",
@@ -72,55 +38,28 @@
                 ]
             },
             {
-                "boosted_weather": [
-                    "Rainy"
-                ],
                 "form": "Normal",
                 "id": 258,
-                "max_boosted_cp": 805,
-                "max_unboosted_cp": 644,
-                "min_boosted_cp": 746,
-                "min_unboosted_cp": 597,
                 "name": "Mudkip",
-                "possible_shiny": true,
                 "tier": 1,
                 "type": [
                     "Water"
                 ]
             }
         ],
-        "2": [],
-        "3": [
-            {
-                "boosted_weather": [
-                    "Clear"
-                ],
+        "3": [{
                 "form": "Normal",
                 "id": 105,
-                "max_boosted_cp": 1311,
-                "max_unboosted_cp": 1048,
-                "min_boosted_cp": 1235,
-                "min_unboosted_cp": 988,
                 "name": "Marowak",
-                "possible_shiny": true,
                 "tier": 3,
                 "type": [
                     "Ground"
                 ]
             },
             {
-                "boosted_weather": [
-                    "Clear",
-                    "Fog"
-                ],
                 "form": "Alola",
                 "id": 105,
-                "max_boosted_cp": 1311,
-                "max_unboosted_cp": 1048,
-                "min_boosted_cp": 1235,
-                "min_unboosted_cp": 988,
                 "name": "Marowak",
-                "possible_shiny": false,
                 "tier": 3,
                 "type": [
                     "Fire",
@@ -128,103 +67,55 @@
                 ]
             },
             {
-                "boosted_weather": [
-                    "Partly Cloudy"
-                ],
                 "form": "Normal",
                 "id": 113,
-                "max_boosted_cp": 896,
-                "max_unboosted_cp": 717,
-                "min_boosted_cp": 817,
-                "min_unboosted_cp": 654,
                 "name": "Chansey",
-                "possible_shiny": true,
                 "tier": 3,
                 "type": [
                     "Normal"
                 ]
             },
             {
-                "boosted_weather": [
-                    "Fog"
-                ],
                 "form": "Normal",
                 "id": 197,
-                "max_boosted_cp": 1526,
-                "max_unboosted_cp": 1221,
-                "min_boosted_cp": 1442,
-                "min_unboosted_cp": 1153,
                 "name": "Umbreon",
-                "possible_shiny": true,
                 "tier": 3,
                 "type": [
                     "Dark"
                 ]
             },
             {
-                "boosted_weather": [
-                    "Windy"
-                ],
                 "form": "Normal",
                 "id": 621,
-                "max_boosted_cp": 1951,
-                "max_unboosted_cp": 1561,
-                "min_boosted_cp": 1859,
-                "min_unboosted_cp": 1487,
                 "name": "Druddigon",
-                "possible_shiny": true,
                 "tier": 3,
                 "type": [
                     "Dragon"
                 ]
             }
         ],
-        "4": [],
-        "5": [
-            {
-                "boosted_weather": [
-                    "Windy"
-                ],
-                "form": "Therian",
-                "id": 641,
-                "max_boosted_cp": 2296,
-                "max_unboosted_cp": 1837,
-                "min_boosted_cp": 2196,
-                "min_unboosted_cp": 1756,
-                "name": "Tornadus",
-                "possible_shiny": false,
-                "tier": 5,
-                "type": [
-                    "Flying"
-                ]
-            }
-        ],
-        "6": [],
-        "mega": [
-            {
-                "boosted_weather": [
-                    "Overcast",
-                    "Partly Cloudy"
-                ],
-                "form": "Normal",
-                "id": 428,
-                "max_boosted_cp": 2675,
-                "max_unboosted_cp": 2140,
-                "min_boosted_cp": 2564,
-                "min_unboosted_cp": 2051,
-                "name": "Lopunny",
-                "possible_shiny": true,
-                "tier": "mega",
-                "type": [
-                    "Normal",
-                    "Fighting"
-                ]
-            }
-        ]
+        "5": [{
+            "form": "Therian",
+            "id": 641,
+            "name": "Tornadus",
+            "tier": 5,
+            "type": [
+                "Flying"
+            ]
+        }],
+        "mega": [{
+            "form": "Normal",
+            "id": 428,
+            "name": "Lopunny",
+            "tier": "mega",
+            "type": [
+                "Normal",
+                "Fighting"
+            ]
+        }]
     },
     "previous": {
-        "1": [
-            {
+        "1": [{
                 "boosted_weather": [
                     "Overcast"
                 ],
@@ -3515,8 +3406,7 @@
                 ]
             }
         ],
-        "2": [
-            {
+        "2": [{
                 "boosted_weather": [
                     "Rainy"
                 ],
@@ -4914,8 +4804,7 @@
                 ]
             }
         ],
-        "3": [
-            {
+        "3": [{
                 "boosted_weather": [
                     "Overcast",
                     "Partly Cloudy"
@@ -7854,8 +7743,7 @@
                 ]
             }
         ],
-        "4": [
-            {
+        "4": [{
                 "boosted_weather": [
                     "Overcast"
                 ],
@@ -8572,8 +8460,7 @@
                 ]
             }
         ],
-        "5": [
-            {
+        "5": [{
                 "boosted_weather": [
                     "Overcast",
                     "Rainy"
@@ -9529,8 +9416,7 @@
                 ]
             }
         ],
-        "6": [
-            {
+        "6": [{
                 "boosted_weather": [
                     "Fog"
                 ],
@@ -9565,8 +9451,7 @@
                 ]
             }
         ],
-        "mega": [
-            {
+        "mega": [{
                 "boosted_weather": [
                     "Clear",
                     "Overcast"

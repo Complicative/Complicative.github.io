@@ -95,19 +95,19 @@ async function setBosses(time, select, bossArr) {
     const tierMObject = nbossObject["mega"];
 
     tierMObject.forEach(elem => {
-        bossArr.push([elem["name"], "Mega", elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"]])
+        bossArr.push([elem["name"], elem['tier'], elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"], elem['id']])
     })
 
     tier5Object.forEach(elem => {
-        bossArr.push([elem["name"], 5, elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"]])
+        bossArr.push([elem["name"], elem['tier'], elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"], elem['id']])
     })
 
     tier3Object.forEach(elem => {
-        bossArr.push([elem["name"], 3, elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"]])
+        bossArr.push([elem["name"], elem['tier'], elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"], elem['id']])
     })
 
     tier1Object.forEach(elem => {
-        bossArr.push([elem["name"], 1, elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"]]);
+        bossArr.push([elem["name"], elem['tier'], elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"], elem['id']]);
     })
 
     bossArr.sort((a, b) => a[1] == b[1] ? a[0] > b[0] : 0);
@@ -115,10 +115,10 @@ async function setBosses(time, select, bossArr) {
 
     bossArr.forEach(elem => {
         let option = document.createElement("option");
-        option.setAttribute("key", `${elem[0]} ${elem["form"]}`);
+        option.setAttribute("key", elem[5]);
         option.setAttribute("type1", elem[2].toLowerCase());
         option.setAttribute("type2", elem[3].toLowerCase());
-        option.value = elem[0] + " " + elem[4];
+        option.value = elem[5] + " " + elem[4];
         option.innerText = `${elem[0]}${elem[4] != "Normal" ? " " + elem[4] : ""} (Tier ${elem[1]})`;
         select.appendChild(option);
     })
@@ -147,19 +147,15 @@ langSwitcher.addEventListener("change", () => {
 PKMNSelectCurrent.addEventListener("change", () => {
     //Event Listener for the lang change
     if (PKMNSelectCurrent.value == "none") return;
-    type1Select.value = bosses.find(elem => elem[0] + " " + elem[4] == PKMNSelectCurrent.value)[2].toLowerCase();
-    type2Select.value = bosses.find(elem => elem[0] + " " + elem[4] == PKMNSelectCurrent.value)[3].toLowerCase();
-
-    //console.log(bosses.find(elem => elem[0] == PKMNSelect.value)[2] + " & " + bosses.find(elem => elem[0] == PKMNSelect.value)[3]);
+    type1Select.value = bosses.find(elem => elem[5] + " " + elem[4] == PKMNSelectCurrent.value)[2].toLowerCase();
+    type2Select.value = bosses.find(elem => elem[5] + " " + elem[4] == PKMNSelectCurrent.value)[3].toLowerCase();
 });
 
 PKMNSelectOld.addEventListener("change", () => {
     //Event Listener for the lang change
     if (PKMNSelectOld.value == "none") return;
-    type1Select.value = bosses.find(elem => elem[0] + " " + elem[4] == PKMNSelectOld.value)[2].toLowerCase();
-    type2Select.value = bosses.find(elem => elem[0] + " " + elem[4] == PKMNSelectOld.value)[3].toLowerCase();
-
-    //console.log(bosses.find(elem => elem[0] == PKMNSelect.value)[2] + " & " + bosses.find(elem => elem[0] == PKMNSelect.value)[3]);
+    type1Select.value = bosses.find(elem => elem[5] + " " + elem[4] == PKMNSelectOld.value)[2].toLowerCase();
+    type2Select.value = bosses.find(elem => elem[5] + " " + elem[4] == PKMNSelectOld.value)[3].toLowerCase();
 });
 
 type1Select.addEventListener("change", () => {
