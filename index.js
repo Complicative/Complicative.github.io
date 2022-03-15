@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", async() => {
     bossObject = await getBosses();
 
     setBosses('current', PKMNSelectCurrent, bossesCurrent);
-    setBosses('previous', PKMNSelectOld, bossesOld);
+    setBosses('previous', PKMNSelectOld, bossesCurrent);
 
 
     console.log("Day: " + getDay());
