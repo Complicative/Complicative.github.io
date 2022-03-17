@@ -62,8 +62,8 @@ document.addEventListener("DOMContentLoaded", async() => {
 
     bossObject = await getBosses();
 
-    setBosses('current', PKMNSelectCurrent, bosses);
-    setBosses('previous', PKMNSelectOld, bosses);
+    setBosses('current', PKMNSelectCurrent);
+    setBosses('previous', PKMNSelectOld);
 
 
     console.log("Day: " + getDay());
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", async() => {
 
 });
 
-async function setBosses(time, select, bossArr) {
+async function setBosses(time, select) {
 
     let nbossObject = bossObject[time];
     const tier1Object = nbossObject["1"];
@@ -104,25 +104,30 @@ async function setBosses(time, select, bossArr) {
     const tierMObject = nbossObject["mega"];
 
     tierMObject.forEach(elem => {
-        bossArr.push([elem["name"], elem['tier'], elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"], elem['id']])
+        bosses.push([elem["name"], elem['tier'], elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"], elem['id']])
     })
 
     tier5Object.forEach(elem => {
-        bossArr.push([elem["name"], elem['tier'], elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"], elem['id']])
+        bosses.push([elem["name"], elem['tier'], elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"], elem['id']])
     })
 
     tier3Object.forEach(elem => {
-        bossArr.push([elem["name"], elem['tier'], elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"], elem['id']])
+        bosses.push([elem["name"], elem['tier'], elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"], elem['id']])
     })
 
     tier1Object.forEach(elem => {
-        bossArr.push([elem["name"], elem['tier'], elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"], elem['id']]);
+        bosses.push([elem["name"], elem['tier'], elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"], elem['id']]);
     })
 
-    bossArr.sort((a, b) => a[1] == b[1] ? a[0] > b[0] : 0);
-    //console.log(bossArr);
+    bosses.sort((a, b) => {
+        if (a[1] == b[1]) return translatePKMN(a[0], a[5]) > translatePKMN(b[0], b[5]);
+        if (a[1] == 'mega') return -1;
+        else if (b[1] == 'mega') return 1;
+        else return a[1] < b[1];
+    })
 
-    bossArr.forEach(elem => {
+
+    bosses.forEach(elem => {
         let option = document.createElement("option");
         //option.setAttribute("key", elem[5]);
         option.setAttribute("type1", elem[2].toLowerCase());
