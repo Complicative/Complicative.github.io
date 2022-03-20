@@ -75,13 +75,13 @@
         function pkmnSelect_open(btn) {
             if (btn.value == "closed") {
                 document.getElementById('inputPKMN').style.height = "auto";
-                document.getElementById('PKMNSelectOld').style.display = "block";
+                //document.getElementById('PKMNSelectOld').style.display = "block";
                 document.getElementById('PKMNSelectNext').style.display = "block";
                 btn.innerHTML = "&UpArrowBar;";
                 btn.value = "open";
             } else if (btn.value == "open") {
                 document.getElementById('inputPKMN').style.height = "0";
-                document.getElementById('PKMNSelectOld').style.display = "none";
+                //document.getElementById('PKMNSelectOld').style.display = "none";
                 document.getElementById('PKMNSelectNext').style.display = "none";
                 btn.innerHTML = "&DownArrowBar;";
                 btn.value = "closed";
@@ -159,10 +159,10 @@
             border-radius: 10px;">
             <option value="none" key="nextRaids">Next Rotation (22th of March)</option>
         </select>
-        <select id="PKMNSelectOld" style="display: none; font-size:large; text-align: center; 
+        <!--<select id="PKMNSelectOld" style="display: none; font-size:large; text-align: center; 
                     background-color: black; color: white; width: 100%; border: 2px solid white; 
                     border-radius: 10px;">
-            <option value="none" key="allRaids">All Raids</option>
+            <option value="none" key="allRaids">All Raids</option>-->
         </select>
     </div>
     <br>

@@ -5,7 +5,8 @@ let type2Select = document.getElementById('type2Select');
 let copyBtn = document.getElementById('copyBtn');
 let langSwitcher = document.getElementById('langSwitcher');
 let PKMNSelectCurrent = document.getElementById('PKMNSelectCurrent');
-let PKMNSelectOld = document.getElementById('PKMNSelectOld');
+let PKMNSelectNext = document.getElementById('PKMNSelectNext');
+//let PKMNSelectOld = document.getElementById('PKMNSelectOld');
 
 
 let dictionary;
@@ -63,7 +64,8 @@ document.addEventListener("DOMContentLoaded", async() => {
     bossObject = await getBosses();
 
     setBosses('current', PKMNSelectCurrent);
-    setBosses('previous', PKMNSelectOld);
+    setBosses('next', PKMNSelectNext);
+    //setBosses('previous', PKMNSelectOld);
 
 
     console.log("Day: " + getDay());
@@ -104,19 +106,19 @@ async function setBosses(time, select) {
     const tierMObject = nbossObject["mega"];
 
     tierMObject.forEach(elem => {
-        bosses.push([elem["name"], elem['tier'], elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"], elem['id']])
+        bosses.push([elem["name"], elem['tier'], elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"], elem['id'], time])
     })
 
     tier5Object.forEach(elem => {
-        bosses.push([elem["name"], elem['tier'], elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"], elem['id']])
+        bosses.push([elem["name"], elem['tier'], elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"], elem['id'], time])
     })
 
     tier3Object.forEach(elem => {
-        bosses.push([elem["name"], elem['tier'], elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"], elem['id']])
+        bosses.push([elem["name"], elem['tier'], elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"], elem['id'], time])
     })
 
     tier1Object.forEach(elem => {
-        bosses.push([elem["name"], elem['tier'], elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"], elem['id']]);
+        bosses.push([elem["name"], elem['tier'], elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"], elem['id'], time]);
     })
 
     bosses.sort((a, b) => {
@@ -128,13 +130,14 @@ async function setBosses(time, select) {
 
 
     bosses.forEach(elem => {
-        let option = document.createElement("option");
-        //option.setAttribute("key", elem[5]);
-        option.setAttribute("type1", elem[2].toLowerCase());
-        option.setAttribute("type2", elem[3].toLowerCase());
-        option.value = elem[5] + " " + elem[4];
-        option.innerText = `${translatePKMN(elem[0], elem[5])}${elem[4] != "Normal" ? " " + elem[4] : ""} (Tier ${elem[1]})`;
-        select.appendChild(option);
+        if (elem[6] == time) {
+            let option = document.createElement("option");
+            option.setAttribute("type1", elem[2].toLowerCase());
+            option.setAttribute("type2", elem[3].toLowerCase());
+            option.value = elem[5] + " " + elem[4];
+            option.innerText = `${translatePKMN(elem[0], elem[5])}${elem[4] != "Normal" ? " " + elem[4] : ""} (Tier ${elem[1]})`;
+            select.appendChild(option);
+        }
     })
 
 }
@@ -171,6 +174,13 @@ PKMNSelectCurrent.addEventListener("change", () => {
     if (PKMNSelectCurrent.value == "none") return;
     type1Select.value = bosses.find(elem => elem[5] + " " + elem[4] == PKMNSelectCurrent.value)[2].toLowerCase();
     type2Select.value = bosses.find(elem => elem[5] + " " + elem[4] == PKMNSelectCurrent.value)[3].toLowerCase();
+});
+
+PKMNSelectNext.addEventListener("change", () => {
+    //Event Listener for the lang change
+    if (PKMNSelectNext.value == "none") return;
+    type1Select.value = bosses.find(elem => elem[5] + " " + elem[4] == PKMNSelectNext.value)[2].toLowerCase();
+    type2Select.value = bosses.find(elem => elem[5] + " " + elem[4] == PKMNSelectNext.value)[3].toLowerCase();
 });
 
 PKMNSelectOld.addEventListener("change", () => {
