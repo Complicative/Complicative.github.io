@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {
     "myDic": {
         "en": {
@@ -206,4 +207,214 @@
             "copyToClipboard": "Kopioi leikepöydälle"
         }
     }
+=======
+{
+    "myDic": {
+        "en": {
+            "bug": "Bug",
+            "dark": "Dark",
+            "dragon": "Dragon",
+            "electric": "Electric",
+            "fairy": "Fairy",
+            "fighting": "Fighting",
+            "fire": "Fire",
+            "flying": "Flying",
+            "ghost": "Ghost",
+            "grass": "Grass",
+            "ground": "Ground",
+            "ice": "Ice",
+            "normal": "Normal",
+            "poison": "Poison",
+            "psychic": "Psychic",
+            "rock": "Rock",
+            "steel": "Steel",
+            "water": "Water",
+
+            "effectAtt": "Effective Attacks:",
+            "defTypes": "Types:",
+
+            "oneAttack": "1+",
+            "twoAttacks": "2+",
+            "threeAttacks": "3",
+            "noAttacks": "None",
+
+            "weakTypes": "No Weak",
+            "strongTypes": "Only Resistant",
+            "noDefTypes": "None",
+
+            "copyToClipboard": "Copy to Clipboard",
+
+            "currentRaids": "Current Raids",
+            "allRaids": "All Raids"
+        },
+        "fr": {
+            "bug": "Insecte",
+            "dark": "Ténèbres",
+            "dragon": "Dragon",
+            "electric": "Electrique",
+            "fairy": "Fée",
+            "fighting": "Combat",
+            "fire": "Feu",
+            "flying": "Vol",
+            "ghost": "Spectre",
+            "grass": "Herbe",
+            "ground": "Sol",
+            "ice": "Glace",
+            "normal": "Normal",
+            "poison": "Poison",
+            "psychic": "Psy",
+            "rock": "Roche",
+            "steel": "Acier",
+            "water": "Eau",
+            "effectAtt": "Attaque Effective",
+            "defTypes": "Types:",
+            "oneAttack": "1+",
+            "twoAttacks": "2+",
+            "threeAttacks": "3",
+            "noAttacks": "Aucune",
+            "weakTypes": "Sans faiblesse",
+            "strongTypes": "Résiste seulement",
+            "noDefTypes": "Aucune",
+            "copyToClipboard": "Copier vers le presse-papier"
+        },
+        "de": {
+            "bug": "Käfer",
+            "dark": "Unlicht",
+            "dragon": "Drache",
+            "electric": "Elektro",
+            "fairy": "Fee",
+            "fighting": "Kampf",
+            "fire": "Feuer",
+            "flying": "Flug",
+            "ghost": "Geist",
+            "grass": "Pflanze",
+            "ground": "Boden",
+            "ice": "Eis",
+            "normal": "Normal",
+            "poison": "Gift",
+            "psychic": "Psycho",
+            "rock": "Gestein",
+            "steel": "Stahl",
+            "water": "Wasser",
+
+            "effectAtt": "Effektive Attacken:",
+            "defTypes": "Typen:",
+
+            "oneAttack": "1+",
+            "twoAttacks": "2+",
+            "threeAttacks": "3",
+            "noAttacks": "Keine",
+
+            "weakTypes": "Keine Schwachen",
+            "strongTypes": "Nur Resistente",
+            "noDefTypes": "Keine",
+
+            "copyToClipboard": "In die Zwischenablage kopieren",
+
+            "currentRaids": "Aktuelle Raids",
+            "nextRaids": "Next Rotation (22th of March)",
+            "allRaids": "Alle Raids"
+        },
+        "it": {
+            "bug": "Coleottero",
+            "dark": "Buio",
+            "dragon": "Drago",
+            "electric": "Elettro",
+            "fairy": "Folletto",
+            "fighting": "Lotta",
+            "fire": "Fuoco",
+            "flying": "Volante",
+            "ghost": "Spettro",
+            "grass": "Erba",
+            "ground": "Terra",
+            "ice": "Ghiaccio",
+            "normal": "Normale",
+            "poison": "Veleno",
+            "psychic": "Psico",
+            "rock": "Roccia",
+            "steel": "Acciaio",
+            "water": "Acqua",
+
+
+            "oneAttack": "1+",
+            "twoAttacks": "2+",
+            "threeAttacks": "3"
+        },
+        "es": {
+            "bug": "Bicho",
+            "dark": "Siniestro",
+            "dragon": "Dragón",
+            "electric": "Eléctrico",
+            "fairy": "Hada",
+            "fighting": "Lucha",
+            "fire": "Fuego",
+            "flying": "Volador",
+            "ghost": "Fantasma",
+            "grass": "Planta",
+            "ground": "Tierra",
+            "ice": "Hielo",
+            "normal": "Normal",
+            "poison": "Veneno",
+            "psychic": "Psíquico",
+            "rock": "Roca",
+            "steel": "Acero",
+            "water": "Agua",
+
+
+            "oneAttack": "1+",
+            "twoAttacks": "2+",
+            "threeAttacks": "3"
+        },
+        "sv": {
+            "bug": "Insekt",
+            "dark": "Mörk",
+            "dragon": "Drake",
+            "electric": "Elektrisk",
+            "fairy": "Fe",
+            "fighting": "Kamp",
+            "fire": "Eld",
+            "flying": "Flygande",
+            "ghost": "Spöke",
+            "grass": "Gräs",
+            "ground": "Mark",
+            "ice": "Is",
+            "normal": "Normal",
+            "poison": "Gift",
+            "psychic": "Psykisk",
+            "rock": "Sten",
+            "steel": "Stål",
+            "water": "Vatten"
+        },
+        "fi": {
+            "bug": "Hyönteinen",
+            "dark": "Pimeys",
+            "dragon": "Lohikäärme",
+            "electric": "Sähkö",
+            "fairy": "Keiju",
+            "fighting": "Tappelu",
+            "fire": "Tuli",
+            "flying": "Lento",
+            "ghost": "Aave",
+            "grass": "Ruoho",
+            "ground": "Maa",
+            "ice": "Jää",
+            "normal": "Normaali",
+            "poison": "Myrkky",
+            "psychic": "Meedio",
+            "rock": "Kivi",
+            "steel": "Teräs",
+            "water": "Vesi",
+            "effectAtt": "Tehokkaat hyökkäykset:",
+            "defTypes": "Tyypit:",
+            "oneAttack": "1+",
+            "twoAttacks": "2+",
+            "threeAttacks": "3",
+
+            "weakTypes": "Ei heikkoja",
+
+
+            "copyToClipboard": "Kopioi leikepöydälle"
+        }
+    }
+>>>>>>> Stashed changes
 }
