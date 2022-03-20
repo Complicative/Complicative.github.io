@@ -114,6 +114,109 @@
             ]
         }]
     },
+    "next": {
+        "1": [{
+                "form": "Normal",
+                "id": 69,
+                "name": "Bellsprout",
+                "tier": 1,
+                "type": [
+                    "Grass",
+                    "Poison"
+                ]
+            },
+            {
+                "form": "Normal",
+                "id": 114,
+                "name": "Tangela",
+                "tier": 1,
+                "type": [
+                    "Grass"
+                ]
+            },
+            {
+                "form": "Normal",
+                "id": 540,
+                "name": "Sewaddle",
+                "tier": 1,
+                "type": [
+                    "Bug",
+                    "Grass"
+                ]
+            },
+            {
+                "form": "Normal",
+                "id": 546,
+                "name": "Cottonee",
+                "tier": 1,
+                "type": [
+                    "Grass",
+                    "Fairy"
+                ]
+            }
+        ],
+        "3": [{
+                "form": "Normal",
+                "id": 12,
+                "name": "Butterfree",
+                "tier": 3,
+                "type": [
+                    "Bug",
+                    "Flying"
+                ]
+            },
+            {
+                "form": "Normal",
+                "id": 45,
+                "name": "Vileplume",
+                "tier": 3,
+                "type": [
+                    "Grass",
+                    "Poison"
+                ]
+            },
+            {
+                "form": "Normal",
+                "id": 47,
+                "name": "Parasect",
+                "tier": 3,
+                "type": [
+                    "Bug",
+                    "Grass"
+                ]
+            },
+            {
+                "form": "Normal",
+                "id": 103,
+                "name": "Exeggutor",
+                "tier": 3,
+                "type": [
+                    "Grass",
+                    "Psychic"
+                ]
+            }
+        ],
+        "5": [{
+            "form": "Normal",
+            "id": 786,
+            "name": "Tapu Lele",
+            "tier": 5,
+            "type": [
+                "Psychic",
+                "Fairy"
+            ]
+        }],
+        "mega": [{
+            "form": "Y",
+            "id": 6,
+            "name": "Charizard",
+            "tier": "mega",
+            "type": [
+                "Fire",
+                "Flying"
+            ]
+        }]
+    },
     "previous": {
         "1": [{
                 "boosted_weather": [
