@@ -183,12 +183,12 @@ PKMNSelectNext.addEventListener("change", () => {
     type2Select.value = bosses.find(elem => elem[5] + " " + elem[4] == PKMNSelectNext.value)[3].toLowerCase();
 });
 
-PKMNSelectOld.addEventListener("change", () => {
+/*PKMNSelectOld.addEventListener("change", () => {
     //Event Listener for the lang change
     if (PKMNSelectOld.value == "none") return;
     type1Select.value = bosses.find(elem => elem[5] + " " + elem[4] == PKMNSelectOld.value)[2].toLowerCase();
     type2Select.value = bosses.find(elem => elem[5] + " " + elem[4] == PKMNSelectOld.value)[3].toLowerCase();
-});
+});*/
 
 type1Select.addEventListener("change", () => {
     PKMNSelectCurrent.value = "none";
