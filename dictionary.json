@@ -35,7 +35,7 @@
             "copyToClipboard": "Copy to Clipboard",
 
             "currentRaids": "Current Raids",
-            "nextRaids": "Next Rotation (22nd of March)",
+            "nextRaids": "Future Raids",
             "allRaids": "All Raids"
         },
         "fr": {
@@ -103,7 +103,7 @@
             "copyToClipboard": "In die Zwischenablage kopieren",
 
             "currentRaids": "Aktuelle Raids",
-            "nextRaids": "Nächste Welle (22ter März)",
+            "nextRaids": "Kommende Raids",
             "allRaids": "Alle Raids"
         },
         "it": {

@@ -45,6 +45,44 @@
                 "type": [
                     "Water"
                 ]
+            },
+            {
+                "form": "Normal",
+                "id": 215,
+                "name": "Sneasel",
+                "tier": 1,
+                "type": [
+                    "Dark",
+                    "Ice"
+                ]
+            },
+            {
+                "form": "Normal",
+                "id": 231,
+                "name": "Phanpy",
+                "tier": 1,
+                "type": [
+                    "Ground"
+                ]
+            },
+            {
+                "form": "Normal",
+                "id": 529,
+                "name": "Drilbur",
+                "tier": 1,
+                "type": [
+                    "Ground"
+                ]
+            },
+            {
+                "form": "Normal",
+                "id": 580,
+                "name": "Ducklett",
+                "tier": 1,
+                "type": [
+                    "Water",
+                    "Flying"
+                ]
             }
         ],
         "3": [{
@@ -91,6 +129,35 @@
                 "tier": 3,
                 "type": [
                     "Dragon"
+                ]
+            },
+            {
+                "form": "Normal",
+                "id": 340,
+                "name": "Whiscash",
+                "tier": 3,
+                "type": [
+                    "Water",
+                    "Ground"
+                ]
+            },
+            {
+                "form": "Normal",
+                "id": 362,
+                "name": "Glalie",
+                "tier": 3,
+                "type": [
+                    "Ice"
+                ]
+            },
+            {
+                "form": "Normal",
+                "id": 520,
+                "name": "Tranquill",
+                "tier": 3,
+                "type": [
+                    "Normal",
+                    "Flying"
                 ]
             }
         ],
