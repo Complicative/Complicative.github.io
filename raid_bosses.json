@@ -2,82 +2,88 @@
     "current": {
         "1": [{
                 "form": "Normal",
-                "id": 69,
-                "name": "Bellsprout",
+                "id": 209,
+                "name": "Snubbull",
                 "tier": 1,
                 "type": [
-                    "Grass",
-                    "Poison"
-                ]
-            },
-            {
-                "form": "Normal",
-                "id": 114,
-                "name": "Tangela",
-                "tier": 1,
-                "type": [
-                    "Grass"
-                ]
-            },
-            {
-                "form": "Normal",
-                "id": 540,
-                "name": "Sewaddle",
-                "tier": 1,
-                "type": [
-                    "Bug",
-                    "Grass"
-                ]
-            },
-            {
-                "form": "Normal",
-                "id": 546,
-                "name": "Cottonee",
-                "tier": 1,
-                "type": [
-                    "Grass",
                     "Fairy"
+                ]
+            },
+            {
+                "form": "Normal",
+                "id": 280,
+                "name": "Ralts",
+                "tier": 1,
+                "type": [
+                    "Psychic",
+                    "Fairy"
+                ]
+            },
+            {
+                "form": "Normal",
+                "id": 517,
+                "name": "Munna",
+                "tier": 1,
+                "type": [
+                    "Psychic"
+                ]
+            },
+            {
+                "form": "Normal",
+                "id": 599,
+                "name": "Klink",
+                "tier": 1,
+                "type": [
+                    "Steel"
+                ]
+            },
+            {
+                "form": "Normal",
+                "id": 744,
+                "name": "Rockruff",
+                "tier": 1,
+                "type": [
+                    "Rock"
                 ]
             }
         ],
         "3": [{
                 "form": "Normal",
-                "id": 12,
-                "name": "Butterfree",
+                "id": 65,
+                "name": "Alakazam",
                 "tier": 3,
                 "type": [
-                    "Bug",
+                    "Psychic"
+                ]
+            },
+            {
+                "form": "Alola",
+                "id": 105,
+                "name": "Marowak",
+                "tier": 3,
+                "type": [
+                    "Fire",
+                    "Ghost"
+                ]
+            },
+            {
+                "form": "Normal",
+                "id": 176,
+                "name": "Togetic",
+                "tier": 3,
+                "type": [
+                    "Fairy",
                     "Flying"
                 ]
             },
             {
                 "form": "Normal",
-                "id": 45,
-                "name": "Vileplume",
-                "tier": 3,
-                "type": [
-                    "Grass",
-                    "Poison"
-                ]
-            },
-            {
-                "form": "Normal",
-                "id": 47,
-                "name": "Parasect",
+                "id": 205,
+                "name": "Forretress",
                 "tier": 3,
                 "type": [
                     "Bug",
-                    "Grass"
-                ]
-            },
-            {
-                "form": "Normal",
-                "id": 103,
-                "name": "Exeggutor",
-                "tier": 3,
-                "type": [
-                    "Grass",
-                    "Psychic"
+                    "Steel"
                 ]
             }
         ],
