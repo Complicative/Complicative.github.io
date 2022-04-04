@@ -105,21 +105,22 @@ async function setBosses(time, select) {
     const tier5Object = nbossObject["5"];
     const tierMObject = nbossObject["mega"];
 
-    tierMObject.forEach(elem => {
-        bosses.push([elem["name"], elem['tier'], elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"], elem['id'], time])
-    })
-
-    tier5Object.forEach(elem => {
-        bosses.push([elem["name"], elem['tier'], elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"], elem['id'], time])
-    })
-
-    tier3Object.forEach(elem => {
-        bosses.push([elem["name"], elem['tier'], elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"], elem['id'], time])
-    })
-
-    tier1Object.forEach(elem => {
-        bosses.push([elem["name"], elem['tier'], elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"], elem['id'], time]);
-    })
+    if (tierMObject != undefined)
+        tierMObject.forEach(elem => {
+            bosses.push([elem["name"], elem['tier'], elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"], elem['id'], time])
+        })
+    if (tier5Object != undefined)
+        tier5Object.forEach(elem => {
+            bosses.push([elem["name"], elem['tier'], elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"], elem['id'], time])
+        })
+    if (tier3Object != undefined)
+        tier3Object.forEach(elem => {
+            bosses.push([elem["name"], elem['tier'], elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"], elem['id'], time])
+        })
+    if (tier1Object != undefined)
+        tier1Object.forEach(elem => {
+            bosses.push([elem["name"], elem['tier'], elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"], elem['id'], time]);
+        })
 
     bosses.sort((a, b) => {
         if (a[1] == b[1]) return translatePKMN(a[0], a[5]) > translatePKMN(b[0], b[5]);
