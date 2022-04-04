@@ -107,5 +107,53 @@
                 "Flying"
             ]
         }]
+    },
+    "next": {
+        "5": [{
+            "form": "Therian",
+            "id": 642,
+            "name": "Thundurus",
+            "tier": 5,
+            "type": [
+                "Electric",
+                "Flying"
+            ]
+        }, {
+            "form": "Normal",
+            "id": 787,
+            "name": "Tapu Bulu",
+            "tier": 5,
+            "type": [
+                "Grass",
+                "Fairy"
+            ]
+        }, {
+            "form": "Therian",
+            "id": 645,
+            "name": "Landorus",
+            "tier": 5,
+            "type": [
+                "Ground",
+                "Flying"
+            ]
+        }],
+        "mega": [{
+            "form": "Normal",
+            "id": 310,
+            "name": "Manectric",
+            "tier": "mega",
+            "type": [
+                "Electric"
+            ]
+        }, {
+            "form": "Normal",
+            "id": 18,
+            "name": "Pidgeot",
+            "tier": "mega",
+            "type": [
+                "Normal",
+                "Flying"
+            ]
+        }]
     }
 }
