@@ -1,40 +1,40 @@
 {
     "current": {
         "1": [{
+                "form": "Alola",
+                "id": 88,
+                "name": "Grimer",
+                "tier": 1,
+                "type": [
+                    "Poison",
+                    "Dark"
+                ]
+            },
+            {
                 "form": "Normal",
-                "id": 209,
-                "name": "Snubbull",
+                "id": 255,
+                "name": "Torchic",
+                "tier": 1,
+                "type": [
+                    "Fire"
+                ]
+            },
+            {
+                "form": "Normal",
+                "id": 548,
+                "name": "Petilil",
+                "tier": 1,
+                "type": [
+                    "Grass"
+                ]
+            },
+            {
+                "form": "Normal",
+                "id": 684,
+                "name": "Swirlix",
                 "tier": 1,
                 "type": [
                     "Fairy"
-                ]
-            },
-            {
-                "form": "Normal",
-                "id": 280,
-                "name": "Ralts",
-                "tier": 1,
-                "type": [
-                    "Psychic",
-                    "Fairy"
-                ]
-            },
-            {
-                "form": "Normal",
-                "id": 517,
-                "name": "Munna",
-                "tier": 1,
-                "type": [
-                    "Psychic"
-                ]
-            },
-            {
-                "form": "Normal",
-                "id": 599,
-                "name": "Klink",
-                "tier": 1,
-                "type": [
-                    "Steel"
                 ]
             },
             {
@@ -49,76 +49,44 @@
         ],
         "3": [{
                 "form": "Normal",
-                "id": 65,
-                "name": "Alakazam",
+                "id": 42,
+                "name": "Golbat",
                 "tier": 3,
                 "type": [
-                    "Psychic"
-                ]
-            },
-            {
-                "form": "Alola",
-                "id": 105,
-                "name": "Marowak",
-                "tier": 3,
-                "type": [
-                    "Fire",
-                    "Ghost"
-                ]
-            },
-            {
-                "form": "Normal",
-                "id": 176,
-                "name": "Togetic",
-                "tier": 3,
-                "type": [
-                    "Fairy",
+                    "Poison",
                     "Flying"
                 ]
             },
             {
-                "form": "Normal",
-                "id": 205,
-                "name": "Forretress",
+                "form": "Alola",
+                "id": 103,
+                "name": "Exeggutor",
                 "tier": 3,
                 "type": [
-                    "Bug",
-                    "Steel"
+                    "Grass",
+                    "Dragon"
+                ]
+            },
+            {
+                "form": "Normal",
+                "id": 210,
+                "name": "Granbull",
+                "tier": 3,
+                "type": [
+                    "Fairy"
+                ]
+            },
+            {
+                "form": "Normal",
+                "id": 388,
+                "name": "Grotle",
+                "tier": 3,
+                "type": [
+                    "Grass"
                 ]
             }
         ],
         "5": [{
-            "form": "Normal",
-            "id": 786,
-            "name": "Tapu Lele",
-            "tier": 5,
-            "type": [
-                "Psychic",
-                "Fairy"
-            ]
-        }],
-        "mega": [{
-            "form": "Y",
-            "id": 6,
-            "name": "Charizard",
-            "tier": "mega",
-            "type": [
-                "Fire",
-                "Flying"
-            ]
-        }]
-    },
-    "next": {
-        "5": [{
-            "form": "Therian",
-            "id": 642,
-            "name": "Thundurus",
-            "tier": 5,
-            "type": [
-                "Electric",
-                "Flying"
-            ]
-        }, {
             "form": "Normal",
             "id": 787,
             "name": "Tapu Bulu",
@@ -127,25 +95,8 @@
                 "Grass",
                 "Fairy"
             ]
-        }, {
-            "form": "Therian",
-            "id": 645,
-            "name": "Landorus",
-            "tier": 5,
-            "type": [
-                "Ground",
-                "Flying"
-            ]
         }],
         "mega": [{
-            "form": "Normal",
-            "id": 310,
-            "name": "Manectric",
-            "tier": "mega",
-            "type": [
-                "Electric"
-            ]
-        }, {
             "form": "Normal",
             "id": 18,
             "name": "Pidgeot",
@@ -155,5 +106,20 @@
                 "Flying"
             ]
         }]
+    },
+    "next": {
+        "5": [{
+            "form": "Therian",
+            "id": 645,
+            "name": "Landorus",
+            "tier": 5,
+            "type": [
+                "Ground",
+                "Flying"
+            ]
+        }],
+        "mega": [
+
+        ]
     }
 }
