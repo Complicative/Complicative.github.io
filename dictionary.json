@@ -35,8 +35,7 @@
             "copyToClipboard": "Copy to Clipboard",
 
             "legendAnd": "All Legendaries & Mythicals",
-            "megaAnd": "All Mega",
-            "allRaids": "All Raids"
+            "megaAnd": "All Mega"
         },
         "fr": {
             "bug": "Insecte",
@@ -102,9 +101,8 @@
 
             "copyToClipboard": "In die Zwischenablage kopieren",
 
-            "currentRaids": "Aktuelle Raids",
-            "nextRaids": "Kommende Raids",
-            "allRaids": "Alle Raids"
+            "legendAnd": "Alle Legänderen und Mystischen",
+            "megaAnd": "Alle Mega"
         },
         "it": {
             "bug": "Coleottero",
