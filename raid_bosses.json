@@ -62,7 +62,7 @@
             ]
         },
         {
-            "form": "Mega X",
+            "form": "Mega X/Y",
             "id": 150,
             "name": "Mewtwo",
             "type": [
@@ -70,9 +70,9 @@
             ]
         },
         {
-            "form": "Mega Y",
-            "id": 150,
-            "name": "Mewtwo",
+            "form": "Normal",
+            "id": 151,
+            "name": "Mew",
             "type": [
                 "Psychic"
             ]
@@ -117,6 +117,32 @@
             "type": [
                 "Fire",
                 "Flying"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 251,
+            "name": "Celebi",
+            "type": [
+                "Psychic",
+                "Grass"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 365,
+            "name": "Jirachi",
+            "type": [
+                "Steel",
+                "Psychic"
+            ]
+        },
+        {
+            "form": "(All Forms)",
+            "id": 366,
+            "name": "Deoxys",
+            "type": [
+                "Psychic"
             ]
         },
         {
@@ -256,16 +282,7 @@
             ]
         },
         {
-            "form": "Altered",
-            "id": 487,
-            "name": "Giratina",
-            "type": [
-                "Ghost",
-                "Dragon"
-            ]
-        },
-        {
-            "form": "Origin",
+            "form": "(All Forms)",
             "id": 487,
             "name": "Giratina",
             "type": [
@@ -300,6 +317,64 @@
         },
         {
             "form": "Normal",
+            "id": 489,
+            "name": "Phione",
+            "type": [
+                "Water"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 490,
+            "name": "Manaphy",
+            "type": [
+                "Water"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 491,
+            "name": "Darkrai",
+            "type": [
+                "Dark"
+            ]
+        },
+        {
+            "form": "Land Forme",
+            "id": 492,
+            "name": "Shaymin",
+            "type": [
+                "Grass"
+            ]
+        },
+        {
+            "form": "Sky Forme",
+            "id": 492,
+            "name": "Shaymin",
+            "type": [
+                "Grass",
+                "Flying"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 493,
+            "name": "Arceus",
+            "type": [
+                "Normal"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 494,
+            "name": "Victini",
+            "type": [
+                "Psychic",
+                "Fire"
+            ]
+        },
+        {
+            "form": "Normal",
             "id": 638,
             "name": "Cobalion",
             "type": [
@@ -326,7 +401,7 @@
             ]
         },
         {
-            "form": "Incarnate",
+            "form": "(All Forms)",
             "id": 641,
             "name": "Tornadus",
             "type": [
@@ -334,7 +409,7 @@
             ]
         },
         {
-            "form": "Incarnate",
+            "form": "(All Forms)",
             "id": 642,
             "name": "Thundurus",
             "type": [
@@ -343,33 +418,7 @@
             ]
         },
         {
-            "form": "Incarnate",
-            "id": 645,
-            "name": "Landorus",
-            "type": [
-                "Ground",
-                "Flying"
-            ]
-        },
-        {
-            "form": "Therian",
-            "id": 641,
-            "name": "Tornadus",
-            "type": [
-                "Flying"
-            ]
-        },
-        {
-            "form": "Therian",
-            "id": 642,
-            "name": "Thundurus",
-            "type": [
-                "Electric",
-                "Flying"
-            ]
-        },
-        {
-            "form": "Therian",
+            "form": "(All Forms)",
             "id": 645,
             "name": "Landorus",
             "type": [
@@ -396,7 +445,7 @@
             ]
         },
         {
-            "form": "Normal",
+            "form": "(All Forms)",
             "id": 646,
             "name": "Kyurem",
             "type": [
@@ -405,21 +454,39 @@
             ]
         },
         {
-            "form": "White",
-            "id": 646,
-            "name": "Kyurem",
+            "form": "(All Forms)",
+            "id": 647,
+            "name": "Keldeo",
             "type": [
-                "Dragon",
-                "Ice"
+                "Water",
+                "Fighting"
             ]
         },
         {
-            "form": "Black",
-            "id": 646,
-            "name": "Kyurem",
+            "form": "Aria",
+            "id": 648,
+            "name": "Meloetta",
             "type": [
-                "Dragon",
-                "Ice"
+                "Normal",
+                "Psychic"
+            ]
+        },
+        {
+            "form": "Pirouette",
+            "id": 648,
+            "name": "Meloetta",
+            "type": [
+                "Normal",
+                "Fighting"
+            ]
+        },
+        {
+            "form": "(All Forms)",
+            "id": 649,
+            "name": "Genesect",
+            "type": [
+                "Bug",
+                "Steel"
             ]
         },
         {
@@ -446,6 +513,42 @@
             "type": [
                 "Dragon",
                 "Ground"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 719,
+            "name": "Diancie",
+            "type": [
+                "Rock",
+                "Fairy"
+            ]
+        },
+        {
+            "form": "Confined",
+            "id": 720,
+            "name": "Hoopa",
+            "type": [
+                "Psychic",
+                "Ghost"
+            ]
+        },
+        {
+            "form": "Unbound",
+            "id": 720,
+            "name": "Hoopa",
+            "type": [
+                "Psychic",
+                "Dark"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 721,
+            "name": "Volcanion",
+            "type": [
+                "Fire",
+                "Water"
             ]
         },
         {
@@ -486,6 +589,22 @@
         },
         {
             "form": "Normal",
+            "id": 808,
+            "name": "Meltan",
+            "type": [
+                "Steel"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 809,
+            "name": "Melmetal",
+            "type": [
+                "Steel"
+            ]
+        },
+        {
+            "form": "Normal",
             "id": 888,
             "name": "Zacian",
             "type": [
@@ -498,6 +617,15 @@
             "name": "Zamazenta",
             "type": [
                 "Fighting"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 893,
+            "name": "Zarude",
+            "type": [
+                "Dark",
+                "Grass"
             ]
         }
     ],
@@ -616,20 +744,12 @@
             ]
         },
         {
-            "form": "Mega X",
+            "form": "Mega X/Y",
             "id": 150,
             "name": "Mewtwo",
             "type": [
                 "Psychic",
                 "Fighting"
-            ]
-        },
-        {
-            "form": "Mega Y",
-            "id": 150,
-            "name": "Mewtwo",
-            "type": [
-                "Psychic"
             ]
         },
         {
