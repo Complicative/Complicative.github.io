@@ -52,6 +52,226 @@
                 "Dark",
                 "Flying"
             ]
+        },
+        {
+            "form": "Normal",
+            "id": 150,
+            "name": "Mewtwo",
+            "type": [
+                "Psychic"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 243,
+            "name": "Raikou",
+            "type": [
+                "Electric"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 244,
+            "name": "Entei",
+            "type": [
+                "Fire"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 245,
+            "name": "Suicune",
+            "type": [
+                "Water"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 249,
+            "name": "Lugia",
+            "type": [
+                "Psychic",
+                "Flying"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 250,
+            "name": "Ho-Oh",
+            "type": [
+                "Fire",
+                "Flying"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 377,
+            "name": "Regirock",
+            "type": [
+                "Rock"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 378,
+            "name": "Regice",
+            "type": [
+                "Ice"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 379,
+            "name": "Registeel",
+            "type": [
+                "Steel"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 380,
+            "name": "Latias",
+            "type": [
+                "Dragon",
+                "Psychic"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 381,
+            "name": "Latios",
+            "type": [
+                "Dragon",
+                "Psychic"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 380,
+            "name": "Latias",
+            "type": [
+                "Dragon",
+                "Psychic"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 381,
+            "name": "Latios",
+            "type": [
+                "Dragon",
+                "Psychic"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 382,
+            "name": "Kyogre",
+            "type": [
+                "Water"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 383,
+            "name": "Groudon",
+            "type": [
+                "Ground"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 384,
+            "name": "Rayquaza",
+            "type": [
+                "Dragon",
+                "Flying"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 480,
+            "name": "Uxie",
+            "type": [
+                "Psychic"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 481,
+            "name": "Mesprit",
+            "type": [
+                "Psychic"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 482,
+            "name": "Azelf",
+            "type": [
+                "Psychic"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 483,
+            "name": "Dialga",
+            "type": [
+                "Steel",
+                "Dragon"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 484,
+            "name": "Palkia",
+            "type": [
+                "Water",
+                "Dragon"
+            ]
+        },
+        {
+            "form": "Altered",
+            "id": 487,
+            "name": "Giratina",
+            "type": [
+                "Ghost",
+                "Dragon"
+            ]
+        },
+        {
+            "form": "Origin",
+            "id": 487,
+            "name": "Giratina",
+            "type": [
+                "Ghost",
+                "Dragon"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 485,
+            "name": "Heatran",
+            "type": [
+                "Fire",
+                "Steel"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 486,
+            "name": "Regigigas",
+            "type": [
+                "Normal"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 488,
+            "name": "Cresselia",
+            "type": [
+                "Psychic"
+            ]
         }
     ],
     "mega": [{
