@@ -396,6 +396,84 @@
                 "Dragon",
                 "Ice"
             ]
+        },
+        {
+            "form": "Normal",
+            "id": 716,
+            "name": "Xerneas",
+            "type": [
+                "Fairy"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 717,
+            "name": "Yveltal",
+            "type": [
+                "Dark",
+                "Flying"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 718,
+            "name": "Zygarde",
+            "type": [
+                "Dragon",
+                "Ground"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 785,
+            "name": "Tapu Koko",
+            "type": [
+                "Electric",
+                "Fairy"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 786,
+            "name": "Tapu Lele",
+            "type": [
+                "Psychic",
+                "Fairy"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 787,
+            "name": "Tapu Bulu",
+            "type": [
+                "Grass",
+                "Fairy"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 788,
+            "name": "Tapu Fini",
+            "type": [
+                "Water",
+                "Fairy"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 888,
+            "name": "Zacian",
+            "type": [
+                "Fairy"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 889,
+            "name": "Zamazenta",
+            "type": [
+                "Fighting"
+            ]
         }
     ],
     "mega": [{
