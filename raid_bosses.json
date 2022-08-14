@@ -317,6 +317,374 @@
                 "Bug",
                 "Poison"
             ]
+        },
+        {
+            "form": "Mega",
+            "id": 18,
+            "name": "Pidgeot",
+            "type": [
+                "Normal",
+                "Flying"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 65,
+            "name": "Alakazam",
+            "type": [
+                "Psychic"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 80,
+            "name": "Slowbro",
+            "type": [
+                "Water",
+                "Psychic"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 94,
+            "name": "Gengar",
+            "type": [
+                "Ghost",
+                "Poison"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 115,
+            "name": "Kangaskhan",
+            "type": [
+                "Normal"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 127,
+            "name": "Pinsir",
+            "type": [
+                "Bug",
+                "Flying"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 130,
+            "name": "Gyarados",
+            "type": [
+                "Water",
+                "Dark"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 142,
+            "name": "Aerodactyl",
+            "type": [
+                "Rock",
+                "Flying"
+            ]
+        },
+        {
+            "form": "Mega X",
+            "id": 150,
+            "name": "Mewtwo",
+            "type": [
+                "Psychic",
+                "Fighting"
+            ]
+        },
+        {
+            "form": "Mega Y",
+            "id": 150,
+            "name": "Mewtwo",
+            "type": [
+                "Psychic"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 181,
+            "name": "Ampharos",
+            "type": [
+                "Electric",
+                "Dragon"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 208,
+            "name": "Steelix",
+            "type": [
+                "Steel",
+                "Ground"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 212,
+            "name": "Scizor",
+            "type": [
+                "Bug",
+                "Steel"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 214,
+            "name": "Heracross",
+            "type": [
+                "Bug",
+                "Fighting"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 229,
+            "name": "Houndoom",
+            "type": [
+                "Dark",
+                "Fire"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 248,
+            "name": "Tyranitar",
+            "type": [
+                "Rock",
+                "Dark"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 254,
+            "name": "Sceptile",
+            "type": [
+                "Grass"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 257,
+            "name": "Blaziken",
+            "type": [
+                "Fire",
+                "Fighting"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 260,
+            "name": "Swampert",
+            "type": [
+                "Water",
+                "Ground"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 282,
+            "name": "Gardevoir",
+            "type": [
+                "Psychic",
+                "Fairy"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 302,
+            "name": "Sableye",
+            "type": [
+                "Dark",
+                "Ghost"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 303,
+            "name": "Mawile",
+            "type": [
+                "Steel",
+                "Fairy"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 306,
+            "name": "Aggron",
+            "type": [
+                "Steel",
+                "Rock"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 308,
+            "name": "Medicham",
+            "type": [
+                "Fighting",
+                "Psychic"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 310,
+            "name": "Manectric",
+            "type": [
+                "Electric"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 319,
+            "name": "Sharpedo",
+            "type": [
+                "Water",
+                "Dark"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 323,
+            "name": "Camerupt",
+            "type": [
+                "Fire",
+                "Ground"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 334,
+            "name": "Altaria",
+            "type": [
+                "Dragon",
+                "Fairy"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 354,
+            "name": "Banette",
+            "type": [
+                "Ghost"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 359,
+            "name": "Absol",
+            "type": [
+                "Dark"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 362,
+            "name": "Glalie",
+            "type": [
+                "Ice"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 373,
+            "name": "Salamence",
+            "type": [
+                "Dragon",
+                "Flying"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 376,
+            "name": "Metagross",
+            "type": [
+                "Steel",
+                "Psychic"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 380,
+            "name": "Latias",
+            "type": [
+                "Dragon",
+                "Psychic"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 381,
+            "name": "Latios",
+            "type": [
+                "Dragon",
+                "Psychic"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 384,
+            "name": "Rayquaza",
+            "type": [
+                "Dragon",
+                "Flying"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 428,
+            "name": "Lopunny",
+            "type": [
+                "Normal",
+                "Fighting"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 445,
+            "name": "Garchomp",
+            "type": [
+                "445"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 448,
+            "name": "Lucario",
+            "type": [
+                "Fighting",
+                "Steel"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 460,
+            "name": "Abomasnow",
+            "type": [
+                "Grass",
+                "Ice"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 475,
+            "name": "Gallade",
+            "type": [
+                "Psychic",
+                "Fighting"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 531,
+            "name": "Audino",
+            "type": [
+                "Normal"
+            ]
         }
     ]
 }
