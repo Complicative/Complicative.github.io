@@ -62,6 +62,22 @@
             ]
         },
         {
+            "form": "Mega X",
+            "id": 150,
+            "name": "Mewtwo",
+            "type": [
+                "Psychic"
+            ]
+        },
+        {
+            "form": "Mega Y",
+            "id": 150,
+            "name": "Mewtwo",
+            "type": [
+                "Psychic"
+            ]
+        },
+        {
             "form": "Normal",
             "id": 243,
             "name": "Raikou",
@@ -181,6 +197,15 @@
         },
         {
             "form": "Normal",
+            "id": 384,
+            "name": "Rayquaza",
+            "type": [
+                "Dragon",
+                "Flying"
+            ]
+        },
+        {
+            "form": "Mega",
             "id": 384,
             "name": "Rayquaza",
             "type": [
