@@ -166,15 +166,15 @@ langSwitcher.addEventListener("change", () => {
 PKMNSelectCurrent.addEventListener("change", () => {
     //Event Listener for the lang change
     if (PKMNSelectCurrent.value == "none") return;
-    type1Select.value = bosses.find(elem => elem[5] + " " + elem[4] == PKMNSelectCurrent.value)[2].toLowerCase();
-    type2Select.value = bosses.find(elem => elem[5] + " " + elem[4] == PKMNSelectCurrent.value)[3].toLowerCase();
+    type1Select.value = bosses.find(elem => elem[4] + " " + elem[3] == PKMNSelectCurrent.value)[1].toLowerCase();
+    type2Select.value = bosses.find(elem => elem[4] + " " + elem[3] == PKMNSelectCurrent.value)[2].toLowerCase();
 });
 
 PKMNSelectNext.addEventListener("change", () => {
     //Event Listener for the lang change
     if (PKMNSelectNext.value == "none") return;
-    type1Select.value = bosses.find(elem => elem[5] + " " + elem[4] == PKMNSelectNext.value)[2].toLowerCase();
-    type2Select.value = bosses.find(elem => elem[5] + " " + elem[4] == PKMNSelectNext.value)[3].toLowerCase();
+    type1Select.value = bosses.find(elem => elem[4] + " " + elem[3] == PKMNSelectNext.value)[1].toLowerCase();
+    type2Select.value = bosses.find(elem => elem[4] + " " + elem[3] == PKMNSelectNext.value)[2].toLowerCase();
 });
 
 /*PKMNSelectOld.addEventListener("change", () => {
