@@ -1,114 +1,102 @@
 {
-    "current": {
-        "1": [{
+    "legend": [{
             "form": "Normal",
-            "id": 211,
-            "name": "Qwilfish",
-            "tier": 1,
+            "id": 144,
+            "name": "Articuno",
             "type": [
-                "Water",
+                "Ice",
+                "Flying"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 145,
+            "name": "Zapdos",
+            "type": [
+                "Lightning",
+                "Flying"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 146,
+            "name": "Molteres",
+            "type": [
+                "Fire",
+                "Flying"
+            ]
+        },
+        {
+            "form": "Galarian",
+            "id": 144,
+            "name": "Articuno",
+            "type": [
+                "Psychic",
+                "Flying"
+            ]
+        },
+        {
+            "form": "Galarian",
+            "id": 145,
+            "name": "Zapdos",
+            "type": [
+                "Fighting",
+                "Flying"
+            ]
+        },
+        {
+            "form": "Galarian",
+            "id": 145,
+            "name": "Molteres",
+            "type": [
+                "Dark",
+                "Flying"
+            ]
+        }
+    ],
+    "mega": [{
+            "form": "Mega",
+            "id": 3,
+            "name": "Venusaur",
+            "type": [
+                "Grass",
                 "Poison"
             ]
-        }, {
-            "form": "Normal",
-            "id": 320,
-            "name": "Wailmer",
-            "tier": 1,
+        },
+        {
+            "form": "Mega X",
+            "id": 6,
+            "name": "Charizard",
             "type": [
-                "Water"
+                "Fire",
+                "Dragon"
             ]
-        }, {
-            "form": "Normal",
-            "id": 682,
-            "name": "Spritzee",
-            "tier": 1,
+        },
+        {
+            "form": "Mega Y",
+            "id": 6,
+            "name": "Charizard",
             "type": [
-                "Fairy"
+                "Fire",
+                "Flying"
             ]
-        }, {
-            "form": "Normal",
-            "id": 694,
-            "name": "Helioptile",
-            "tier": 1,
-            "type": [
-                "Electric",
-                "Normal"
-            ]
-        }, {
-            "form": "Normal",
-            "id": 744,
-            "name": "Rockruff",
-            "tier": 1,
-            "type": [
-                "Rock"
-            ]
-        }],
-        "3": [{
-                "form": "Alola",
-                "id": 26,
-                "name": "Raichu",
-                "tier": 3,
-                "type": [
-                    "Electric",
-                    "Psychic"
-                ]
-            },
-            {
-                "form": "Normal",
-                "id": 160,
-                "name": "Feraligatr",
-                "tier": 3,
-                "type": [
-                    "Water"
-                ]
-            },
-            {
-                "form": "Normal",
-                "id": 184,
-                "name": "Azumarill",
-                "tier": 3,
-                "type": [
-                    "Water",
-                    "Fairy"
-                ]
-            },
-            {
-                "form": "Normal",
-                "id": 272,
-                "name": "Ludicolo",
-                "tier": 3,
-                "type": [
-                    "Water",
-                    "Grass"
-                ]
-            }
-        ],
-        "5": [{
-            "form": "Normal",
-            "id": 788,
-            "name": "Tapu Fini",
-            "tier": 5,
-            "type": [
-                "Water",
-                "Fairy"
-            ]
-        }],
-        "mega": [{
-            "form": "Normal",
+        },
+        {
+            "form": "Mega",
             "id": 9,
             "name": "Blastoise",
-            "tier": "mega",
             "type": [
                 "Water"
             ]
-        }]
-    },
-    "next": {
-        "5": [
-
-        ],
-        "mega": [
-
-        ]
-    }
+        },
+        {
+            "form": "Mega",
+            "id": 15,
+            "name": "Beedril",
+            "type": [
+                "Bug",
+                "Poison"
+            ]
+        }
+    ]
 }

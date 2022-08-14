@@ -140,31 +140,22 @@
         </select>
     </div>
 
-    <div style="display:flex; justify-content: center; width: 90%; margin: 0 auto;">
+    <div style="display:flex; justify-content: center; width: 100%; margin: 0 auto;">
         <select id="PKMNSelectCurrent" style="font-size:large; text-align: center; 
             background-color: black; color: white; width: 90%; border: 2px solid white; 
             border-radius: 10px;">
-            <option value="none" key="currentRaids">Current Raids</option>
+            <option value="none" key="legendAnd">All Legendaries & Mythicals</option>
         </select>
-        <button onclick="pkmnSelect_open(this)" value="closed" style="background-color: black; color: white;
-    border: 2px solid white; border-radius: 10px;
-    font-size: x-large; width: 10%;">&DownArrowBar;</button>
     </div>
 
-
-    <div id="inputPKMN" style="width:90%; margin: 0 auto; height: 0;">
-
-        <select id="PKMNSelectNext" style="display: none; font-size:large; text-align: center; 
-            background-color: black; color: white; width: 100%; border: 2px solid white; 
-            border-radius: 10px;">
-            <option value="none" key="nextRaids">Next Rotation (22th of March)</option>
-        </select>
-        <!--<select id="PKMNSelectOld" style="display: none; font-size:large; text-align: center; 
-                    background-color: black; color: white; width: 100%; border: 2px solid white; 
+    <div style="display:flex; justify-content: center; width: 100%; margin: 0 auto;">
+        <select id="PKMNSelectNext" style="font-size:large; text-align: center; 
+                    background-color: black; color: white; width: 90%; border: 2px solid white; 
                     border-radius: 10px;">
-            <option value="none" key="allRaids">All Raids</option>-->
+            <option value="none" key="megaAnd">All Mega</option>
         </select>
     </div>
+
     <br>
     <div style="width: 90%; margin: 0 auto;
     font-size: large; background-color: black;color: white; text-align: center;
@@ -214,17 +205,6 @@
         <button id="copyBtn" style="font-size: x-large; background-color: black;color: white;
         border: 2px solid white; border-radius: 100px; margin-bottom: 20px;
     width:90%;" key="copyToClipboard">Copy to Clipboard</button>
-    </div>
-
-    <!--<div id="footer" style="transition: 0.5s; position: fixed; bottom: 0; right: 0;
-    text-align: center; background-color: black;
-    width: 0; margin-right: 40%;">
-        <p id="footerText" style="display:none; color: white; font-size: small;">Report issue through<br>
-            <a href="https://www.reddit.com/message/compose/?to=mComplicative" style="color: white;">Reddit DM
-                (mComplicative)</a> or
-            <a href="https://github.com/Complicative/Complicative.github.io/issues" style="color: white;">Github Issues
-                (Complicative)</a>
-        </p>
     </div>
 
 
