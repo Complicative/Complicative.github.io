@@ -272,6 +272,130 @@
             "type": [
                 "Psychic"
             ]
+        },
+        {
+            "form": "Normal",
+            "id": 638,
+            "name": "Cobalion",
+            "type": [
+                "Steel",
+                "Fighting"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 639,
+            "name": "Terrakion",
+            "type": [
+                "Rock",
+                "Fighting"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 640,
+            "name": "Virizion",
+            "type": [
+                "Grass",
+                "Fighting"
+            ]
+        },
+        {
+            "form": "Incarnate",
+            "id": 641,
+            "name": "Tornadus",
+            "type": [
+                "Flying"
+            ]
+        },
+        {
+            "form": "Incarnate",
+            "id": 642,
+            "name": "Thundurus",
+            "type": [
+                "Electric",
+                "Flying"
+            ]
+        },
+        {
+            "form": "Incarnate",
+            "id": 645,
+            "name": "Landorus",
+            "type": [
+                "Ground",
+                "Flying"
+            ]
+        },
+        {
+            "form": "Therian",
+            "id": 641,
+            "name": "Tornadus",
+            "type": [
+                "Flying"
+            ]
+        },
+        {
+            "form": "Therian",
+            "id": 642,
+            "name": "Thundurus",
+            "type": [
+                "Electric",
+                "Flying"
+            ]
+        },
+        {
+            "form": "Therian",
+            "id": 645,
+            "name": "Landorus",
+            "type": [
+                "Ground",
+                "Flying"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 643,
+            "name": "Reshiram",
+            "type": [
+                "Dragon",
+                "Fire"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 644,
+            "name": "Zekrom",
+            "type": [
+                "Dragon",
+                "Electric"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 646,
+            "name": "Kyurem",
+            "type": [
+                "Dragon",
+                "Ice"
+            ]
+        },
+        {
+            "form": "White",
+            "id": 646,
+            "name": "Kyurem",
+            "type": [
+                "Dragon",
+                "Ice"
+            ]
+        },
+        {
+            "form": "Black",
+            "id": 646,
+            "name": "Kyurem",
+            "type": [
+                "Dragon",
+                "Ice"
+            ]
         }
     ],
     "mega": [{
@@ -648,7 +772,8 @@
             "id": 445,
             "name": "Garchomp",
             "type": [
-                "445"
+                "Dragon",
+                "Ground"
             ]
         },
         {
