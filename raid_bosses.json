@@ -1,5 +1,36 @@
 {
     "legend": [{
+            "form": "Ultra",
+            "id": 793,
+            "name": "",
+            "type": [
+                "Rock",
+                "Poison"
+            ]
+        },{
+            "form": "Ultra",
+            "id": 794,
+            "name": "",
+            "type": [
+                "Bug",
+                "Fighting"
+            ]
+        },{
+            "form": "Ultra",
+            "id": 795,
+            "name": "",
+            "type": [
+                "Bug",
+                "Fighting"
+            ]
+        },{
+            "form": "Ultra",
+            "id": 796,
+            "name": "",
+            "type": [
+                "Electric"
+            ]
+        },{
             "form": "Normal",
             "id": 144,
             "name": "Articuno",
