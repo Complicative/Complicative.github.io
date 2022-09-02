@@ -7,7 +7,7 @@
                 "Rock",
                 "Poison"
             ]
-        },{
+        }, {
             "form": "Ultra",
             "id": 794,
             "name": "",
@@ -15,7 +15,7 @@
                 "Bug",
                 "Fighting"
             ]
-        },{
+        }, {
             "form": "Ultra",
             "id": 795,
             "name": "",
@@ -23,14 +23,14 @@
                 "Bug",
                 "Fighting"
             ]
-        },{
+        }, {
             "form": "Ultra",
             "id": 796,
             "name": "",
             "type": [
                 "Electric"
             ]
-        },{
+        }, {
             "form": "Normal",
             "id": 144,
             "name": "Articuno",
@@ -161,7 +161,7 @@
         },
         {
             "form": "Normal",
-            "id": 365,
+            "id": 385,
             "name": "Jirachi",
             "type": [
                 "Steel",
@@ -170,7 +170,7 @@
         },
         {
             "form": "(All Forms)",
-            "id": 366,
+            "id": 386,
             "name": "Deoxys",
             "type": [
                 "Psychic"
