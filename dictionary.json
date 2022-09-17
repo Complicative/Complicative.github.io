@@ -34,8 +34,8 @@
 
             "copyToClipboard": "Copy to Clipboard",
 
-            "legendAnd": "All Legendaries & Mythicals",
-            "megaAnd": "All Mega"
+            "legendAnd": "All Legendaries, Mythicals & Ultra",
+            "megaAnd": "All Mega Evolutions"
         },
         "fr": {
             "bug": "Insecte",
@@ -101,8 +101,8 @@
 
             "copyToClipboard": "In die Zwischenablage kopieren",
 
-            "legendAnd": "Alle Legänderen und Mystischen",
-            "megaAnd": "Alle Mega"
+            "legendAnd": "Alle Legänderen, Mystischen & Ultra",
+            "megaAnd": "Alle Mega Entwicklungen"
         },
         "it": {
             "bug": "Coleottero",

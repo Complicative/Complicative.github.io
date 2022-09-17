@@ -1,36 +1,5 @@
 {
     "legend": [{
-            "form": "Ultra",
-            "id": 793,
-            "name": "",
-            "type": [
-                "Rock",
-                "Poison"
-            ]
-        }, {
-            "form": "Ultra",
-            "id": 794,
-            "name": "",
-            "type": [
-                "Bug",
-                "Fighting"
-            ]
-        }, {
-            "form": "Ultra",
-            "id": 795,
-            "name": "",
-            "type": [
-                "Bug",
-                "Fighting"
-            ]
-        }, {
-            "form": "Ultra",
-            "id": 796,
-            "name": "",
-            "type": [
-                "Electric"
-            ]
-        }, {
             "form": "Normal",
             "id": 144,
             "name": "Articuno",
@@ -93,7 +62,16 @@
             ]
         },
         {
-            "form": "Mega X/Y",
+            "form": "Mega X",
+            "id": 150,
+            "name": "Mewtwo",
+            "type": [
+                "Psychic",
+                "Fighting"
+            ]
+        },
+        {
+            "form": "Mega Y",
             "id": 150,
             "name": "Mewtwo",
             "type": [
@@ -584,6 +562,21 @@
         },
         {
             "form": "Normal",
+            "id": 772,
+            "name": "Type: Null",
+            "type": [
+                "Normal"
+            ]
+        }, {
+            "form": "Normal",
+            "id": 773,
+            "name": "Silvally",
+            "type": [
+                "Normal"
+            ]
+        },
+        {
+            "form": "Normal",
             "id": 785,
             "name": "Tapu Koko",
             "type": [
@@ -617,6 +610,177 @@
                 "Water",
                 "Fairy"
             ]
+        }, {
+            "form": "Normal",
+            "id": 789,
+            "name": "Cosmog",
+            "type": [
+                "Psychic"
+            ]
+        }, {
+            "form": "Normal",
+            "id": 790,
+            "name": "Cosmoem",
+            "type": [
+                "Psychic"
+            ]
+        }, {
+            "form": "Normal",
+            "id": 791,
+            "name": "Solgaleo",
+            "type": [
+                "Psychic",
+                "Steel"
+            ]
+        }, {
+            "form": "Normal",
+            "id": 792,
+            "name": "Lunala",
+            "type": [
+                "Psychic",
+                "Ghost"
+            ]
+        },
+        {
+            "form": "Ultra",
+            "id": 793,
+            "name": "Nihilego",
+            "type": [
+                "Rock",
+                "Poison"
+            ]
+        }, {
+            "form": "Ultra",
+            "id": 794,
+            "name": "Buzzwole",
+            "type": [
+                "Bug",
+                "Fighting"
+            ]
+        }, {
+            "form": "Ultra",
+            "id": 795,
+            "name": "Pheromosa",
+            "type": [
+                "Bug",
+                "Fighting"
+            ]
+        }, {
+            "form": "Ultra",
+            "id": 796,
+            "name": "Xurkitree",
+            "type": [
+                "Electric"
+            ]
+        }, {
+            "form": "Ultra",
+            "id": 797,
+            "name": "Celesteela",
+            "type": [
+                "Steel",
+                "Flying"
+            ]
+        }, {
+            "form": "Ultra",
+            "id": 798,
+            "name": "Kartana",
+            "type": [
+                "Grass",
+                "Steel"
+            ]
+        }, {
+            "form": "Ultra",
+            "id": 799,
+            "name": "Guzzlord",
+            "type": [
+                "Dark",
+                "Dragon"
+            ]
+        }, {
+            "form": "Normal",
+            "id": 800,
+            "name": "Necrozma",
+            "type": [
+                "Psychic"
+            ]
+        }, {
+            "form": "Dusk Mane",
+            "id": 800,
+            "name": "Necrozma",
+            "type": [
+                "Psychic",
+                "Steel"
+            ]
+        }, {
+            "form": "Dawn Wings",
+            "id": 800,
+            "name": "Necrozma",
+            "type": [
+                "Psychic",
+                "Ghost"
+            ]
+        }, {
+            "form": "Ultra",
+            "id": 800,
+            "name": "Necrozma",
+            "type": [
+                "Psychic",
+                "Dragon"
+            ]
+        }, {
+            "form": "Normal",
+            "id": 801,
+            "name": "Magearna",
+            "type": [
+                "Steel",
+                "Fairy"
+            ]
+        }, {
+            "form": "Normal",
+            "id": 802,
+            "name": "Marshadow",
+            "type": [
+                "Fighting",
+                "Ghost"
+            ]
+        }, {
+            "form": "Ultra",
+            "id": 803,
+            "name": "Poipole",
+            "type": [
+                "Poison"
+            ]
+        }, {
+            "form": "Ultra",
+            "id": 804,
+            "name": "Naganadel",
+            "type": [
+                "Poison",
+                "Dragon"
+            ]
+        }, {
+            "form": "Ultra",
+            "id": 805,
+            "name": "Stakataka",
+            "type": [
+                "Rock",
+                "Steel"
+            ]
+        }, {
+            "form": "Ultra",
+            "id": 806,
+            "name": "Blacephalon",
+            "type": [
+                "Fire",
+                "Ghost"
+            ]
+        }, {
+            "form": "Normal",
+            "id": 807,
+            "name": "Zeraora",
+            "type": [
+                "Electric"
+            ]
         },
         {
             "form": "Normal",
@@ -641,6 +805,14 @@
             "type": [
                 "Fairy"
             ]
+        }, {
+            "form": "Crowned Sword",
+            "id": 888,
+            "name": "Zacian",
+            "type": [
+                "Fairy",
+                "Steel"
+            ]
         },
         {
             "form": "Normal",
@@ -648,6 +820,45 @@
             "name": "Zamazenta",
             "type": [
                 "Fighting"
+            ]
+        }, {
+            "form": "Crowned Shield",
+            "id": 889,
+            "name": "Zamazenta",
+            "type": [
+                "Fighting",
+                "Steel"
+            ]
+        }, {
+            "form": "(All Forms)",
+            "id": 890,
+            "name": "Eternatus",
+            "type": [
+                "Poison",
+                "Dragon"
+            ]
+        }, {
+            "form": "Normal",
+            "id": 891,
+            "name": "Kubfu",
+            "type": [
+                "Fighting"
+            ]
+        }, {
+            "form": "(Single Strike)",
+            "id": 892,
+            "name": "Urshifu",
+            "type": [
+                "Fighting",
+                "Dark"
+            ]
+        }, {
+            "form": "(Rapid Strike)",
+            "id": 892,
+            "name": "Urshifu",
+            "type": [
+                "Fighting",
+                "Water"
             ]
         },
         {
@@ -657,6 +868,74 @@
             "type": [
                 "Dark",
                 "Grass"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 894,
+            "name": "Regieleki",
+            "type": [
+                "Electric"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 895,
+            "name": "Regidrago",
+            "type": [
+                "Dragon"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 896,
+            "name": "Glastrier",
+            "type": [
+                "Ice"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 897,
+            "name": "Spectrier",
+            "type": [
+                "Ghost"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 898,
+            "name": "Calyrex",
+            "type": [
+                "Psychic",
+                "Grass"
+            ]
+        },
+        {
+            "form": "(Ice Rider)",
+            "id": 898,
+            "name": "Calyrex",
+            "type": [
+                "Psychic",
+                "Ice"
+            ]
+        },
+        {
+            "form": "(Shadow Rider)",
+            "id": 898,
+            "name": "Calyrex",
+            "type": [
+                "Psychic",
+                "Ghost"
+            ]
+        },
+        {
+            "form": "(All Forms)",
+            "id": 905,
+            "name": "Enamorus",
+            "type": [
+                "Fairy",
+                "Flying"
             ]
         }
     ],
@@ -775,12 +1054,20 @@
             ]
         },
         {
-            "form": "Mega X/Y",
+            "form": "Mega X",
             "id": 150,
             "name": "Mewtwo",
             "type": [
                 "Psychic",
                 "Fighting"
+            ]
+        },
+        {
+            "form": "Mega Y",
+            "id": 150,
+            "name": "Mewtwo",
+            "type": [
+                "Psychic"
             ]
         },
         {
@@ -842,7 +1129,8 @@
             "id": 254,
             "name": "Sceptile",
             "type": [
-                "Grass"
+                "Grass",
+                "Dragon"
             ]
         },
         {
@@ -895,8 +1183,7 @@
             "id": 306,
             "name": "Aggron",
             "type": [
-                "Steel",
-                "Rock"
+                "Steel"
             ]
         },
         {
@@ -1062,7 +1349,17 @@
             "id": 531,
             "name": "Audino",
             "type": [
-                "Normal"
+                "Normal",
+                "Fairy"
+            ]
+        },
+        {
+            "form": "Mega",
+            "id": 719,
+            "name": "Diancie",
+            "type": [
+                "Rock",
+                "Fairy"
             ]
         }
     ]
