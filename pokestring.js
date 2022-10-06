@@ -1,5 +1,9 @@
 let goBtn = document.getElementById('goBtn');
+let outputDiv = document.getElementById('outputDiv');
+let outputTitle = document.getElementById('outputTitle');
 let output = document.getElementById('output');
+let output2Div = document.getElementById('output2Div');
+let output2Title = document.getElementById('output2Title');
 let output2 = document.getElementById('output2');
 let type1Select = document.getElementById('type1Select');
 let type2Select = document.getElementById('type2Select');
@@ -318,9 +322,11 @@ function printTypes(lang) {
     }
 
     if (superEffectiveAttacks.length != 0) {
-        output.style.width = "45%";
+        outputDiv.style.width = "45%";
+        output2Div.style.width = "45%";
+        output2Title.style.borderWidth = "2px";
         output2.style.borderWidth = "2px";
-        output2.style.width = "45%";
+        output2Title.innerHTML = "Double Effective<br />(2.56x damage)";
 
         copyBtn.style.width = "45%";
         copy2Btn.style.borderWidth = "2px";
@@ -335,10 +341,17 @@ function printTypes(lang) {
             output2.textContent += `${firstSuperEffectiveAttack}&${secondSuperEffectiveAttack}&${thirdSuperEffectiveAttack}&`;
         }
     } else {
-        output2.textContent = "No supereffective attacks"
+
+        outputDiv.style.width = "90%";
+        output2Div.style.width = "0%";
+        output2Title.style.borderWidth = "0px";
+        output2.style.borderWidth = "0px";
+        output2Title.textContent = ""
+
+        /*output2.textContent = "No supereffective attacks"
         output2.style.borderWidth = "0px";
         output2.style.width = "0%";
-        output.style.width = "90%";
+        output.style.width = "90%";*/
 
         copy2Btn.style.width = "0%";
         copy2Btn.style.padding = "default";
