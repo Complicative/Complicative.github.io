@@ -6,26 +6,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>PokeString BETA</title>
-    <script defer src="index.js" charset="utf-8"></script>
+    <title>Complicative</title>
 
 </head>
 
 <body style="background-color:#555555; overflow: auto;">
 
-
-
     <button onclick="menu_open()" style="right: 0; bottom: 0; position: fixed;
-    background-color: black; color: white;
-    border: 2px solid white; border-radius: 0px;
-    font-size: x-large; width: 20%;">&#9776;</button>
+        background-color: black; color: white;
+        border: 2px solid white; border-radius: 0px;
+        font-size: x-large; width: 20%;">&#9776;</button>
 
     <div style="transition:0.5s; position:fixed; width:0; 
-    bottom: 0; right:0; top: 0; background-color: transparent;" id="sidebar">
+        bottom: 0; right:0; top: 0; background-color: transparent;" id="sidebar">
+        <div onclick="menu_close()" style="width: 100%; height: 100%; margin: 0 auto; position: fixed; bottom: 0;">
+        </div>
         <div style="width: 100%; margin: 0 auto; position: fixed; bottom: 0; background-color: black;">
             <select id="langSwitcher" style="background-color: black; color: white; 
-            border: 2px solid white; border-radius: 10px; font-size: large; text-align: center;
-            width: 100%;">
+                border: 2px solid white; border-radius: 10px; font-size: large; text-align: center;
+                width: 100%;">
                 <option value="en">English</option>
                 <option value="fr">French</option>
                 <option value="fi">Finnish</option>
@@ -55,9 +54,9 @@
             </div>
 
             <button onclick="menu_close()" style="
-                                background-color: black; color: white;
-                                border: 2px solid white; border-radius: 0px;
-                                font-size: x-large; width: 100%;">&times;</button>
+                                    background-color: black; color: white;
+                                    border: 2px solid white; border-radius: 0px;
+                                    font-size: x-large; width: 100%;">&times;</button>
         </div>
 
     </div>
@@ -71,145 +70,22 @@
         function menu_close() {
             document.getElementById("sidebar").style.width = "0";
         }
-
-        function pkmnSelect_open(btn) {
-            if (btn.value == "closed") {
-                document.getElementById('inputPKMN').style.height = "auto";
-                //document.getElementById('PKMNSelectOld').style.display = "block";
-                document.getElementById('PKMNSelectNext').style.display = "block";
-                btn.innerHTML = "&UpArrowBar;";
-                btn.value = "open";
-            } else if (btn.value == "open") {
-                document.getElementById('inputPKMN').style.height = "0";
-                //document.getElementById('PKMNSelectOld').style.display = "none";
-                document.getElementById('PKMNSelectNext').style.display = "none";
-                btn.innerHTML = "&DownArrowBar;";
-                btn.value = "closed";
-            }
-        }
     </script>
 
-
     <div style="display:flex; justify-content: center; width: 100%; margin-top: -10px;">
-        <h1 style="color: white;">PokeString BETA</h1>
+        <h1 style="color: white;">Complicative</h1>
     </div>
-    <div id="input" style="display:flex; justify-content: center; width:100%; margin-top: -10px;">
-        <select id="type1Select" style="font-size:x-large; text-align: center; 
-        background-color: black; color: white; width: 45%; border: 2px solid white; 
-        border-radius: 10px;">
-            <option value="bug" key="bug">Bug</option>
-            <option value="dark" key="dark">Dark</option>
-            <option value="dragon" key="dragon">Dragon</option>
-            <option value="electric" key="electric">Electric</option>
-            <option value="fairy" key="fairy">Fairy</option>
-            <option value="fighting" key="fighting">Fighting</option>
-            <option value="fire" key="fire">Fire</option>
-            <option value="flying" key="flying">Flying</option>
-            <option value="ghost" key="ghost">Ghost</option>
-            <option value="grass" key="grass">Grass</option>
-            <option value="ground" key="ground">Ground</option>
-            <option value="ice" key="ice">Ice</option>
-            <option value="normal" key="normal">Normal</option>
-            <option value="poison" key="poison">Poison</option>
-            <option value="psychic" key="psychic">Psychic</option>
-            <option value="rock" key="rock">Rock</option>
-            <option value="steel" key="steel">Steel</option>
-            <option value="water" key="water">Water</option>
-        </select>
-        <select id="type2Select" style="font-size: x-large; text-align: center; 
-        background-color: black; color: white; width: 45%; 
-        border: 2px solid white; border-radius: 10px;">
-            <option value="bug" key="bug">Bug</option>
-            <option value="dark" key="dark">Dark</option>
-            <option value="dragon" key="dragon">Dragon</option>
-            <option value="electric" key="electric">Electric</option>
-            <option value="fairy" key="fairy">Fairy</option>
-            <option value="fighting" key="fighting">Fighting</option>
-            <option value="fire" key="fire">Fire</option>
-            <option value="flying" key="flying">Flying</option>
-            <option value="ghost" key="ghost">Ghost</option>
-            <option value="grass" key="grass">Grass</option>
-            <option value="ground" key="ground">Ground</option>
-            <option value="ice" key="ice">Ice</option>
-            <option value="normal" key="normal">Normal</option>
-            <option value="poison" key="poison">Poison</option>
-            <option value="psychic" key="psychic">Psychic</option>
-            <option value="rock" key="rock">Rock</option>
-            <option value="steel" key="steel">Steel</option>
-            <option value="water" key="water">Water</option>
-        </select>
+    <hr>
+    <div style="display:flex; justify-content: center; width: 100%; margin-top: -10px;">
+        <h2 style="color: white;">Projects</h2>
     </div>
-
-    <div style="display:flex; justify-content: center; width: 100%; margin: 0 auto;">
-        <select id="PKMNSelectCurrent" style="font-size:large; text-align: center; 
-            background-color: black; color: white; width: 90%; border: 2px solid white; 
-            border-radius: 10px;">
-            <option value="none" key="legendAnd">All Legendaries & Mythicals</option>
-        </select>
-    </div>
-
-    <div style="display:flex; justify-content: center; width: 100%; margin: 0 auto;">
-        <select id="PKMNSelectNext" style="font-size:large; text-align: center; 
-                    background-color: black; color: white; width: 90%; border: 2px solid white; 
-                    border-radius: 10px;">
-            <option value="none" key="megaAnd">All Mega</option>
-        </select>
-    </div>
-
     <br>
-    <div style="width: 90%; margin: 0 auto;
-    font-size: large; background-color: black;color: white; text-align: center;
-        border: 2px solid white; border-radius: 10px;">
-        <div style="margin-bottom: 20px;">
-            <div key="effectAtt" style="font-size: x-large; margin: 10px;">Effective Attacks:</div>
-            <input type="radio" name="attackAmountRadio" id="attackAmountOption1" value="one">
-            <label for="attackAmountOption1" style="align-self: center; font-size: large;" key="oneAttack">1+</label>
-            <input type="radio" name="attackAmountRadio" id="attackAmountOption2" value="two" checked>
-            <label for="attackAmountOption2" style="align-self: center; font-size: large;" key="twoAttacks">2+</label>
-            <input type="radio" name="attackAmountRadio" id="attackAmountOption3" value="three">
-            <label for="attackAmountOption3" style="align-self: center; font-size: large;" key="threeAttacks">3</label>
-            <input type="radio" name="attackAmountRadio" id="attackAmountOption4" value="none">
-            <label for="attackAmountOption4" style="align-self: center; font-size: large;" key="noAttacks">None</label>
-        </div>
-    </div>
-    <div style="display: flex; justify-content: center; width: 90%; margin: 0 auto;
-        font-size: large; background-color: black;color: white; text-align: center;
-            border: 2px solid white; border-radius: 10px;">
-        <div style="margin-bottom: 20px;">
-            <div key="defTypes" style="font-size: x-large; margin: 10px;">Types:</div>
-            <input type="radio" name="defTypesRadio" id="defTypesOption3" value="none" checked>
-            <label for="defTypesOption3" style="align-self: center; font-size: large;" key="noDefTypes">None</label>
-            <br>
-            <input type="radio" name="defTypesRadio" id="defTypesOption1" value="weak">
-            <label for="defTypesOption1" style="align-self: center; font-size: large;" key="weakTypes">No Weak</label>
-            <br>
-            <input type="radio" name="defTypesRadio" id="defTypesOption2" value="strong">
-            <label for="defTypesOption2" style="align-self: center; font-size: large;" key="strongTypes">Only
-                Resistant</label>
-        </div>
-    </div>
-    <div style="display: flex; justify-content: center; width: 100%; margin-top: 10px; margin-bottom: 20px;">
-        <button id="goBtn" style="font-size: xx-large; background-color: black;color: white;
-        border: 2px solid white; border-radius: 100px;
-    width:90%;">GO</button>
+    <div style="display:flex; justify-content: center; width: 100%; margin-top: -10px;">
+        <button style="font-size: large; background-color: black;color: white;
+        border: 2px solid white; border-radius: 100px; margin-bottom: 20px;
+    width:90%;"><a href="pokestring.html" style="text-decoration: none; color: white;">PokeString BETA</a></button>
     </div>
 
-    <div id="outputDiv" style="display: flex; justify-content: center; width: 100%;">
-        <div id="output" style="color: white; margin-bottom: 10px; width: 90%; 
-        text-align: center; height: 60px;
-        overflow: auto; overflow-wrap: break-word;
-        background-color: black; border: 2px solid white;">output
-        </div>
-    </div>
-    <div style="display: flex; justify-content: center; width: 100%;">
-        <button id="copyBtn" style="font-size: x-large; background-color: black;color: white;
-        border: 2px solid white; border-radius: 100px; margin-bottom: 20px;
-    width:90%;" key="copyToClipboard">Copy to Clipboard</button>
-    </div>
 
 
 </body>
-
-
-
-</html>
