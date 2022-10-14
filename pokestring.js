@@ -21,17 +21,17 @@ let bossObject;
 let bosses = [];
 
 async function getTranslations() {
-    const response = await fetch("dictionary.json");
+    const response = await fetch("https://www.pokestring.app/dictionary.json");
     return await response.json();
 }
 
 async function getTranslationsPKMN() {
-    const response = await fetch("dictionaryPKMN.json");
+    const response = await fetch("https://www.pokestring.app/dictionaryPKMN.json");
     return await response.json();
 }
 
 async function getBosses() {
-    const response = await fetch("raid_bosses.json");
+    const response = await fetch("https://www.pokestring.app/raid_bosses.json");
     return await response.json();
 }
 
