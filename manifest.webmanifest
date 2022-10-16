@@ -1,0 +1,13 @@
+{
+    "background_color": "#555555",
+    "description": "PokeString - Easy and quick type effectiveness through the search bar",
+    "display": "standalone",
+    "icons": [{
+        "src": "icon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+    }],
+    "name": "PokeString",
+    "short_name": "PokeStr",
+    "start_url": "index.html"
+}
