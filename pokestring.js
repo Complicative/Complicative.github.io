@@ -10,8 +10,8 @@ let type2Select = document.getElementById('type2Select');
 let copyBtn = document.getElementById('copyBtn');
 let copy2Btn = document.getElementById('copy2Btn');
 let langSwitcher = document.getElementById('langSwitcher');
-let PKMNSelectCurrent = document.getElementById('PKMNSelectCurrent');
-let PKMNSelectNext = document.getElementById('PKMNSelectNext');
+let PKMNSelectLegend = document.getElementById('PKMNSelectLegend');
+let PKMNSelectMega = document.getElementById('PKMNSelectMega');
 
 
 let dictionary;
@@ -19,6 +19,8 @@ let translations;
 let translationsPKMN;
 let bossObject;
 let bosses = [];
+
+const acc_color = getComputedStyle(document.documentElement).getPropertyValue("--acc-color");
 
 async function getTranslations() {
     const response = await fetch("https://www.pokestring.app/dictionary.json");
@@ -68,8 +70,8 @@ document.addEventListener("DOMContentLoaded", async() => {
 
     bossObject = await getBosses();
 
-    setBosses('legend', PKMNSelectCurrent);
-    setBosses('mega', PKMNSelectNext);
+    setBosses('legend', PKMNSelectLegend);
+    setBosses('mega', PKMNSelectMega);
 
 
     console.log("Day: " + getDay());
@@ -169,25 +171,25 @@ langSwitcher.addEventListener("change", () => {
     window.location.assign(pathWithoutParam + "?" + locale);
 });
 
-PKMNSelectCurrent.addEventListener("change", () => {
+PKMNSelectLegend.addEventListener("change", () => {
     //Event Listener for the lang change
-    if (PKMNSelectCurrent.value == "none") return;
-    type1Select.value = bosses.find(elem => elem[4] + " " + elem[3] == PKMNSelectCurrent.value)[1].toLowerCase();
-    type2Select.value = bosses.find(elem => elem[4] + " " + elem[3] == PKMNSelectCurrent.value)[2].toLowerCase();
+    if (PKMNSelectLegend.value == "none") return;
+    type1Select.value = bosses.find(elem => elem[4] + " " + elem[3] == PKMNSelectLegend.value)[1].toLowerCase();
+    type2Select.value = bosses.find(elem => elem[4] + " " + elem[3] == PKMNSelectLegend.value)[2].toLowerCase();
 });
 
-PKMNSelectNext.addEventListener("change", () => {
+PKMNSelectMega.addEventListener("change", () => {
     //Event Listener for the lang change
-    if (PKMNSelectNext.value == "none") return;
-    type1Select.value = bosses.find(elem => elem[4] + " " + elem[3] == PKMNSelectNext.value)[1].toLowerCase();
-    type2Select.value = bosses.find(elem => elem[4] + " " + elem[3] == PKMNSelectNext.value)[2].toLowerCase();
+    if (PKMNSelectMega.value == "none") return;
+    type1Select.value = bosses.find(elem => elem[4] + " " + elem[3] == PKMNSelectMega.value)[1].toLowerCase();
+    type2Select.value = bosses.find(elem => elem[4] + " " + elem[3] == PKMNSelectMega.value)[2].toLowerCase();
 });
 
 type1Select.addEventListener("change", () => {
-    PKMNSelectCurrent.value = "none";
+    PKMNSelectLegend.value = "none";
 })
 type2Select.addEventListener("change", () => {
-    PKMNSelectCurrent.value = "none";
+    PKMNSelectLegend.value = "none";
 })
 
 
@@ -204,8 +206,8 @@ copyBtn.addEventListener("click", evt => {
     //Copy the output
     navigator.clipboard.writeText(output.textContent);
     //Change button colour, as confirmation
-    output.style.color = "green";
-    copyBtn.style.color = "green";
+    output.style.color = acc_color;
+    copyBtn.style.color = acc_color;
     output2.style.color = "white";
     copy2Btn.style.color = "white";
     fetch("https://api.countapi.xyz/hit/complicative.github.io/copy" + getDay());
@@ -215,8 +217,8 @@ copy2Btn.addEventListener("click", evt => {
     //Copy the output
     navigator.clipboard.writeText(output2.textContent);
     //Change button colour, as confirmation
-    output2.style.color = "green";
-    copy2Btn.style.color = "green";
+    output2.style.color = acc_color;
+    copy2Btn.style.color = acc_color;
     output.style.color = "white";
     copyBtn.style.color = "white";
     fetch("https://api.countapi.xyz/hit/complicative.github.io/copy" + getDay());

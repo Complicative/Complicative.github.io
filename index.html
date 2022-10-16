@@ -6,60 +6,48 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="stylesheet" href="styles.css">
+
     <title>PokeString BETA</title>
     <script defer src="pokestring.js" charset="utf-8"></script>
 
 </head>
 
-<body style="background-color:#555555; overflow: auto;">
+<body>
+    <button id="btn_menu_open" onclick="menu_open()">&#9776;</button>
 
-
-
-    <button onclick="menu_open()" style="right: 0; bottom: 0; position: fixed;
-    background-color: black; color: white;
-    border: 2px solid white; border-radius: 0px;
-    font-size: x-large; width: 20%;">&#9776;</button>
-
-    <div style="transition:0.5s; position:fixed; width:0; 
-    bottom: 0; right:0; top: 0;" id="sidebar">
-        <div onclick="menu_close()" style="width: 100%; height: 100%; margin: 0 auto; position: fixed; bottom: 0;">
-        </div>
-        <div style="width: 100%; margin: 0 auto; position: fixed; bottom: 0; background-color: black;">
-            <select id="langSwitcher" style="background-color: black; color: white; 
-            border: 2px solid white; border-radius: 10px; font-size: large; text-align: center;
-            width: 100%;">
+    <div id="sidebar">
+        <div id="sidebar_inner_free_space_div" onclick="menu_close()"></div>
+        <div id="sidebar_inner_div">
+            <select id="langSwitcher">
                 <option value="en">English</option>
                 <option value="fr">French</option>
-                <option value="fi">Finnish</option>
                 <option value="de">German</option>
                 <option value="it">Italian</option>
                 <option value="es">Spanish</option>
-                <option value="sv">Swedish</option>
+                <option value="pt">Portuguese</option>
             </select>
 
-            <div style="width: fit-content; justify-content: center; margin: 0 auto; margin-bottom: 10px; color: white;">
-                <div style="display:inline-block; text-align: center;">
+            <div id="sidebar_inner_contact">
+                <!--<div class="sidebar_inner_contact_text">
                     Contact me at
                 </div>
-                &#8594;
-                <a href="https://twitter.com/mComplicative" style="text-decoration: none;">
-                    <img src="twitter.png" style="width: 32px; height: 32px; margin-top: 16px;">
+                &#8594;-->
+                <a href="https://twitter.com/mComplicative">
+                    <img src="twitter.png">
                 </a>
-                <a href="https://www.reddit.com/user/mComplicative" style="text-decoration: none;">
-                    <img src="reddit.png" style="width: 32px; height: 32px; margin-top: 16px;">
+                <a href="https://www.reddit.com/user/mComplicative">
+                    <img src="reddit.png">
                 </a>
-                <a href="https://github.com/Complicative/Complicative.github.io" style="text-decoration: none;">
-                    <img src="github.png" style="width: 32px; height: 32px; margin-top: 16px;">
+                <a href="https://github.com/Complicative/Complicative.github.io">
+                    <img src="github.png">
                 </a>
-                <div style="display:inline-block; text-align: center; transform: scale(-1,1);">
+                <!--<div class="sidebar_inner_contact_text" id="sidebar_inner_contact_text_right">
                     Contact me at &#8594;
-                </div>
+                </div>-->
             </div>
 
-            <button onclick="menu_close()" style="
-                                background-color: black; color: white;
-                                border: 2px solid white; border-radius: 0px;
-                                font-size: x-large; width: 100%;">&times;</button>
+            <button id="btn_menu_close" onclick="menu_close()">&times;</button>
         </div>
 
     </div>
@@ -92,13 +80,11 @@
     </script>
 
 
-    <div style="display:flex; justify-content: center; width: 100%; margin-top: -10px;">
-        <h1 style="color: white;">PokeString BETA</h1>
+    <div class="FlexDiv" id="title_div">
+        <h1>PokeString BETA</h1>
     </div>
-    <div id="input" style="display:flex; justify-content: center; width:100%; margin-top: -10px;">
-        <select id="type1Select" style="font-size:x-large; text-align: center; 
-        background-color: black; color: white; width: 45%; border: 2px solid white; 
-        border-radius: 10px;">
+    <div class="FlexDiv" id="input">
+        <select class="selectType" id="type1Select">
             <option value="bug" key="bug">Bug</option>
             <option value="dark" key="dark">Dark</option>
             <option value="dragon" key="dragon">Dragon</option>
@@ -118,9 +104,7 @@
             <option value="steel" key="steel">Steel</option>
             <option value="water" key="water">Water</option>
         </select>
-        <select id="type2Select" style="font-size: x-large; text-align: center; 
-        background-color: black; color: white; width: 45%; 
-        border: 2px solid white; border-radius: 10px;">
+        <select class="selectType" id="type2Select">
             <option value="bug" key="bug">Bug</option>
             <option value="dark" key="dark">Dark</option>
             <option value="dragon" key="dragon">Dragon</option>
@@ -142,35 +126,29 @@
         </select>
     </div>
 
-    <div style="display:flex; justify-content: center; width: 100%; margin: 0 auto;">
-        <select id="PKMNSelectCurrent" style="font-size:large; text-align: center; 
-            background-color: black; color: white; width: 90%; border: 2px solid white; 
-            border-radius: 10px;">
+    <div class="FlexDiv">
+        <select id="PKMNSelectLegend" class="selectPKMN">
             <option value="none" key="legendAnd">All Legendaries & Mythicals</option>
         </select>
     </div>
 
-    <div style="display:flex; justify-content: center; width: 100%; margin: 0 auto;">
-        <select id="PKMNSelectNext" style="font-size:large; text-align: center; 
-                    background-color: black; color: white; width: 90%; border: 2px solid white; 
-                    border-radius: 10px;">
+    <div class="FlexDiv">
+        <select id="PKMNSelectMega" class="selectPKMN">
             <option value="none" key="megaAnd">All Mega</option>
         </select>
     </div>
 
     <br>
-    <div style="width: 90%; margin: 0 auto;
-    font-size: large; background-color: black;color: white; text-align: center;
-        border: 2px solid white; border-radius: 10px;">
+    <div id="effectiveAtt_div">
         <div style="margin-bottom: 20px;">
             <div key="effectAtt" style="font-size: x-large; margin: 10px;">Effective Attacks:</div>
             <input type="radio" name="attackAmountRadio" id="attackAmountOption1" value="one">
-            <label for="attackAmountOption1" style="align-self: center; font-size: large;" key="oneAttack">1+</label>
+            <label for="attackAmountOption1" key="oneAttack">1+</label>
             <input type="radio" name="attackAmountRadio" id="attackAmountOption2" value="two" checked>
-            <label for="attackAmountOption2" style="align-self: center; font-size: large;" key="twoAttacks">2+</label>
-            <input type="radio" name="attackAmountRadio" id="attackAmountOption3" value="three">
+            <label for="attackAmountOption2" key="twoAttacks">2+</label>
+            <!--<input type="radio" name="attackAmountRadio" id="attackAmountOption3" value="three">
             <label for="attackAmountOption3" style="align-self: center; font-size: large;" key="threeAttacks">3</label>
-            <!--<input type="radio" name="attackAmountRadio" id="attackAmountOption4" value="none">
+            <input type="radio" name="attackAmountRadio" id="attackAmountOption4" value="none">
             <label for="attackAmountOption4" style="align-self: center; font-size: large;" key="noAttacks">None</label>-->
         </div>
     </div>
@@ -190,54 +168,30 @@
                 Resistant</label>
         </div>
     </div>-->
-    <div style="display: flex; justify-content: center; width: 100%; margin-top: 10px; margin-bottom: 20px;">
-        <button id="goBtn" style="font-size: xx-large; background-color: black;color: white;
-        border: 2px solid white; border-radius: 100px;
-    width:90%;">GO</button>
+    <div class="FlexDiv" id="goBtn_div">
+        <button id="goBtn">GO</button>
     </div>
 
-    <div style="display: flex; justify-content: center; width: 100%;">
-        <div id="outputDiv" style="width:auto; justify-content: center; width: 90%; transition: .2s;">
+    <div class="FlexDiv">
+        <div id="outputDiv">
 
-            <div id="outputTitle" style="display: block; 
-            justify-content: center; align-items: center;
-            color: white; 
-            width: 100%; height: 40px; overflow:hidden;
-            text-align: center;  border: 2px solid white;">Effective Attacks<br>(1.6x damage)
+            <div id="outputTitle">Effective Attacks<br>(1.6x damage)
             </div>
-            <div id="output" style="display: block; color: white; 
-                    margin-bottom: 10px; width: 100%; 
-                    text-align: center; height: 100px;
-                    overflow: auto; overflow-wrap: break-word;
-                    background-color: black; border: 2px solid white;">
+            <div id="output">
             </div>
         </div>
-        <div id="output2Div" style="width:auto; justify-content: center; width: 0%; transition: .2s;">
+        <div id="output2Div">
 
-            <div id="output2Title" style="display: block; 
-            justify-content: center; align-items: center;
-            color: white; 
-                    width: 100%; height: 40px; overflow: hidden;
-                    text-align: center; border: 0px solid white;">
+            <div id="output2Title">
             </div>
-            <div id="output2" style="display: block; color: white; 
-                    margin-bottom: 10px; width: 100%; 
-                    text-align: center; height: 100px;
-                    overflow: auto; overflow-wrap: break-word;
-                    background-color: black; border: 0px solid white;">
+            <div id="output2">
             </div>
         </div>
 
     </div>
-    <div style="display: flex; justify-content: center; width: 100%;">
-        <button id="copyBtn" style="font-size: large; background-color: black;color: white;
-        border: 2px solid white; border-radius: 100px; margin-bottom: 20px;
-    width:90%;
-    transition: width .2s;" key="copyToClipboard">Copy to Clipboard</button>
-        <button id="copy2Btn" style="font-size: large; background-color: black;color: white;
-            border: 0px solid white; border-radius: 100px; margin-bottom: 20px;
-        width:0%; padding: 0;
-        transition: width .2s;"></button>
+    <div class="FlexDiv">
+        <button id="copyBtn" key="copyToClipboard">Copy to Clipboard</button>
+        <button id="copy2Btn"></button>
     </div>
 
 

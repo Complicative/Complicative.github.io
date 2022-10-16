@@ -1,0 +1,291 @@
+:root {
+    --acc-color: green;
+    --primary-text-color: #fff;
+    --primary-content-background-color: #000;
+}
+
+body {
+    background-color: #555555;
+    overflow: auto;
+}
+
+
+/*
+--------------------------------
+-----TEXT-----------------------
+--------------------------------
+*/
+
+h1 {
+    color: white;
+}
+
+
+/*
+--------------------------------
+-----BUTTON---------------------
+--------------------------------
+*/
+
+button {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    border-radius: 100px;
+}
+
+#btn_menu_open {
+    border-radius: 0px;
+    font-size: x-large;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    width: 20%;
+}
+
+#btn_menu_close {
+    border-radius: 0px;
+    font-size: x-large;
+    width: 100%;
+}
+
+#goBtn {
+    font-size: xx-large;
+    width: 90%;
+}
+
+#copyBtn {
+    font-size: large;
+    margin-bottom: 20px;
+    width: 90%;
+    transition: width .2s;
+}
+
+#copy2Btn {
+    font-size: large;
+    border: 0px solid white;
+    margin-bottom: 20px;
+    width: 0%;
+    padding: 0;
+    transition: width .2s;
+}
+
+
+/*
+--------------------------------
+-----SELECT---------------------
+--------------------------------
+*/
+
+select {
+    text-align: center;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.selectType {
+    font-size: x-large;
+    width: 45%;
+}
+
+.selectPKMN {
+    font-size: large;
+    width: 90%;
+}
+
+#langSwitcher {
+    font-size: large;
+    width: 100%;
+}
+
+
+/*
+--------------------------------
+-----LABLE----------------------
+--------------------------------
+*/
+
+label {
+    align-self: center;
+    font-size: large;
+}
+
+
+/*
+--------------------------------
+-----A--------------------------
+--------------------------------
+*/
+
+a {
+    text-decoration: none;
+}
+
+
+/*
+--------------------------------
+-----IMAGE----------------------
+--------------------------------
+*/
+
+img {
+    width: 32px;
+    height: 32px;
+    margin-top: 16px;
+}
+
+
+/*
+--------------------------------
+-----DIV------------------------
+--------------------------------
+*/
+
+
+/*Sidebar*/
+
+#sidebar {
+    transition: 0.5s;
+    position: fixed;
+    width: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+}
+
+#sidebar_inner_div {
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;
+    bottom: 0;
+    background-color: black;
+}
+
+#sidebar_inner_free_space_div {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: fixed;
+    bottom: 0;
+}
+
+#sidebar_inner_contact {
+    width: fit-content;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.sidebar_inner_contact_text {
+    display: inline-block;
+    text-align: center;
+}
+
+#sidebar_inner_contact_text_right {
+    display: inline-block;
+    text-align: center;
+    transform: scale(-1, 1);
+}
+
+.FlexDiv {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#title_div {
+    margin-top: -10px;
+}
+
+#input {
+    margin-top: -10px;
+}
+
+#effectiveAtt_div {
+    width: 90%;
+    margin: 0 auto;
+    font-size: large;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+#goBtn_div {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+/*
+------------OUTPUT------------
+*/
+
+#outputDiv {
+    width: auto;
+    justify-content: center;
+    width: 90%;
+    transition: .2s;
+}
+
+#outputTitle {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    text-align: center;
+    border: 2px solid white;
+}
+
+#output {
+    display: block;
+    color: white;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    height: 100px;
+    overflow: auto;
+    overflow-wrap: break-word;
+    background-color: black;
+    border: 2px solid white;
+}
+
+#output2Div {
+    width: auto;
+    justify-content: center;
+    width: 0%;
+    transition: .2s;
+}
+
+#output2Title {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    text-align: center;
+    border: 0px solid white;
+}
+
+#output2 {
+    display: block;
+    color: white;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    height: 100px;
+    overflow: auto;
+    overflow-wrap: break-word;
+    background-color: black;
+    border: 0px solid white;
+}

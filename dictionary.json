@@ -21,16 +21,8 @@
             "water": "Water",
 
             "effectAtt": "Effective Attacks:",
-            "defTypes": "Types:",
-
             "oneAttack": "1+",
             "twoAttacks": "2+",
-            "threeAttacks": "3",
-            "noAttacks": "None",
-
-            "weakTypes": "No Weak",
-            "strongTypes": "Only Resistant",
-            "noDefTypes": "None",
 
             "copyToClipboard": "Copy to Clipboard",
 
@@ -41,13 +33,13 @@
             "bug": "Insecte",
             "dark": "Ténèbres",
             "dragon": "Dragon",
-            "electric": "Electrique",
+            "electric": "Électrik",
             "fairy": "Fée",
             "fighting": "Combat",
             "fire": "Feu",
             "flying": "Vol",
             "ghost": "Spectre",
-            "grass": "Herbe",
+            "grass": "Plante",
             "ground": "Sol",
             "ice": "Glace",
             "normal": "Normal",
@@ -56,15 +48,12 @@
             "rock": "Roche",
             "steel": "Acier",
             "water": "Eau",
+
             "effectAtt": "Attaque Effective",
-            "defTypes": "Types:",
+
             "oneAttack": "1+",
             "twoAttacks": "2+",
-            "threeAttacks": "3",
-            "noAttacks": "Aucune",
-            "weakTypes": "Sans faiblesse",
-            "strongTypes": "Résiste seulement",
-            "noDefTypes": "Aucune",
+
             "copyToClipboard": "Copier vers le presse-papier"
         },
         "de": {
@@ -88,16 +77,9 @@
             "water": "Wasser",
 
             "effectAtt": "Effektive Attacken:",
-            "defTypes": "Typen:",
 
             "oneAttack": "1+",
             "twoAttacks": "2+",
-            "threeAttacks": "3",
-            "noAttacks": "Keine",
-
-            "weakTypes": "Keine Schwachen",
-            "strongTypes": "Nur Resistente",
-            "noDefTypes": "Keine",
 
             "copyToClipboard": "In die Zwischenablage kopieren",
 
@@ -126,8 +108,7 @@
 
 
             "oneAttack": "1+",
-            "twoAttacks": "2+",
-            "threeAttacks": "3"
+            "twoAttacks": "2+"
         },
         "es": {
             "bug": "Bicho",
@@ -151,58 +132,31 @@
 
 
             "oneAttack": "1+",
-            "twoAttacks": "2+",
-            "threeAttacks": "3"
+            "twoAttacks": "2+"
         },
-        "sv": {
-            "bug": "Insekt",
-            "dark": "Mörk",
-            "dragon": "Drake",
-            "electric": "Elektrisk",
-            "fairy": "Fe",
-            "fighting": "Kamp",
-            "fire": "Eld",
-            "flying": "Flygande",
-            "ghost": "Spöke",
-            "grass": "Gräs",
-            "ground": "Mark",
-            "ice": "Is",
+        "pt": {
+            "bug": "Inseto",
+            "dark": "Sombrio",
+            "dragon": "Dragão",
+            "electric": "Elétrico",
+            "fairy": "Fada",
+            "fighting": "Lutador",
+            "fire": "Fogo",
+            "flying": "Voador",
+            "ghost": "Fantasma",
+            "grass": "Planta",
+            "ground": "Terrestre",
+            "ice": "Gelo",
             "normal": "Normal",
-            "poison": "Gift",
-            "psychic": "Psykisk",
-            "rock": "Sten",
-            "steel": "Stål",
-            "water": "Vatten"
-        },
-        "fi": {
-            "bug": "Hyönteinen",
-            "dark": "Pimeys",
-            "dragon": "Lohikäärme",
-            "electric": "Sähkö",
-            "fairy": "Keiju",
-            "fighting": "Tappelu",
-            "fire": "Tuli",
-            "flying": "Lento",
-            "ghost": "Aave",
-            "grass": "Ruoho",
-            "ground": "Maa",
-            "ice": "Jää",
-            "normal": "Normaali",
-            "poison": "Myrkky",
-            "psychic": "Meedio",
-            "rock": "Kivi",
-            "steel": "Teräs",
-            "water": "Vesi",
-            "effectAtt": "Tehokkaat hyökkäykset:",
-            "defTypes": "Tyypit:",
+            "poison": "Venenoso",
+            "psychic": "Psíquico",
+            "rock": "Pedra",
+            "steel": "Aço",
+            "water": "Água",
+
+
             "oneAttack": "1+",
-            "twoAttacks": "2+",
-            "threeAttacks": "3",
-
-            "weakTypes": "Ei heikkoja",
-
-
-            "copyToClipboard": "Kopioi leikepöydälle"
+            "twoAttacks": "2+"
         }
     }
 }
