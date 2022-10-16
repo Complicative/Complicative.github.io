@@ -8,6 +8,5 @@
         "type": "image/png"
     }],
     "name": "PokeString",
-    "short_name": "PokeStr",
-    "start_url": "index.html?"
+    "short_name": "PokeStr"
 }
