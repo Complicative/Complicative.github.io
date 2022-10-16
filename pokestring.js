@@ -114,18 +114,19 @@ async function setBosses(time, select) {
     [5] = tier (legend or mega)
     */
 
-    console.log(nbossObject)
-
     if (nbossObject != undefined)
         nbossObject.forEach(elem => {
             bosses.push([elem["name"], elem['type'][0], elem['type'][1] != undefined ? elem['type'][1] : elem['type'][0], elem["form"], elem['id'], time])
         })
 
-    console.log(bosses)
 
     bosses.sort((a, b) => {
-        return translatePKMN(a[0], a[4]) > translatePKMN(b[0], b[4]);
+        //While I could write this sort algorythm in 1 line, chrome doesn't want to behave if I do that :/
+        if (translatePKMN(a[0], a[4]) > translatePKMN(b[0], b[4]))
+            return 1;
+        else return -1;
     })
+    console.log(bosses);
 
 
     bosses.forEach(elem => {
