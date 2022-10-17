@@ -26,6 +26,7 @@ h1 {
 
 * {
     font-family: ui-sans-serif, sans-serif;
+    color: var(--primary-text-color);
 }
 
 
@@ -203,6 +204,7 @@ img {
 .FlexDiv {
     display: flex;
     justify-content: center;
+    text-align: center;
     width: 100%;
     margin: 0 auto;
 }
