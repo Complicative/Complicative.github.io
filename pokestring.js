@@ -21,6 +21,10 @@ let bossObject;
 let bosses = [];
 
 const acc_color = getComputedStyle(document.documentElement).getPropertyValue("--acc-color");
+const positive_color = getComputedStyle(document.documentElement).getPropertyValue("--positive-color");
+const primary_text_color = getComputedStyle(document.documentElement).getPropertyValue("--primary-text-color");
+const primary_border_color = getComputedStyle(document.documentElement).getPropertyValue("--primary-border-color");
+const primary_content_background_color = getComputedStyle(document.documentElement).getPropertyValue("--primary-content-background-color");
 
 async function getTranslations() {
     const response = await fetch("https://www.pokestring.app/dictionary.json");
@@ -176,6 +180,7 @@ PKMNSelectLegend.addEventListener("change", () => {
     if (PKMNSelectLegend.value == "none") return;
     type1Select.value = bosses.find(elem => elem[4] + " " + elem[3] == PKMNSelectLegend.value)[1].toLowerCase();
     type2Select.value = bosses.find(elem => elem[4] + " " + elem[3] == PKMNSelectLegend.value)[2].toLowerCase();
+    goBtn.style.backgroundColor = acc_color;
 });
 
 PKMNSelectMega.addEventListener("change", () => {
@@ -183,13 +188,16 @@ PKMNSelectMega.addEventListener("change", () => {
     if (PKMNSelectMega.value == "none") return;
     type1Select.value = bosses.find(elem => elem[4] + " " + elem[3] == PKMNSelectMega.value)[1].toLowerCase();
     type2Select.value = bosses.find(elem => elem[4] + " " + elem[3] == PKMNSelectMega.value)[2].toLowerCase();
+    goBtn.style.backgroundColor = acc_color;
 });
 
 type1Select.addEventListener("change", () => {
     PKMNSelectLegend.value = "none";
+    goBtn.style.backgroundColor = acc_color;
 })
 type2Select.addEventListener("change", () => {
     PKMNSelectLegend.value = "none";
+    goBtn.style.backgroundColor = acc_color;
 })
 
 
@@ -206,10 +214,14 @@ copyBtn.addEventListener("click", evt => {
     //Copy the output
     navigator.clipboard.writeText(output.textContent);
     //Change button colour, as confirmation
-    output.style.color = acc_color;
-    copyBtn.style.color = acc_color;
-    output2.style.color = "white";
-    copy2Btn.style.color = "white";
+    output.style.color = positive_color;
+    copyBtn.style.color = positive_color;
+    output.style.backgroundColor = primary_content_background_color;
+    copyBtn.style.backgroundColor = primary_content_background_color;
+    output2.style.color = primary_text_color;
+    copy2Btn.style.color = primary_text_color;
+    output2.style.backgroundColor = primary_content_background_color;
+    copy2Btn.style.backgroundColor = primary_content_background_color;
     fetch("https://api.countapi.xyz/hit/complicative.github.io/copy" + getDay());
 });
 
@@ -217,10 +229,14 @@ copy2Btn.addEventListener("click", evt => {
     //Copy the output
     navigator.clipboard.writeText(output2.textContent);
     //Change button colour, as confirmation
-    output2.style.color = acc_color;
-    copy2Btn.style.color = acc_color;
-    output.style.color = "white";
-    copyBtn.style.color = "white";
+    output2.style.color = positive_color;
+    copy2Btn.style.color = positive_color;
+    output2.style.backgroundColor = primary_content_background_color;
+    copy2Btn.style.backgroundColor = primary_content_background_color;
+    output.style.color = primary_text_color;
+    copyBtn.style.color = primary_text_color;
+    output.style.backgroundColor = primary_content_background_color;
+    copyBtn.style.backgroundColor = primary_content_background_color;
     fetch("https://api.countapi.xyz/hit/complicative.github.io/copy" + getDay());
 });
 
@@ -371,10 +387,14 @@ function printTypes(lang) {
 
 
     //change copy button background to black
-    copyBtn.style.color = "white";
-    copy2Btn.style.color = "white";
-    output.style.color = "white";
-    output2.style.color = "white";
+    copyBtn.style.color = primary_text_color;
+    copyBtn.style.backgroundColor = acc_color;
+    copy2Btn.style.color = primary_text_color;
+    copy2Btn.style.backgroundColor = acc_color;
+    output.style.color = primary_text_color;
+    output2.style.color = primary_text_color;
+
+    goBtn.style.backgroundColor = primary_content_background_color;
 };
 
 function getAttacks(type, e) {

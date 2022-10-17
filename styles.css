@@ -1,11 +1,15 @@
 :root {
-    --acc-color: green;
-    --primary-text-color: #fff;
-    --primary-content-background-color: #000;
+    --acc-color: #EB5E28;
+    --positive-color: #AFFC41;
+    --primary-background-color: #2F4550;
+    --primary-text-color: white;
+    --primary-border-color: white;
+    --primary-content-background-color: #586F7C;
+    --secondary-content-background-color: #586F7C;
 }
 
 body {
-    background-color: #555555;
+    background-color: var(--primary-background-color);
     overflow: auto;
 }
 
@@ -17,7 +21,9 @@ body {
 */
 
 h1 {
-    color: white;
+    color: var(--acc-color);
+    -webkit-text-stroke: 1px white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -28,9 +34,9 @@ h1 {
 */
 
 button {
-    background-color: black;
-    color: white;
-    border: 2px solid white;
+    background-color: var(--primary-content-background-color);
+    color: var(--primary-text-color);
+    border: 2px solid var(--primary-border-color);
     border-radius: 100px;
 }
 
@@ -52,6 +58,7 @@ button {
 #goBtn {
     font-size: xx-large;
     width: 90%;
+    background-color: var(--acc-color);
 }
 
 #copyBtn {
@@ -63,7 +70,7 @@ button {
 
 #copy2Btn {
     font-size: large;
-    border: 0px solid white;
+    border: 0px solid var(--primary-border-color);
     margin-bottom: 20px;
     width: 0%;
     padding: 0;
@@ -79,9 +86,9 @@ button {
 
 select {
     text-align: center;
-    background-color: black;
-    color: white;
-    border: 2px solid white;
+    background-color: var(--primary-content-background-color);
+    color: var(--primary-text-color);
+    border: 2px solid var(--primary-border-color);
     border-radius: 10px;
 }
 
@@ -160,7 +167,7 @@ img {
     margin: 0 auto;
     position: fixed;
     bottom: 0;
-    background-color: black;
+    background-color: var(--primary-content-background-color);
 }
 
 #sidebar_inner_free_space_div {
@@ -176,7 +183,7 @@ img {
     justify-content: center;
     margin: 0 auto;
     margin-bottom: 10px;
-    color: white;
+    color: var(--primary-text-color);
 }
 
 .sidebar_inner_contact_text {
@@ -209,10 +216,10 @@ img {
     width: 90%;
     margin: 0 auto;
     font-size: large;
-    background-color: black;
-    color: white;
+    background-color: var(--primary-content-background-color);
+    color: var(--primary-text-color);
     text-align: center;
-    border: 2px solid white;
+    border: 2px solid var(--primary-border-color);
     border-radius: 10px;
 }
 
@@ -237,25 +244,26 @@ img {
     display: block;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: var(--primary-text-color);
+    background-color: var(--secondary-content-background-color);
     width: 100%;
     height: 40px;
     overflow: hidden;
     text-align: center;
-    border: 2px solid white;
+    border: 2px solid var(--primary-border-color);
 }
 
 #output {
     display: block;
-    color: white;
+    color: var(--primary-text-color);
     margin-bottom: 10px;
     width: 100%;
     text-align: center;
     height: 100px;
     overflow: auto;
     overflow-wrap: break-word;
-    background-color: black;
-    border: 2px solid white;
+    background-color: var(--primary-content-background-color);
+    border: 2px solid var(--primary-border-color);
 }
 
 #output2Div {
@@ -269,23 +277,24 @@ img {
     display: block;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: var(--primary-text-color);
+    background-color: var(--secondary-content-background-color);
     width: 100%;
     height: 40px;
     overflow: hidden;
     text-align: center;
-    border: 0px solid white;
+    border: 0px solid var(--primary-border-color);
 }
 
 #output2 {
     display: block;
-    color: white;
+    color: var(--primary-text-color);
     margin-bottom: 10px;
     width: 100%;
     text-align: center;
     height: 100px;
     overflow: auto;
     overflow-wrap: break-word;
-    background-color: black;
-    border: 0px solid white;
+    background-color: var(--primary-content-background-color);
+    border: 0px solid var(--primary-border-color);
 }
