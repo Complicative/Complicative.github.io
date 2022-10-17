@@ -1,3 +1,6 @@
 
 PKMNNames.ods
 icon.psd
+
+*.png
+!icon7.png
