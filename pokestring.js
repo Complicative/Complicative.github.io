@@ -194,10 +194,15 @@ PKMNSelectMega.addEventListener("change", () => {
 type1Select.addEventListener("change", () => {
     PKMNSelectLegend.value = "none";
     goBtn.style.backgroundColor = acc_color;
+    copyBtn.style.backgroundColor = primary_content_background_color;
+    copy2Btn.style.backgroundColor = primary_content_background_color;
+
 })
 type2Select.addEventListener("change", () => {
     PKMNSelectLegend.value = "none";
     goBtn.style.backgroundColor = acc_color;
+    copyBtn.style.backgroundColor = primary_content_background_color;
+    copy2Btn.style.backgroundColor = primary_content_background_color;
 })
 
 
@@ -216,11 +221,9 @@ copyBtn.addEventListener("click", evt => {
     //Change button colour, as confirmation
     output.style.color = positive_color;
     copyBtn.style.color = positive_color;
-    output.style.backgroundColor = primary_content_background_color;
     copyBtn.style.backgroundColor = primary_content_background_color;
     output2.style.color = primary_text_color;
     copy2Btn.style.color = primary_text_color;
-    output2.style.backgroundColor = primary_content_background_color;
     copy2Btn.style.backgroundColor = primary_content_background_color;
     fetch("https://api.countapi.xyz/hit/complicative.github.io/copy" + getDay());
 });
