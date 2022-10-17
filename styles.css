@@ -178,6 +178,7 @@ img {
     margin: 0 auto;
     position: fixed;
     bottom: 0;
+    background-color: #2F4550dd;
 }
 
 #sidebar_inner_contact {
