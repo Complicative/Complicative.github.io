@@ -22,7 +22,10 @@ body {
 
 h1 {
     color: var(--acc-color);
-    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    font-family: ui-sans-serif, sans-serif;
 }
 
 
@@ -57,7 +60,7 @@ button {
 #goBtn {
     font-size: xx-large;
     width: 90%;
-    background-color: var(--acc-color);
+    background-color: var(--primary-content-background-color);
 }
 
 #copyBtn {
