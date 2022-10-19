@@ -132,7 +132,6 @@ async function setBosses(time, select) {
             return 1;
         else return -1;
     })
-    console.log(bosses);
 
 
     bosses.forEach(elem => {
