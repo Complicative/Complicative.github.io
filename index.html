@@ -34,10 +34,6 @@
             </select>
 
             <div id="sidebar_inner_contact">
-                <!--<div class="sidebar_inner_contact_text">
-                    Contact me at
-                </div>
-                &#8594;-->
                 <a href="https://twitter.com/mComplicative">
                     <img src="img/twitter.png" alt="mComplicative at Twitter">
                 </a>
@@ -48,10 +44,7 @@
                     <img src="img/github.png" alt="mComplicative at Github">
                 </a>
                 <a href='https://ko-fi.com/complicative'>
-                    <img style="width: auto;" src='https://cdn.ko-fi.com/cdn/kofi5.png?v=3' alt='Buy Me a Coffee at ko-fi.com' /></a>
-                <!--<div class="sidebar_inner_contact_text" id="sidebar_inner_contact_text_right">
-                    Contact me at &#8594;
-                </div>-->
+                    <img style="width: auto;" src='img/kofi5.png' alt='Buy Me a Coffee at ko-fi.com' /></a>
             </div>
 
             <button id="btn_menu_close" onclick="menu_close()">&times;</button>
@@ -72,13 +65,11 @@
         function pkmnSelect_open(btn) {
             if (btn.value == "closed") {
                 document.getElementById('inputPKMN').style.height = "auto";
-                //document.getElementById('PKMNSelectOld').style.display = "block";
                 document.getElementById('PKMNSelectNext').style.display = "block";
                 btn.innerHTML = "&UpArrowBar;";
                 btn.value = "open";
             } else if (btn.value == "open") {
                 document.getElementById('inputPKMN').style.height = "0";
-                //document.getElementById('PKMNSelectOld').style.display = "none";
                 document.getElementById('PKMNSelectNext').style.display = "none";
                 btn.innerHTML = "&DownArrowBar;";
                 btn.value = "closed";
@@ -92,7 +83,7 @@
     </div>
     <div class="FlexDiv" id="input">
         <select class="selectType" id="type1Select">
-            <option value="bug" key="bug">Bug</option>
+            <!--<option value="bug" key="bug">Bug</option>
             <option value="dark" key="dark">Dark</option>
             <option value="dragon" key="dragon">Dragon</option>
             <option value="electric" key="electric">Electric</option>
@@ -109,10 +100,10 @@
             <option value="psychic" key="psychic">Psychic</option>
             <option value="rock" key="rock">Rock</option>
             <option value="steel" key="steel">Steel</option>
-            <option value="water" key="water">Water</option>
+            <option value="water" key="water">Water</option>-->
         </select>
         <select class="selectType" id="type2Select">
-            <option value="bug" key="bug">Bug</option>
+            <!--<option value="bug" key="bug">Bug</option>
             <option value="dark" key="dark">Dark</option>
             <option value="dragon" key="dragon">Dragon</option>
             <option value="electric" key="electric">Electric</option>
@@ -129,7 +120,7 @@
             <option value="psychic" key="psychic">Psychic</option>
             <option value="rock" key="rock">Rock</option>
             <option value="steel" key="steel">Steel</option>
-            <option value="water" key="water">Water</option>
+            <option value="water" key="water">Water</option>-->
         </select>
     </div>
 
@@ -153,28 +144,8 @@
             <label for="attackAmountOption1" key="oneAttack">1+</label>
             <input type="radio" name="attackAmountRadio" id="attackAmountOption2" value="two" checked>
             <label for="attackAmountOption2" key="twoAttacks">2+</label>
-            <!--<input type="radio" name="attackAmountRadio" id="attackAmountOption3" value="three">
-            <label for="attackAmountOption3" style="align-self: center; font-size: large;" key="threeAttacks">3</label>
-            <input type="radio" name="attackAmountRadio" id="attackAmountOption4" value="none">
-            <label for="attackAmountOption4" style="align-self: center; font-size: large;" key="noAttacks">None</label>-->
         </div>
     </div>
-    <!--<div style="display: flex; justify-content: center; width: 90%; margin: 0 auto;
-        font-size: large; background-color: black;color: white; text-align: center;
-            border: 2px solid white; border-radius: 10px;">
-        <div style="margin-bottom: 20px;">
-            <div key="defTypes" style="font-size: x-large; margin: 10px;">Types:</div>
-            <input type="radio" name="defTypesRadio" id="defTypesOption3" value="none" checked>
-            <label for="defTypesOption3" style="align-self: center; font-size: large;" key="noDefTypes">None</label>
-            <br>
-            <input type="radio" name="defTypesRadio" id="defTypesOption1" value="weak">
-            <label for="defTypesOption1" style="align-self: center; font-size: large;" key="weakTypes">No Weak</label>
-            <br>
-            <input type="radio" name="defTypesRadio" id="defTypesOption2" value="strong">
-            <label for="defTypesOption2" style="align-self: center; font-size: large;" key="strongTypes">Only
-                Resistant</label>
-        </div>
-    </div>-->
     <div class="FlexDiv" id="goBtn_div">
         <button id="goBtn">GO</button>
     </div>

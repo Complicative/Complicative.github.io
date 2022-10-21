@@ -50,7 +50,9 @@ let locale = document.documentElement.lang;
 
 
 
-document.addEventListener("DOMContentLoaded", async() => {
+document.addEventListener("DOMContentLoaded", async () => {
+
+
 
     translations = await getTranslations();
     translations = translations['myDic'];
@@ -65,12 +67,15 @@ document.addEventListener("DOMContentLoaded", async() => {
         langSwitcher.value = locale;
     }
     document
-    // Find all elements that have the key attribute and translate them
+        // Find all elements that have the key attribute and translate them
         .querySelectorAll("[key]")
         .forEach(elem => {
             translateElement(elem);
         });
 
+
+
+    setTypes();
 
     bossObject = await getBosses();
 
@@ -107,6 +112,38 @@ document.addEventListener("DOMContentLoaded", async() => {
 
 });
 
+async function setTypes() {
+    let options1 = [];
+    let options2 = [];
+    let types = ["bug", "dark", "dragon", "electric", "fairy", "fighting", "fire", "flying", "ghost", "grass", "ground", "ice", "normal", "poison", "psychic", "rock", "steel", "water"];
+
+    for (let i = 0; i < types.length; i++) {
+        let option = document.createElement("option");
+        option.setAttribute("value", types[i]);
+        option.setAttribute("key", types[i]);
+        options1.push(option);
+
+        let option2 = document.createElement("option");
+        option2.setAttribute("value", types[i]);
+        option2.setAttribute("key", types[i]);
+        options2.push(option2);
+    }
+
+    options1.sort((a, b) => {
+        return translateElement(a).localeCompare(translateElement(b))
+    })
+    options2.sort((a, b) => {
+        return translateElement(a).localeCompare(translateElement(b))
+    })
+
+    for (let i = 0; i < options1.length; i++) {
+        type1Select.appendChild(options1[i]);
+        type2Select.appendChild(options2[i]);
+    }
+
+
+}
+
 async function setBosses(time, select) {
 
     let nbossObject = bossObject[time];
@@ -128,9 +165,7 @@ async function setBosses(time, select) {
 
     bosses.sort((a, b) => {
         //While I could write this sort algorythm in 1 line, chrome doesn't want to behave if I do that :/
-        if (translatePKMN(a[0], a[4]) > translatePKMN(b[0], b[4]))
-            return 1;
-        else return -1;
+        return translatePKMN(a[0], a[4]).localeCompare(translatePKMN(b[0], b[4]));
     })
 
 
@@ -157,6 +192,7 @@ function translateElement(element) {
         translation = translations['en'][key];
     }
     element.innerText = translation;
+    return translation;
 };
 
 function translatePKMN(pkmnName, pkmnID) {
@@ -427,7 +463,7 @@ function getDefType(type, e) {
 
 function combineArrayWithoutDuplicates(arr1, arr2) {
     let newArr = arr1.concat(arr2);
-    newArr = newArr.sort().filter(function(item, pos, ary) {
+    newArr = newArr.sort().filter(function (item, pos, ary) {
         return item != ary[pos - 1];
     })
     return newArr;
@@ -435,7 +471,7 @@ function combineArrayWithoutDuplicates(arr1, arr2) {
 
 function combineArrayOnlyDuplicates(arr1, arr2) {
     let newArr = arr1.concat(arr2);
-    newArr = newArr.sort().filter(function(item, pos, ary) {
+    newArr = newArr.sort().filter(function (item, pos, ary) {
         return item == ary[pos - 1];
     })
     return newArr;
