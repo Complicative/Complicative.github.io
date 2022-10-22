@@ -13,6 +13,10 @@ body {
     overflow: auto;
 }
 
+#icon {
+    background-color: white;
+}
+
 
 /*
 --------------------------------

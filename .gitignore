@@ -1,6 +1,8 @@
 
 PKMNNames.ods
-icon.psd
+*.svg
 
-icon*.png
-!icon7.png
+!Magnifying_Glass_Bottom_Round_Background_White.svg
+!Magnifying_Glass_Top_Fall.svg
+!String_Accent_Colours.svg
+!Magnifying_Glass_Top_Rise.svg
