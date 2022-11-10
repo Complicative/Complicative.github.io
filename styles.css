@@ -159,7 +159,7 @@ img {
 #sidebar {
     transition: 0.5s;
     position: fixed;
-    width: 100%;
+    width: 0;
     bottom: 0;
     right: 0;
     top: 0;
@@ -181,7 +181,6 @@ img {
     position: fixed;
     bottom: 0;
     background-color: var(--primary-content-background-color);
-    background-color: #00000000;
 }
 
 
