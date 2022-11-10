@@ -163,7 +163,7 @@ img {
     bottom: 0;
     right: 0;
     top: 0;
-    background-color: #2F4550ee;
+    background-color: var(--primary-background-color);
     overflow: scroll;
 }
 
