@@ -159,30 +159,35 @@ img {
 #sidebar {
     transition: 0.5s;
     position: fixed;
-    width: 0;
+    width: 100%;
     bottom: 0;
     right: 0;
     top: 0;
-}
-
-#sidebar_inner_div {
-    width: 100%;
-    margin: 0 auto;
-    position: fixed;
-    bottom: 0;
-    background-color: var(--primary-content-background-color);
+    background-color: #2F4550ee;
+    overflow: scroll;
 }
 
 #sidebar_inner_free_space_div {
     width: 100%;
-    height: 100%;
-    margin: 0 auto;
+    overflow: auto;
     position: fixed;
+    top: 0;
     bottom: 0;
-    background-color: #2F4550dd;
+    margin-bottom: 140px;
 }
 
+#sidebar_inner_div {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: var(--primary-content-background-color);
+    background-color: #00000000;
+}
+
+
+
 #sidebar_inner_contact {
+
     width: fit-content;
     justify-content: center;
     margin: 0 auto;
@@ -201,6 +206,11 @@ img {
     transform: scale(-1, 1);
 }
 
+.LRMargin {
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
 .FlexDiv {
     display: flex;
     justify-content: center;
@@ -209,6 +219,8 @@ img {
     width: 100%;
     margin: 0 auto;
 }
+
+
 
 #title_div {
     margin-top: -10px;

@@ -22,7 +22,48 @@
     <button id="btn_menu_open" onclick="menu_open()">&#9776;</button>
 
     <div id="sidebar">
-        <div id="sidebar_inner_free_space_div" onclick="menu_close()"></div>
+        <div id="sidebar_inner_free_space_div" onclick="menu_close()">
+            <div class="FlexDiv">
+                <h2 class="LRMargin">About PokeString</h2>
+            </div>
+            <hr
+                style="width: 45%; border: 0; height: 2px; background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));">
+            <div class="FlexDiv">
+                <p class="LRMargin">PokeString is a free web app for quick and easy type effectivness in Pokemon
+                    Go throught it's Search Bar.<br><br>
+                    <b>PokeString is ad-free and cookie-free.</b><br><br>
+                    If you want to support PokeString, head down to my <a href='https://ko-fi.com/complicative'><i>KoFi
+                            page</i></a> and help keep the domain <b>PokeString.app</b> with a
+                    donation. Every bit counts!
+                </p>
+            </div>
+            <hr
+                style="width:90%; border: 0; height: 2px; background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));">
+            <div class="FlexDiv">
+                <h2 class="LRMargin">How to use:</h2>
+            </div>
+            <hr
+                style="width: 45%; border: 0; height: 2px; background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));">
+            <div>
+                <p class="LRMargin">1. Select the defending Pokemon<br>
+                    (Or select the types manually)<br>
+                    2. Press GO<br>
+                    3. Press Copy to Clipboard<br>
+                    4. Paste the string in your Pokemon Go Search Bar<br>
+                    5. Enjoy!<br><br>
+                    <b>Bonus Tip:</b> PokeString support WPA. Open your browser menu and press Install/Add to Home
+                    scren. PokeString will then behave like any other installed app.<br>
+                    (Make sure, you have your correct language selected first. Same applies for bookmarking
+                    PokeString)
+                </p>
+            </div>
+            <hr
+                style="width:90%; border: 0; height: 2px; background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));">
+            <div class="FlexDiv">
+                <small class="LRMargin">© Complicative 2022</small>
+            </div>
+
+        </div>
         <div id="sidebar_inner_div">
             <select id="langSwitcher">
                 <option value="en">English</option>
@@ -45,6 +86,7 @@
                 </a>
                 <a href='https://ko-fi.com/complicative'>
                     <img style="width: auto;" src='img/kofi5.png' alt='Buy Me a Coffee at ko-fi.com' /></a>
+
             </div>
 
             <button id="btn_menu_close" onclick="menu_close()">&times;</button>
