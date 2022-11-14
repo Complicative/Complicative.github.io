@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
 
 <head>
     <meta charset="utf-8">
@@ -15,10 +16,12 @@
 <body>
     <label>Days: </label>
     <input type="number" id="daysInput">
-    <button type="button" onclick="test()">Go</button>
+    <button type="button" onclick="goBtn()" id="goBtn">Go</button>
     <canvas id="myChart1" height="50"></canvas>
     <canvas id="myChart2" height="50"></canvas>
     <canvas id="myChart3" height="50"></canvas>
+
+    <div id="container" style="width:100%; height:800px;"></div>
 </body>
 
 </html>
