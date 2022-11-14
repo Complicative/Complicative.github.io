@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (days != "" && !isNaN(days)) {
         console.log("Loading Chart for " + days + " days...");
         loadingLabel.innerHTML = "Loading Chart for " + days + " days...";
-        await main(days);
+        await main(days - 1);
         console.log("Done");
         loadingLabel.innerHTML = "Done";
     }
@@ -23,7 +23,7 @@ async function goBtn() {
     if (input.value != "" && !isNaN(input.value)) {
         console.log("Loading Chart for " + input.value + " days...");
         loadingLabel.innerHTML = "Loading Chart for " + input.value + " days...";
-        await main(input.value);
+        await main(input.value - 1);
         console.log("Done");
         loadingLabel.innerHTML = "Done";
     }
