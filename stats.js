@@ -1,17 +1,32 @@
 let text = document.getElementById('text');
 let input = document.getElementById('daysInput');
+let loadingLabel = document.getElementById('loadingLabel');
 const myChart1 = document.getElementById('myChart1');
 const myChart2 = document.getElementById('myChart2');
 const myChart3 = document.getElementById('myChart3');
 
 document.addEventListener("DOMContentLoaded", async () => {
-    main(3);
-    //console.log(getDate(getDay() - 1));
+
+
+    days = window.location.search.slice(1, window.location.search.length);
+    if (days != "" && !isNaN(days)) {
+        console.log("Loading Chart for " + days + " days...");
+        loadingLabel.innerHTML = "Loading Chart for " + days + " days...";
+        await main(days);
+        console.log("Done");
+        loadingLabel.innerHTML = "Done";
+    }
 
 });
 
-function goBtn() {
-    main(input.value);
+async function goBtn() {
+    if (input.value != "" && !isNaN(input.value)) {
+        console.log("Loading Chart for " + input.value + " days...");
+        loadingLabel.innerHTML = "Loading Chart for " + input.value + " days...";
+        await main(input.value);
+        console.log("Done");
+        loadingLabel.innerHTML = "Done";
+    }
 }
 
 async function main(days) {
@@ -156,7 +171,6 @@ async function mainOld(days) {
 }
 
 input.addEventListener("keypress", function (event) {
-    console.log("test");
     // If the user presses the "Enter" key on the keyboard
     if (event.key === "Enter") {
         // Cancel the default action, if needed
