@@ -42,7 +42,27 @@ async function main(days) {
         yAxis: {
             title: {
                 text: 'Values'
+            },
+            stackLabels: {
+                enabled: true,
+                style: {
+                    fontWeight: 'bold',
+                    color: ( // theme
+                        Highcharts.defaultOptions.title.style &&
+                        Highcharts.defaultOptions.title.style.color
+                    ) || 'gray',
+                    textOutline: 'none'
+                }
             }
+        },
+        legend: {
+            align: 'left',
+            verticalAlign: 'top',
+            floating: true,
+        },
+        tooltip: {
+            headerFormat: '<b>{point.x}</b><br/>',
+            pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
         },
         series: [{
             name: 'Page Visits',
