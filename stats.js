@@ -55,11 +55,6 @@ async function main(days) {
                 }
             }
         },
-        legend: {
-            align: 'left',
-            verticalAlign: 'top',
-            floating: true,
-        },
         tooltip: {
             headerFormat: '<b>{point.x}</b><br/>',
             pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
