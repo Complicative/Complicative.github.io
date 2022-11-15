@@ -41,7 +41,7 @@ async function main(days) {
 
     var xValues = [];
     for (let i = 0; i <= days; i++) {
-        xValues[i] = getDate(getDay() - days + i);
+        xValues[i] = getDay() - days + i;
     }
 
     const chart = Highcharts.chart('container', {
@@ -52,7 +52,7 @@ async function main(days) {
             text: 'PokeString Statistics'
         },
         xAxis: {
-            categories: xValues
+            categories: xValues.map(x => getDate(x))
         },
         yAxis: {
             title: {
@@ -71,8 +71,14 @@ async function main(days) {
             }
         },
         tooltip: {
-            headerFormat: '<b>{point.x}</b><br/>',
-            pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+            formatter: function () {
+                const newDay = new Date(xValues[this.point.index] * 1000 * 86400);
+                console.log(this.series.name)
+                return ('<b>' + whatDay(newDay.getDay()) + '</b> the <b>' + this.x + '</b><br>' + this.series.name + ': <b>' + this.y + '</b>/' + this.total + ' (' + Math.floor(this.y / this.total * 100) + '%)');
+            }
+            /*headerFormat: '<b>{arr[1]}</b><br/>',
+            context: { arr: ['1', '2', '3'] },
+            pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'*/
         },
         series: [{
             name: 'Page Visits',
@@ -87,7 +93,7 @@ async function main(days) {
         plotOptions: {
             series: {
                 dataLabels: {
-                    enabled: true
+                    enabled: true,
                 },
                 stacking: "normal"
             },
@@ -100,73 +106,6 @@ async function main(days) {
             }
         },
         colors: ['#586F7C', '#EB5E28', '#AFFC41']
-    });
-}
-
-async function mainOld(days) {
-    let visits = [];
-    let go = [];
-    let copy = [];
-    for (let i = 0; i <= days; i++) {
-        visits[i] = await getVisits(getDay() - (days - i));
-        go[i] = await getGo(getDay() - (days - i));
-        copy[i] = await getCopy(getDay() - (days - i));
-    }
-
-    var xValues = [];
-    for (let i = 0; i <= days; i++) {
-        xValues[i] = days - i;
-    }
-
-    new Chart("myChart1", {
-        type: "bar",
-        data: {
-            labels: xValues,
-            datasets: [{
-                label: 'Visits',
-                fill: false,
-                tension: 0,
-                backgroundColor: "rgba(0,0,0,0.5)",
-                borderColor: "rgba(0,0,0)",
-                borderWidth: 1,
-                barPercentage: 0.99,
-                data: visits
-            }]
-        }
-    });
-
-    new Chart("myChart2", {
-        type: "bar",
-        data: {
-            labels: xValues,
-            datasets: [{
-                label: 'Go',
-                fill: false,
-                tension: 0,
-                backgroundColor: "rgba(0,0,0,0.5)",
-                borderColor: "rgba(0,0,0)",
-                borderWidth: 1,
-                barPercentage: 0.99,
-                data: go
-            }]
-        }
-    });
-
-    new Chart("myChart3", {
-        type: "bar",
-        data: {
-            labels: xValues,
-            datasets: [{
-                label: 'Copy',
-                fill: false,
-                tension: 0,
-                backgroundColor: "rgba(0,0,0,0.5)",
-                borderColor: "rgba(0,0,0)",
-                borderWidth: 1,
-                barPercentage: 0.99,
-                data: copy
-            }]
-        }
     });
 }
 
@@ -190,6 +129,18 @@ function getDay() {
 function getDate(day) {
     const newDay = new Date(day * 1000 * 86400);
     return (newDay.getDate() + "." + (newDay.getMonth() + 1));
+}
+
+function whatDay(day) {
+    switch (day) {
+        case 0: return 'Sunday';
+        case 1: return 'Monday';
+        case 2: return 'Tuesday';
+        case 3: return 'Wednesday';
+        case 4: return 'Thursday';
+        case 5: return 'Friday';
+        case 6: return 'Satruday';
+    }
 }
 
 async function getVisits(day) {
