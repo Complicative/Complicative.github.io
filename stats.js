@@ -73,7 +73,6 @@ async function main(days) {
         tooltip: {
             formatter: function () {
                 const newDay = new Date(xValues[this.point.index] * 1000 * 86400);
-                console.log(this.series.name)
                 return ('<b>' + whatDay(newDay.getDay()) + '</b> the <b>' + this.x + '</b><br>' + this.series.name + ': <b>' + this.y + '</b>/' + this.total + ' (' + Math.floor(this.y / this.total * 100) + '%)');
             }
             /*headerFormat: '<b>{arr[1]}</b><br/>',
