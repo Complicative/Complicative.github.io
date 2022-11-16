@@ -213,6 +213,7 @@ langSwitcher.addEventListener("change", () => {
 PKMNSelectLegend.addEventListener("change", () => {
     //Event Listener for the lang change
     if (PKMNSelectLegend.value == "none") return;
+    PKMNSelectMega.value = "none";
     type1Select.value = bosses.find(elem => elem[4] + " " + elem[3] == PKMNSelectLegend.value)[1].toLowerCase();
     type2Select.value = bosses.find(elem => elem[4] + " " + elem[3] == PKMNSelectLegend.value)[2].toLowerCase();
     goBtn.style.backgroundColor = acc_color;
@@ -221,6 +222,7 @@ PKMNSelectLegend.addEventListener("change", () => {
 PKMNSelectMega.addEventListener("change", () => {
     //Event Listener for the lang change
     if (PKMNSelectMega.value == "none") return;
+    PKMNSelectLegend.value = "none";
     type1Select.value = bosses.find(elem => elem[4] + " " + elem[3] == PKMNSelectMega.value)[1].toLowerCase();
     type2Select.value = bosses.find(elem => elem[4] + " " + elem[3] == PKMNSelectMega.value)[2].toLowerCase();
     goBtn.style.backgroundColor = acc_color;
@@ -228,6 +230,7 @@ PKMNSelectMega.addEventListener("change", () => {
 
 type1Select.addEventListener("change", () => {
     PKMNSelectLegend.value = "none";
+    PKMNSelectMega.value = "none";
     goBtn.style.backgroundColor = acc_color;
     copyBtn.style.backgroundColor = primary_content_background_color;
     copy2Btn.style.backgroundColor = primary_content_background_color;
@@ -235,6 +238,7 @@ type1Select.addEventListener("change", () => {
 })
 type2Select.addEventListener("change", () => {
     PKMNSelectLegend.value = "none";
+    PKMNSelectMega.value = "none";
     goBtn.style.backgroundColor = acc_color;
     copyBtn.style.backgroundColor = primary_content_background_color;
     copy2Btn.style.backgroundColor = primary_content_background_color;
