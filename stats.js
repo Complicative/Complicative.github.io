@@ -46,7 +46,8 @@ async function main(days) {
 
     const chart = Highcharts.chart('container', {
         chart: {
-            type: 'column'
+            type: 'column',
+            backgroundColor: '#333333',
         },
         title: {
             text: 'PokeString Statistics'
@@ -65,7 +66,7 @@ async function main(days) {
                     color: ( // theme
                         Highcharts.defaultOptions.title.style &&
                         Highcharts.defaultOptions.title.style.color
-                    ) || 'gray',
+                    ) || 'white',
                     textOutline: 'none'
                 }
             }
