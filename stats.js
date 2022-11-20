@@ -47,17 +47,33 @@ async function main(days) {
     const chart = Highcharts.chart('container', {
         chart: {
             type: 'column',
-            backgroundColor: '#333333',
+            backgroundColor: '#2F4550',
         },
         title: {
-            text: 'PokeString Statistics'
+            text: 'PokeString Statistics',
+            style: {
+                color: 'white'
+            }
+        },
+        legend:{
+            itemStyle: {
+                color: 'white'
+            }
         },
         xAxis: {
-            categories: xValues.map(x => getDate(x))
+            categories: xValues.map(x => getDate(x)),
+            labels: {
+                style: {
+                    color: 'white'
+                }
+            }
         },
         yAxis: {
             title: {
-                text: 'Values'
+                text: 'Values',
+                style: {
+                    color: 'white'
+                }
             },
             stackLabels: {
                 enabled: true,
@@ -68,6 +84,11 @@ async function main(days) {
                         Highcharts.defaultOptions.title.style.color
                     ) || 'white',
                     textOutline: 'none'
+                }
+            },
+            labels: {
+                style: {
+                    color: 'white'
                 }
             }
         },
