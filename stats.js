@@ -37,6 +37,8 @@ async function main(days) {
         visits[i] = await getVisits(getDay() - (days - i));
         go[i] = await getGo(getDay() - (days - i));
         copy[i] = await getCopy(getDay() - (days - i));
+        loadingLabel.innerHTML = "Loading Chart for " + (days + 1) + " days... " + Math.round(((i + 1) / (days + 1) * 100)) + "%";
+        console.log((i + 1) + "/" + (days + 1));
     }
 
     var xValues = [];
@@ -55,7 +57,7 @@ async function main(days) {
                 color: 'white'
             }
         },
-        legend:{
+        legend: {
             itemStyle: {
                 color: 'white'
             }
