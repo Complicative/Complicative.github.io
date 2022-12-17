@@ -52,6 +52,7 @@ function createSnowflakes(n) {
     document.getElementById('snowflakeSVG').style.display = "block";
     for (let i = 0; i < n; i++) {
         const node = document.getElementById('snowflakeSVG');
+        node.childNodes[1].style.transform = `scale(${(Math.random())+1})`;
         document.body.appendChild(node.cloneNode(true));
     }
 
@@ -61,7 +62,7 @@ function createSnowflakes(n) {
 
 document.addEventListener("DOMContentLoaded", async () => {
 
-    createSnowflakes(100);
+    createSnowflakes(9);
 
 
     translations = await getTranslations();
@@ -94,7 +95,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 
     console.log("Day: " + getDay());
-    if (window.location.protocol == "file:") {
+
+    if (window.location == "http://127.0.0.1:5500/") {
+        console.log("local access");
         fetch("https://api.countapi.xyz/get/complicative.github.io/visits" + getDay())
             .then(res => res.json())
             .then(visits => {

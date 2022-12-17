@@ -388,7 +388,7 @@ img {
     animation-duration: 10s, 3s;
     animation-timing-function: linear, ease-in-out;
     animation-iteration-count: infinite, infinite;
-    animation-play-state: running, running
+    animation-play-state: running, running;
 }
 
 .snowflake:nth-of-type(0) {
