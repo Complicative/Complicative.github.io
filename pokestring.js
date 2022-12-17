@@ -27,17 +27,17 @@ const primary_border_color = getComputedStyle(document.documentElement).getPrope
 const primary_content_background_color = getComputedStyle(document.documentElement).getPropertyValue("--primary-content-background-color");
 
 async function getTranslations() {
-    const response = await fetch("https://www.pokestring.app/dictionary.json");
+    const response = await fetch("dictionary.json");
     return await response.json();
 }
 
 async function getTranslationsPKMN() {
-    const response = await fetch("https://www.pokestring.app/dictionaryPKMN.json");
+    const response = await fetch("dictionaryPKMN.json");
     return await response.json();
 }
 
 async function getBosses() {
-    const response = await fetch("https://www.pokestring.app/raid_bosses.json");
+    const response = await fetch("raid_bosses.json");
     return await response.json();
 }
 
@@ -48,10 +48,20 @@ async function getBosses() {
 //localisation
 let locale = document.documentElement.lang;
 
+function createSnowflakes(n) {
+    document.getElementById('snowflakeSVG').style.display = "block";
+    for (let i = 0; i < n; i++) {
+        const node = document.getElementById('snowflakeSVG');
+        document.body.appendChild(node.cloneNode(true));
+    }
+
+}
+
 
 
 document.addEventListener("DOMContentLoaded", async () => {
 
+    createSnowflakes(100);
 
 
     translations = await getTranslations();

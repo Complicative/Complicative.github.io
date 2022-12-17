@@ -19,6 +19,9 @@
 </head>
 
 <body>
+    <svg width="100" height="100" id="snowflakeSVG" class="snowflake" style="display: none;">
+        <circle cx="5" cy="5" r="5" fill="white"></circle>
+    </svg>
     <button id="btn_menu_open" onclick="menu_open()">&#9776;</button>
 
     <div id="sidebar">
@@ -121,9 +124,9 @@
 
 
     <div class="FlexDiv" id="title_div" style="margin-bottom: 50px; margin-top: 30px;">
-        <img src="img/icon_top_fall.png" style="width: auto; height:50px;">
+        <img src="img/icon_top_santa_hat.png" style="width: auto; height:50px;  transform: scaleX(-1);">
         <img src="img/logo2.png" style="width: 150px; height:fit-content; margin-left: 20px; margin-right: 20px;">
-        <img src="img/icon_top_rise.png" style="width: auto; height:50px">
+        <img src="img/icon_top_santa_hat.png" style="width: auto; height:50px;">
     </div>
     <div class="FlexDiv" id="input">
         <select class="selectType" id="type1Select">
