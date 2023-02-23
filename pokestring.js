@@ -62,7 +62,7 @@ function createSnowflakes(n) {
 
 document.addEventListener("DOMContentLoaded", async () => {
 
-    createSnowflakes(9);
+    /* createSnowflakes(9); */
 
 
     translations = await getTranslations();
