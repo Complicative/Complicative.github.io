@@ -1,5 +1,6 @@
 {
-    "legend": [{
+    "legend": [
+        {
             "form": "Normal",
             "id": 144,
             "name": "Articuno",
@@ -223,11 +224,28 @@
             ]
         },
         {
+            "form": "Primal",
+            "id": 382,
+            "name": "Kyogre",
+            "type": [
+                "Water"
+            ]
+        },
+        {
             "form": "Normal",
             "id": 383,
             "name": "Groudon",
             "type": [
                 "Ground"
+            ]
+        },
+        {
+            "form": "Primal",
+            "id": 383,
+            "name": "Groudon",
+            "type": [
+                "Ground",
+                "Fire"
             ]
         },
         {
@@ -567,7 +585,8 @@
             "type": [
                 "Normal"
             ]
-        }, {
+        },
+        {
             "form": "Normal",
             "id": 773,
             "name": "Silvally",
@@ -610,21 +629,24 @@
                 "Water",
                 "Fairy"
             ]
-        }, {
+        },
+        {
             "form": "Normal",
             "id": 789,
             "name": "Cosmog",
             "type": [
                 "Psychic"
             ]
-        }, {
+        },
+        {
             "form": "Normal",
             "id": 790,
             "name": "Cosmoem",
             "type": [
                 "Psychic"
             ]
-        }, {
+        },
+        {
             "form": "Normal",
             "id": 791,
             "name": "Solgaleo",
@@ -632,7 +654,8 @@
                 "Psychic",
                 "Steel"
             ]
-        }, {
+        },
+        {
             "form": "Normal",
             "id": 792,
             "name": "Lunala",
@@ -649,7 +672,8 @@
                 "Rock",
                 "Poison"
             ]
-        }, {
+        },
+        {
             "form": "Ultra",
             "id": 794,
             "name": "Buzzwole",
@@ -657,7 +681,8 @@
                 "Bug",
                 "Fighting"
             ]
-        }, {
+        },
+        {
             "form": "Ultra",
             "id": 795,
             "name": "Pheromosa",
@@ -665,14 +690,16 @@
                 "Bug",
                 "Fighting"
             ]
-        }, {
+        },
+        {
             "form": "Ultra",
             "id": 796,
             "name": "Xurkitree",
             "type": [
                 "Electric"
             ]
-        }, {
+        },
+        {
             "form": "Ultra",
             "id": 797,
             "name": "Celesteela",
@@ -680,7 +707,8 @@
                 "Steel",
                 "Flying"
             ]
-        }, {
+        },
+        {
             "form": "Ultra",
             "id": 798,
             "name": "Kartana",
@@ -688,7 +716,8 @@
                 "Grass",
                 "Steel"
             ]
-        }, {
+        },
+        {
             "form": "Ultra",
             "id": 799,
             "name": "Guzzlord",
@@ -696,14 +725,16 @@
                 "Dark",
                 "Dragon"
             ]
-        }, {
+        },
+        {
             "form": "Normal",
             "id": 800,
             "name": "Necrozma",
             "type": [
                 "Psychic"
             ]
-        }, {
+        },
+        {
             "form": "Dusk Mane",
             "id": 800,
             "name": "Necrozma",
@@ -711,7 +742,8 @@
                 "Psychic",
                 "Steel"
             ]
-        }, {
+        },
+        {
             "form": "Dawn Wings",
             "id": 800,
             "name": "Necrozma",
@@ -719,7 +751,8 @@
                 "Psychic",
                 "Ghost"
             ]
-        }, {
+        },
+        {
             "form": "Ultra",
             "id": 800,
             "name": "Necrozma",
@@ -727,7 +760,8 @@
                 "Psychic",
                 "Dragon"
             ]
-        }, {
+        },
+        {
             "form": "Normal",
             "id": 801,
             "name": "Magearna",
@@ -735,7 +769,8 @@
                 "Steel",
                 "Fairy"
             ]
-        }, {
+        },
+        {
             "form": "Normal",
             "id": 802,
             "name": "Marshadow",
@@ -743,14 +778,16 @@
                 "Fighting",
                 "Ghost"
             ]
-        }, {
+        },
+        {
             "form": "Ultra",
             "id": 803,
             "name": "Poipole",
             "type": [
                 "Poison"
             ]
-        }, {
+        },
+        {
             "form": "Ultra",
             "id": 804,
             "name": "Naganadel",
@@ -758,7 +795,8 @@
                 "Poison",
                 "Dragon"
             ]
-        }, {
+        },
+        {
             "form": "Ultra",
             "id": 805,
             "name": "Stakataka",
@@ -766,7 +804,8 @@
                 "Rock",
                 "Steel"
             ]
-        }, {
+        },
+        {
             "form": "Ultra",
             "id": 806,
             "name": "Blacephalon",
@@ -774,7 +813,8 @@
                 "Fire",
                 "Ghost"
             ]
-        }, {
+        },
+        {
             "form": "Normal",
             "id": 807,
             "name": "Zeraora",
@@ -805,7 +845,8 @@
             "type": [
                 "Fairy"
             ]
-        }, {
+        },
+        {
             "form": "Crowned Sword",
             "id": 888,
             "name": "Zacian",
@@ -821,7 +862,8 @@
             "type": [
                 "Fighting"
             ]
-        }, {
+        },
+        {
             "form": "Crowned Shield",
             "id": 889,
             "name": "Zamazenta",
@@ -829,7 +871,8 @@
                 "Fighting",
                 "Steel"
             ]
-        }, {
+        },
+        {
             "form": "(All Forms)",
             "id": 890,
             "name": "Eternatus",
@@ -837,14 +880,16 @@
                 "Poison",
                 "Dragon"
             ]
-        }, {
+        },
+        {
             "form": "Normal",
             "id": 891,
             "name": "Kubfu",
             "type": [
                 "Fighting"
             ]
-        }, {
+        },
+        {
             "form": "(Single Strike)",
             "id": 892,
             "name": "Urshifu",
@@ -852,7 +897,8 @@
                 "Fighting",
                 "Dark"
             ]
-        }, {
+        },
+        {
             "form": "(Rapid Strike)",
             "id": 892,
             "name": "Urshifu",
@@ -939,7 +985,8 @@
             ]
         }
     ],
-    "mega": [{
+    "mega": [
+        {
             "form": "Mega",
             "id": 3,
             "name": "Venusaur",
@@ -1288,6 +1335,23 @@
             "type": [
                 "Dragon",
                 "Psychic"
+            ]
+        },
+        {
+            "form": "Primal",
+            "id": 382,
+            "name": "Kyogre",
+            "type": [
+                "Water"
+            ]
+        },
+        {
+            "form": "Primal",
+            "id": 383,
+            "name": "Groudon",
+            "type": [
+                "Ground",
+                "Fire"
             ]
         },
         {
