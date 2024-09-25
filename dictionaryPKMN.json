@@ -905,7 +905,19 @@
             "902": "Basculegion",
             "903": "Sneasler",
             "904": "Overqwil",
-            "905": "Enamorus"
+            "905": "Enamorus",
+            "1001": "Wo-Chien",
+            "1002": "Chien-Pao",
+            "1003": "Ting-Lu",
+            "1004": "Chi-Yu",
+            "1007": "Koraidon",
+            "1008": "Miraidon",
+            "1014": "Okidogi",
+            "1015": "Munkidori",
+            "1016": "Fezandipiti",
+            "1017": "Ogerpon",
+            "1024": "Terapagos",
+            "1025": "Pecharunt"
         },
         "fr": {
             "1": "Bulbizarre",
@@ -1812,7 +1824,19 @@
             "902": "Paragruel",
             "903": "Farfurex",
             "904": "Qwilpik",
-            "905": "Amovénus"
+            "905": "Amovénus",
+            "1001": "Chongjian",
+            "1002": "Baojian",
+            "1003": "Dinglu",
+            "1004": "Yuyu",
+            "1007": "Koraidon",
+            "1008": "Miraidon",
+            "1014": "Félicanis",
+            "1015": "Fortusimia",
+            "1016": "Favianos",
+            "1017": "Ogerpon",
+            "1024": "Terapagos",
+            "1025": "Pêchaminus"
         },
         "de": {
             "1": "Bisasam",
@@ -2719,7 +2743,19 @@
             "902": "Salmagnis",
             "903": "Snieboss",
             "904": "Myriador",
-            "905": "Cupidos"
+            "905": "Cupidos",
+            "1001": "Chongjian",
+            "1002": "Baojian",
+            "1003": "Dinglu",
+            "1004": "Yuyu",
+            "1007": "Koraidon",
+            "1008": "Miraidon",
+            "1014": "Boninu",
+            "1015": "Benesaru",
+            "1016": "Beatori",
+            "1017": "Ogerpon",
+            "1024": "Terapagos",
+            "1025": "Infamomo"
         }
     }
 }

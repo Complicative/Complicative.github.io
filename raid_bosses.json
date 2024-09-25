@@ -983,6 +983,139 @@
                 "Fairy",
                 "Flying"
             ]
+        },
+        {
+            "form": "Normal",
+            "id": 1001,
+            "name": "Wo-Chien",
+            "type": [
+                "Dark",
+                "Grass"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 1002,
+            "name": "Chien-Pao",
+            "type": [
+                "Dark",
+                "Ice"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 1003,
+            "name": "Ting-Lu",
+            "type": [
+                "Dark",
+                "Ground"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 1004,
+            "name": "Chi-Yu",
+            "type": [
+                "Dark",
+                "Fire"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 1007,
+            "name": "Koraidon",
+            "type": [
+                "Fighting",
+                "Dragon"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 1008,
+            "name": "Miraidon",
+            "type": [
+                "Electric",
+                "Dragon"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 1014,
+            "name": "Okidogi",
+            "type": [
+                "Poison",
+                "Fighting"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 1015,
+            "name": "Munkidori",
+            "type": [
+                "Poison",
+                "Psychic"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 1016,
+            "name": "Fezandipiti",
+            "type": [
+                "Poison",
+                "Fairy"
+            ]
+        },
+        {
+            "form": "Teal Mask",
+            "id": 1017,
+            "name": "Ogerpon",
+            "type": [
+                "Grass"
+            ]
+        },
+        {
+            "form": "Wellspring Mask",
+            "id": 1017,
+            "name": "Ogerpon",
+            "type": [
+                "Grass",
+                "Water"
+            ]
+        },
+        {
+            "form": "Hearthflame Mask",
+            "id": 1017,
+            "name": "Ogerpon",
+            "type": [
+                "Grass",
+                "Fire"
+            ]
+        },
+        {
+            "form": "Cornerstone  Mask",
+            "id": 1017,
+            "name": "Ogerpon",
+            "type": [
+                "Grass",
+                "Rock"
+            ]
+        },
+        {
+            "form": "(All Forms)",
+            "id": 1024,
+            "name": "Terapagos",
+            "type": [
+                "Normal"
+            ]
+        },
+        {
+            "form": "Normal",
+            "id": 1025,
+            "name": "Pecharunt",
+            "type": [
+                "Poison",
+                "Ghost"
+            ]
         }
     ],
     "mega": [
