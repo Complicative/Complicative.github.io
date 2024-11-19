@@ -167,24 +167,24 @@ function whatDay(day) {
 }
 
 async function getVisits(day) {
-    const response = await fetch("https://api.countapi.xyz/get/complicative.github.io/visits" + day)
+    const response = await fetch("https://api.counterapi.dev/v1/complicative.github.io/visits" + day)
         .then(async res => res.json())
-        .then(async visits => { return await visits.value });
+        .then(async visits => { return await visits.count });
     return response;
 }
 
 async function getGo(day) {
 
-    const response = await fetch("https://api.countapi.xyz/get/complicative.github.io/goBtn" + day)
+    const response = await fetch("https://api.counterapi.dev/v1/complicative.github.io/goBtn" + day)
         .then(async res => res.json())
-        .then(async visits => { return await visits.value });
+        .then(async visits => { return await visits.count });
     return response;
 }
 
 async function getCopy(day) {
 
-    const response = await fetch("https://api.countapi.xyz/get/complicative.github.io/copy" + day)
+    const response = await fetch("https://api.counterapi.dev/v1/complicative.github.io/copy" + day)
         .then(async res => res.json())
-        .then(async visits => { return await visits.value });
+        .then(async visits => { return await visits.count });
     return response;
 }

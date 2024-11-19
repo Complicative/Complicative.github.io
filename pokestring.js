@@ -52,7 +52,7 @@ function createSnowflakes(n) {
     document.getElementById('snowflakeSVG').style.display = "block";
     for (let i = 0; i < n; i++) {
         const node = document.getElementById('snowflakeSVG');
-        node.childNodes[1].style.transform = `scale(${(Math.random())+1})`;
+        node.childNodes[1].style.transform = `scale(${(Math.random()) + 1})`;
         document.body.appendChild(node.cloneNode(true));
     }
 
@@ -98,27 +98,27 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     if (window.location == "http://127.0.0.1:5500/") {
         console.log("local access");
-        fetch("https://api.countapi.xyz/get/complicative.github.io/visits" + getDay())
+        fetch("https://api.counterapi.dev/v1/complicative.github.io/visits" + getDay())
             .then(res => res.json())
             .then(visits => {
-                console.log("Total visits today: " + visits.value);
+                console.log("Total visits today: " + visits.count);
             })
     } else {
-        fetch("https://api.countapi.xyz/hit/complicative.github.io/visits" + getDay())
+        fetch("https://api.counterapi.dev/v1/complicative.github.io/visits" + getDay() + "/up")
             .then(res => res.json())
             .then(visits => {
-                console.log("Total visits today: " + visits.value);
+                console.log("Total visits today: " + visits.count);
             })
     }
-    fetch("https://api.countapi.xyz/get/complicative.github.io/goBtn" + getDay())
+    fetch("https://api.counterapi.dev/v1/complicative.github.io/goBtn" + getDay())
         .then(res => res.json())
         .then(visits => {
-            console.log("Total GO Button uses: " + visits.value);
+            console.log("Total GO Button uses: " + visits.count);
         })
-    fetch("https://api.countapi.xyz/get/complicative.github.io/copy" + getDay())
+    fetch("https://api.counterapi.dev/v1/complicative.github.io/copy" + getDay())
         .then(res => res.json())
         .then(visits => {
-            console.log("Total copies to clipboard: " + visits.value);
+            console.log("Total copies to clipboard: " + visits.count);
         })
 
 
@@ -264,7 +264,7 @@ type2Select.addEventListener("change", () => {
 goBtn.addEventListener("click", evt => {
     //Event Listener for the GO Button
     printTypes(locale);
-    fetch("https://api.countapi.xyz/hit/complicative.github.io/goBtn" + getDay());
+    fetch("https://api.counterapi.dev/v1/complicative.github.io/goBtn" + getDay() + "/up");
 });
 
 copyBtn.addEventListener("click", evt => {
@@ -277,7 +277,7 @@ copyBtn.addEventListener("click", evt => {
     output2.style.color = primary_text_color;
     copy2Btn.style.color = primary_text_color;
     copy2Btn.style.backgroundColor = primary_content_background_color;
-    fetch("https://api.countapi.xyz/hit/complicative.github.io/copy" + getDay());
+    fetch("https://api.counterapi.dev/v1/complicative.github.io/copy" + getDay() + "/up");
 });
 
 copy2Btn.addEventListener("click", evt => {
@@ -292,7 +292,7 @@ copy2Btn.addEventListener("click", evt => {
     copyBtn.style.color = primary_text_color;
     output.style.backgroundColor = primary_content_background_color;
     copyBtn.style.backgroundColor = primary_content_background_color;
-    fetch("https://api.countapi.xyz/hit/complicative.github.io/copy" + getDay());
+    fetch("https://api.counterapi.dev/v1/complicative.github.io/copy" + getDay() + "/up");
 });
 
 function getDay() {
