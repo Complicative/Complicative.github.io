@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     console.log("Day: " + getDay());
 
-    if (window.location == "http://127.0.0.1:5500/") {
+    if (window.location.hostname == "127.0.0.1") {
         console.log("local access");
         fetch("https://api.counterapi.dev/v1/complicative.github.io/visits" + getDay())
             .then(res => res.json())
